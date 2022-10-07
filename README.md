@@ -20,4 +20,5 @@ Before cloning the project, you should download the latest version of flutter an
 
 ### Architecture
 * Networking will be done with https://pub.dev/packages/chopper.
+* JSON serialization will be done with https://pub.dev/packages/json_serializable.
 * State management will be done with Provider (more info https://docs.flutter.dev/development/data-and-backend/state-mgmt/simple).
