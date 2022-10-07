@@ -7,26 +7,32 @@ class DebugScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: "Application for family backup title",
-      home: Scaffold(
-        appBar: AppBar(
-          title: Text("Application for family backup"),
-        ),
+    return Scaffold(
+        appBar: AppBar(title: Text("Application for family backup title")),
         body: Center(
             child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            ButtonDebugScreen("Login", () {}),
-            ButtonDebugScreen("Register", () {}),
-            ButtonDebugScreen("Pitaj stručnjaka", () {}),
-            ButtonDebugScreen("Donacija robe", () {}),
-            ButtonDebugScreen("O nama", () {}),
-            ButtonDebugScreen("Stručnjaci", () {}),
+            ButtonDebugScreen("Login", () {
+              Navigator.pushNamed(context, '/login');
+            }),
+            ButtonDebugScreen("Register", () {
+              Navigator.pushNamed(context, '/register');
+            }),
+            ButtonDebugScreen("Pitaj stručnjaka", () {
+              Navigator.pushNamed(context, '/ask_expert');
+            }),
+            ButtonDebugScreen("Donacija robe", () {
+              Navigator.pushNamed(context, '/clothing_donation');
+            }),
+            ButtonDebugScreen("O nama", () {
+              Navigator.pushNamed(context, '/about_us');
+            }),
+            ButtonDebugScreen("Stručnjaci", () {
+              Navigator.pushNamed(context, '/experts');
+            }),
           ],
-        )),
-      ),
-    );
+        )));
   }
 }

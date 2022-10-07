@@ -8,7 +8,7 @@ class ButtonDebugScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return TextButton(
-      onPressed: () {},
+      onPressed: onClick,
       style: ButtonStyle(
           backgroundColor: MaterialStateProperty.all(Colors.blueAccent)),
       child: Text(
