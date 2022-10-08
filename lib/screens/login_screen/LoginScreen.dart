@@ -1,3 +1,4 @@
+import 'package:app_for_family_backup/common/widgets/CustomForm.dart';
 import 'package:flutter/material.dart';
 
 class LoginScreen extends StatelessWidget {
@@ -5,6 +6,6 @@ class LoginScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Text("Login screen");
+    return FormCustom();
   }
 }
