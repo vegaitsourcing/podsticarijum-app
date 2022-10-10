@@ -1,5 +1,5 @@
 import 'package:app_for_family_backup/screens/about_us_screen/about_us_screen.dart';
-import 'package:app_for_family_backup/screens/ask_expert_screen/ask_expert_screen.dart';
+import 'package:app_for_family_backup/screens/ask_expert_screen/ask_expert_screen_categories.dart';
 import 'package:app_for_family_backup/screens/clothing_donation_screen/clothing_donation_screen.dart';
 import 'package:app_for_family_backup/common/widgets/outline_button_custom.dart';
 import 'package:app_for_family_backup/screens/experts_screen/experts_screen.dart';
@@ -28,7 +28,7 @@ class DebugScreen extends StatelessWidget {
               Navigator.pushNamed(context, RegisterScreen.route);
             }),
             OutlineButtonCustom("Pitaj stručnjaka", () {
-              Navigator.pushNamed(context, AskExpertScreen.route);
+              Navigator.pushNamed(context, AskExpertCategoryScreen.route);
             }),
             OutlineButtonCustom("Donacija robe", () {
               Navigator.pushNamed(context, ClothingDonationScreen.route);

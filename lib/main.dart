@@ -1,5 +1,6 @@
 import 'package:app_for_family_backup/screens/about_us_screen/about_us_screen.dart';
-import 'package:app_for_family_backup/screens/ask_expert_screen/ask_expert_screen.dart';
+import 'package:app_for_family_backup/screens/ask_expert_screen/ask_expert_form_screen.dart';
+import 'package:app_for_family_backup/screens/ask_expert_screen/ask_expert_screen_categories.dart';
 import 'package:app_for_family_backup/screens/clothing_donation_screen/clothing_donation_screen.dart';
 import 'package:app_for_family_backup/screens/experts_screen/experts_screen.dart';
 import 'package:app_for_family_backup/screens/introduction_screen/splash_screen.dart';
@@ -23,15 +24,16 @@ void main() => runApp(MaterialApp(
       title: "App for family backup",
       initialRoute: '/', // TODO: Change back to start screen
       routes: {
-        '/': (context) => AskExpertScreen(),
+        '/': (context) => AskExpertFormScreen(),
         LoginScreen.route: (context) => LoginScreen(),
         RegisterScreen.route: (context) => RegisterScreen(),
         AboutUsScreen.route: (context) => AboutUsScreen(),
-        AskExpertScreen.route: (context) => AskExpertScreen(),
+        AskExpertCategoryScreen.route: (context) => AskExpertCategoryScreen(),
         ExpertsScreen.route: (context) => ExpertsScreen(),
         ClothingDonationScreen.route: (context) => ClothingDonationScreen(),
         SplashScreen.route: (context) => SplashScreen(),
         StartScreen.route: (context) => StartScreen(),
-        AskExpertScreen.route: (context) => AskExpertScreen()
+        AskExpertCategoryScreen.route: (context) => AskExpertCategoryScreen(),
+        AskExpertFormScreen.route: (context) => AskExpertFormScreen(),
       },
     ));

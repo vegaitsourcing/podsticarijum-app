@@ -30,9 +30,13 @@ class _FormCustomState extends State<FormCustom> {
                       return null;
                     },
                   ),
-                  TextFormFieldCustom((String value) {
-                    return value.length >= 4;
-                  }, "Password should be at least 4 characters long"),
+                  TextFormFieldCustom(
+                    isValid: (String value) {
+                      return value.length >= 4;
+                    },
+                    invalidErrorMessage:
+                        "Password should be at least 4 characters long",
+                  ),
                   ElevatedButton(
                     onPressed: () {
                       // Validate returns true if the form is valid, or false otherwise.

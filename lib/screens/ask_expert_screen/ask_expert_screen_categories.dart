@@ -2,10 +2,10 @@ import 'package:app_for_family_backup/common/widgets/app_bar/app_bar.dart';
 import 'package:app_for_family_backup/common/widgets/outline_button_custom.dart';
 import 'package:flutter/material.dart';
 
-class AskExpertScreen extends StatelessWidget {
+class AskExpertCategoryScreen extends StatelessWidget {
   static String route = '/ask_expert';
 
-  const AskExpertScreen({super.key});
+  const AskExpertCategoryScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
