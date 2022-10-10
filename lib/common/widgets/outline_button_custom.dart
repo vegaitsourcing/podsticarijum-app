@@ -15,13 +15,13 @@ class OutlineButtonCustom extends StatelessWidget {
           child: OutlinedButton(
             onPressed: onClick,
             style: ButtonStyle(
-              backgroundColor: MaterialStateProperty.all(Colors.blueAccent),
+              backgroundColor: MaterialStateProperty.all(Colors.white),
             ),
             child: Padding(
               padding: const EdgeInsets.all(15.0),
               child: Text(
                 text.toUpperCase(),
-                style: TextStyle(color: Colors.white),
+                style: Theme.of(context).textTheme.headlineSmall,
               ),
             ),
           ),

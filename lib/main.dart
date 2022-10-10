@@ -21,7 +21,7 @@ void main() => runApp(MaterialApp(
         ),
       ),
       title: "App for family backup",
-      initialRoute: AboutUsScreen.route, // TODO: Change back to start screen
+      initialRoute: '/', // TODO: Change back to start screen
       routes: {
         '/': (context) => AskExpertScreen(),
         LoginScreen.route: (context) => LoginScreen(),

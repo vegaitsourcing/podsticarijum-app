@@ -10,9 +10,7 @@ class AskExpertScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: AppBarCustom(),
-      ),
+      appBar: getAppBar(),
       body: Container(
         color: Colors.amber,
         width: double.infinity,
