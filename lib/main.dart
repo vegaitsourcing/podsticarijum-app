@@ -1,11 +1,12 @@
-import 'package:app_for_family_backup/screens/about_us_screen/AboutUsScreen.dart';
-import 'package:app_for_family_backup/screens/ask_expert_screen/AskExpertScreen.dart';
-import 'package:app_for_family_backup/screens/clothing_donation_screen/ClothingDonationScreen.dart';
+import 'package:app_for_family_backup/screens/about_us_screen/about_us_screen.dart';
+import 'package:app_for_family_backup/screens/ask_expert_screen/ask_expert_screen.dart';
+import 'package:app_for_family_backup/screens/clothing_donation_screen/clothing_donation_screen.dart';
 import 'package:app_for_family_backup/screens/debug_screen/debug_screen.dart';
-import 'package:app_for_family_backup/screens/experts_screen/ExpertsScreen.dart';
-import 'package:app_for_family_backup/screens/introduction_screen/SplashScreen.dart';
-import 'package:app_for_family_backup/screens/login_screen/LoginScreen.dart';
-import 'package:app_for_family_backup/screens/register_screen/RegisterScreen.dart';
+import 'package:app_for_family_backup/screens/experts_screen/experts_screen.dart';
+import 'package:app_for_family_backup/screens/introduction_screen/splash_screen.dart';
+import 'package:app_for_family_backup/screens/introduction_screen/start_screen.dart';
+import 'package:app_for_family_backup/screens/login_screen/login_screen.dart';
+import 'package:app_for_family_backup/screens/register_screen/register_screen.dart';
 import 'package:flutter/material.dart';
 
 void main() => runApp(MaterialApp(
@@ -22,7 +23,7 @@ void main() => runApp(MaterialApp(
       title: "Application for family backup title",
       initialRoute: '/',
       routes: {
-        '/': (context) => SplashScreen(),
+        '/': (context) => StartScreen(),
         LoginScreen.route: (context) => LoginScreen(),
         RegisterScreen.route: (context) => RegisterScreen(),
         AboutUsScreen.route: (context) => AboutUsScreen(),
@@ -30,5 +31,6 @@ void main() => runApp(MaterialApp(
         ExpertsScreen.route: (context) => ExpertsScreen(),
         ClothingDonationScreen.route: (context) => ClothingDonationScreen(),
         SplashScreen.route: (context) => SplashScreen(),
+        StartScreen.route: (context) => StartScreen()
       },
     ));

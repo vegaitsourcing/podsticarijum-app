@@ -1,18 +1,18 @@
 import 'package:flutter/material.dart';
 
-class ButtonDebugScreen extends StatelessWidget {
+class OutlineButtonCustom extends StatelessWidget {
   final String text;
   final Function() onClick;
-  ButtonDebugScreen(@required this.text, @required this.onClick);
+  OutlineButtonCustom(@required this.text, @required this.onClick);
 
   @override
   Widget build(BuildContext context) {
-    return TextButton(
+    return OutlinedButton(
       onPressed: onClick,
       style: ButtonStyle(
           backgroundColor: MaterialStateProperty.all(Colors.blueAccent)),
       child: Text(
-        text,
+        text.toUpperCase(),
         style: TextStyle(color: Colors.white),
       ),
     );

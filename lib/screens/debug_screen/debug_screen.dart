@@ -1,11 +1,11 @@
-import 'package:app_for_family_backup/screens/about_us_screen/AboutUsScreen.dart';
-import 'package:app_for_family_backup/screens/ask_expert_screen/AskExpertScreen.dart';
-import 'package:app_for_family_backup/screens/clothing_donation_screen/ClothingDonationScreen.dart';
-import 'package:app_for_family_backup/screens/debug_screen/widgets/button.dart';
-import 'package:app_for_family_backup/screens/experts_screen/ExpertsScreen.dart';
-import 'package:app_for_family_backup/screens/introduction_screen/SplashScreen.dart';
-import 'package:app_for_family_backup/screens/login_screen/LoginScreen.dart';
-import 'package:app_for_family_backup/screens/register_screen/RegisterScreen.dart';
+import 'package:app_for_family_backup/screens/about_us_screen/about_us_screen.dart';
+import 'package:app_for_family_backup/screens/ask_expert_screen/ask_expert_screen.dart';
+import 'package:app_for_family_backup/screens/clothing_donation_screen/clothing_donation_screen.dart';
+import 'package:app_for_family_backup/common/widgets/outline_button_custom.dart';
+import 'package:app_for_family_backup/screens/experts_screen/experts_screen.dart';
+import 'package:app_for_family_backup/screens/introduction_screen/splash_screen.dart';
+import 'package:app_for_family_backup/screens/login_screen/login_screen.dart';
+import 'package:app_for_family_backup/screens/register_screen/register_screen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -21,25 +21,25 @@ class DebugScreen extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            ButtonDebugScreen("Login", () {
+            OutlineButtonCustom("Login", () {
               Navigator.pushNamed(context, LoginScreen.route);
             }),
-            ButtonDebugScreen("Register", () {
+            OutlineButtonCustom("Register", () {
               Navigator.pushNamed(context, RegisterScreen.route);
             }),
-            ButtonDebugScreen("Pitaj stručnjaka", () {
+            OutlineButtonCustom("Pitaj stručnjaka", () {
               Navigator.pushNamed(context, AskExpertScreen.route);
             }),
-            ButtonDebugScreen("Donacija robe", () {
+            OutlineButtonCustom("Donacija robe", () {
               Navigator.pushNamed(context, ClothingDonationScreen.route);
             }),
-            ButtonDebugScreen("O nama", () {
+            OutlineButtonCustom("O nama", () {
               Navigator.pushNamed(context, AboutUsScreen.route);
             }),
-            ButtonDebugScreen("Stručnjaci", () {
+            OutlineButtonCustom("Stručnjaci", () {
               Navigator.pushNamed(context, ExpertsScreen.route);
             }),
-            ButtonDebugScreen("Introduction", () {
+            OutlineButtonCustom("Introduction", () {
               Navigator.pushNamed(context, SplashScreen.route);
             }),
           ],
