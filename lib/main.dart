@@ -23,7 +23,7 @@ void main() => runApp(MaterialApp(
       title: "Application for family backup title",
       initialRoute: '/',
       routes: {
-        '/': (context) => StartScreen(),
+        '/': (context) => AskExpertScreen(),
         LoginScreen.route: (context) => LoginScreen(),
         RegisterScreen.route: (context) => RegisterScreen(),
         AboutUsScreen.route: (context) => AboutUsScreen(),
@@ -31,6 +31,7 @@ void main() => runApp(MaterialApp(
         ExpertsScreen.route: (context) => ExpertsScreen(),
         ClothingDonationScreen.route: (context) => ClothingDonationScreen(),
         SplashScreen.route: (context) => SplashScreen(),
-        StartScreen.route: (context) => StartScreen()
+        StartScreen.route: (context) => StartScreen(),
+        AskExpertScreen.route: (context) => AskExpertScreen()
       },
     ));
