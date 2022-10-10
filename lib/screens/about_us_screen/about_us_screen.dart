@@ -1,49 +1,23 @@
+import 'package:app_for_family_backup/common/widgets/scrollable_content_widget.dart';
 import 'package:flutter/material.dart';
 
 class AboutUsScreen extends StatelessWidget {
   static String route = '/about_us';
 
   const AboutUsScreen({super.key});
-
-  Widget buildScreenContent(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 20),
-      child: SingleChildScrollView(
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            const SizedBox(height: 20),
-            Text(
-              'O NAMA',
-              textAlign: TextAlign.start,
-              style: Theme.of(context)
-                  .textTheme
-                  .headline2
-                  ?.copyWith(color: const Color(0xFF06070D)),
-            ),
-            const SizedBox(height: 68),
-            Text(
-              _description,
-              style: Theme.of(context).textTheme.bodyText1,
-            ),
-            const SizedBox(height: 35)
-          ],
-        ),
-      ),
-    );
-  }
-
+  
   @override
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
         body: Stack(
           children: [
+            // TODO: Remove fixed top offset
             Positioned(
               top: -100,
               child: Image.asset('images/about_us_bg.png', scale: 0.8),
             ),
-            buildScreenContent(context)
+            ScrollableContentWidget(title: 'O NAMA', content: _description)
           ],
         ),
       ),
