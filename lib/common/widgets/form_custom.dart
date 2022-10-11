@@ -1,6 +1,15 @@
-import 'package:app_for_family_backup/common/widgets/text_form_field_custom.dart';
+import 'package:app_for_family_backup/common/widgets/custom_text_form_field.dart';
 import 'package:flutter/material.dart';
 
+/**
+ * 
+ * THIS FORM IS UNUSED!
+ * 
+ * IT WAS MEANT TO BE USED WITH AUTHENTICATION SCREENS!
+ * 
+ * DON'T USE!
+ * 
+ */
 class FormCustom extends StatefulWidget {
   FormCustom({Key? key}) : super(key: key);
 
@@ -30,7 +39,7 @@ class _FormCustomState extends State<FormCustom> {
                       return null;
                     },
                   ),
-                  TextFormFieldCustom(
+                  CustomTextFormField(
                     isValid: (String value) {
                       return value.length >= 4;
                     },

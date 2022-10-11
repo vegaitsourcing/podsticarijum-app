@@ -1,11 +1,11 @@
 import 'package:app_for_family_backup/common/widgets/app_bar/app_bar.dart';
-import 'package:app_for_family_backup/common/widgets/outline_button_custom.dart';
+import 'package:app_for_family_backup/common/widgets/custom_outline_button.dart';
 import 'package:flutter/material.dart';
 
-class AskExpertCategoryScreen extends StatelessWidget {
+class ScreenAskExpertCategory extends StatelessWidget {
   static String route = '/ask_expert';
 
-  const AskExpertCategoryScreen({super.key});
+  const ScreenAskExpertCategory({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -25,11 +25,11 @@ class AskExpertCategoryScreen extends StatelessWidget {
                       .headlineSmall, // to be updated in overall theme class
                   "POSTAVI PITANJE\nSTRUČNJAKU ZA:"),
             ),
-            OutlineButtonCustom("Motorički razvoj", () {}),
-            OutlineButtonCustom("Govorno-jezički razvoj", () {}),
-            OutlineButtonCustom("senzo-motorički razvoj", () {}),
-            OutlineButtonCustom("socio-emotivni razvoj", () {}),
-            OutlineButtonCustom("ishrana", () {}),
+            CustomOutlineButton("Motorički razvoj", () {}),
+            CustomOutlineButton("Govorno-jezički razvoj", () {}),
+            CustomOutlineButton("senzo-motorički razvoj", () {}),
+            CustomOutlineButton("socio-emotivni razvoj", () {}),
+            CustomOutlineButton("ishrana", () {}),
           ],
         ),
       ),

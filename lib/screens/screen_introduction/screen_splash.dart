@@ -1,10 +1,10 @@
-import 'package:app_for_family_backup/screens/introduction_screen/widgets/footer_splash_screen.dart';
+import 'package:app_for_family_backup/screens/screen_introduction/widgets/footer_splash_screen.dart';
 import 'package:flutter/material.dart';
 
-class SplashScreen extends StatelessWidget {
+class ScreenSplash extends StatelessWidget {
   static String route = "/splash_screen";
 
-  const SplashScreen({Key? key}) : super(key: key);
+  const ScreenSplash({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

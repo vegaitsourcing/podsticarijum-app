@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
-class ClothingDonationScreen extends StatelessWidget {
+class ScreenClothingDonation extends StatelessWidget {
   static String route = '/clothing_donation';
 
-  const ClothingDonationScreen({super.key});
+  const ScreenClothingDonation({super.key});
 
   @override
   Widget build(BuildContext context) {

@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
-class ExpertsScreen extends StatelessWidget {
+class ScreenExperts extends StatelessWidget {
   static String route = '/experts';
 
-  const ExpertsScreen({super.key});
+  const ScreenExperts({super.key});
 
   @override
   Widget build(BuildContext context) {

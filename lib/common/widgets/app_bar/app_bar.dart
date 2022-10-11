@@ -4,14 +4,14 @@ AppBar getAppBar({Color backgroundColor = Colors.amber}) {
   return AppBar(
     backgroundColor: backgroundColor,
     shadowColor: Colors.transparent,
-    title: AppBarCustom(backgroundColor),
+    title: CustomAppBar(backgroundColor),
   );
 }
 
-class AppBarCustom extends StatelessWidget {
+class CustomAppBar extends StatelessWidget {
   final Color backgroundColor;
 
-  const AppBarCustom(@required this.backgroundColor, {Key? key})
+  const CustomAppBar(@required this.backgroundColor, {Key? key})
       : super(key: key);
 
   @override

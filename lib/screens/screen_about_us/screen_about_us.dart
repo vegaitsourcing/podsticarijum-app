@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
-class AboutUsScreen extends StatelessWidget {
+class ScreenAboutUs extends StatelessWidget {
   static String route = '/about_us';
 
-  const AboutUsScreen({super.key});
+  const ScreenAboutUs({super.key});
 
   Widget buildScreenContent(BuildContext context) {
     return Padding(

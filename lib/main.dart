@@ -1,12 +1,12 @@
-import 'package:app_for_family_backup/screens/about_us_screen/about_us_screen.dart';
-import 'package:app_for_family_backup/screens/ask_expert_screen/ask_expert_form_screen.dart';
-import 'package:app_for_family_backup/screens/ask_expert_screen/ask_expert_screen_categories.dart';
-import 'package:app_for_family_backup/screens/clothing_donation_screen/clothing_donation_screen.dart';
-import 'package:app_for_family_backup/screens/experts_screen/experts_screen.dart';
-import 'package:app_for_family_backup/screens/introduction_screen/splash_screen.dart';
-import 'package:app_for_family_backup/screens/introduction_screen/start_screen.dart';
-import 'package:app_for_family_backup/screens/login_screen/login_screen.dart';
-import 'package:app_for_family_backup/screens/register_screen/register_screen.dart';
+import 'package:app_for_family_backup/screens/screen_about_us/screen_about_us.dart';
+import 'package:app_for_family_backup/screens/screen_ask_expert/screen_ask_expert_form.dart';
+import 'package:app_for_family_backup/screens/screen_ask_expert/screen_ask_expert_category.dart';
+import 'package:app_for_family_backup/screens/screen_clothing_donation/screen_clothing_donation.dart';
+import 'package:app_for_family_backup/screens/screen_experts/experts_screen.dart';
+import 'package:app_for_family_backup/screens/screen_introduction/screen_splash.dart';
+import 'package:app_for_family_backup/screens/screen_introduction/screen_start.dart';
+import 'package:app_for_family_backup/screens/screen_login/screen_login.dart';
+import 'package:app_for_family_backup/screens/screen_register/screen_register.dart';
 import 'package:flutter/material.dart';
 
 void main() => runApp(MaterialApp(
@@ -24,16 +24,16 @@ void main() => runApp(MaterialApp(
       title: "App for family backup",
       initialRoute: '/', // TODO: Change back to start screen
       routes: {
-        '/': (context) => AskExpertFormScreen(),
-        LoginScreen.route: (context) => LoginScreen(),
-        RegisterScreen.route: (context) => RegisterScreen(),
-        AboutUsScreen.route: (context) => AboutUsScreen(),
-        AskExpertCategoryScreen.route: (context) => AskExpertCategoryScreen(),
-        ExpertsScreen.route: (context) => ExpertsScreen(),
-        ClothingDonationScreen.route: (context) => ClothingDonationScreen(),
-        SplashScreen.route: (context) => SplashScreen(),
+        '/': (context) => ScreenAskExpertForm(),
+        ScreenLogin.route: (context) => ScreenLogin(),
+        ScreenRegister.route: (context) => ScreenRegister(),
+        ScreenAboutUs.route: (context) => ScreenAboutUs(),
+        ScreenAskExpertCategory.route: (context) => ScreenAskExpertCategory(),
+        ScreenExperts.route: (context) => ScreenExperts(),
+        ScreenClothingDonation.route: (context) => ScreenClothingDonation(),
+        ScreenSplash.route: (context) => ScreenSplash(),
         StartScreen.route: (context) => StartScreen(),
-        AskExpertCategoryScreen.route: (context) => AskExpertCategoryScreen(),
-        AskExpertFormScreen.route: (context) => AskExpertFormScreen(),
+        ScreenAskExpertCategory.route: (context) => ScreenAskExpertCategory(),
+        ScreenAskExpertForm.route: (context) => ScreenAskExpertForm(),
       },
     ));

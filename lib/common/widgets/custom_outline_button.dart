@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
 
-class OutlineButtonCustom extends StatelessWidget {
+class CustomOutlineButton extends StatelessWidget {
   final String text;
+  final double width;
   final Function() onClick;
-  OutlineButtonCustom(@required this.text, @required this.onClick);
+
+  CustomOutlineButton(@required this.text, @required this.onClick,
+      {this.width = double.infinity});
 
   @override
   Widget build(BuildContext context) {
@@ -11,7 +14,7 @@ class OutlineButtonCustom extends StatelessWidget {
       children: [
         Container(
           height: 70,
-          width: 320,
+          width: width,
           child: OutlinedButton(
             onPressed: onClick,
             style: ButtonStyle(

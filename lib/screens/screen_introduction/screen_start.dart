@@ -1,5 +1,5 @@
 import 'package:app_for_family_backup/common/widgets/app_bar/app_bar.dart';
-import 'package:app_for_family_backup/common/widgets/outline_button_custom.dart';
+import 'package:app_for_family_backup/common/widgets/custom_outline_button.dart';
 import 'package:flutter/material.dart';
 
 class StartScreen extends StatelessWidget {
@@ -17,8 +17,8 @@ class StartScreen extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            OutlineButtonCustom("kategorije razvoja", () {}),
-            OutlineButtonCustom("postavi pitanje", () {}),
+            CustomOutlineButton("kategorije razvoja", () {}),
+            CustomOutlineButton("postavi pitanje", () {}),
           ],
         ),
       ),
