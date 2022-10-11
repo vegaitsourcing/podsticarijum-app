@@ -1,12 +1,13 @@
-import 'package:app_for_family_backup/screens/screen_about_us/screen_about_us.dart';
-import 'package:app_for_family_backup/screens/screen_ask_expert/screen_ask_expert_form.dart';
-import 'package:app_for_family_backup/screens/screen_ask_expert/screen_ask_expert_category.dart';
-import 'package:app_for_family_backup/screens/screen_clothing_donation/screen_clothing_donation.dart';
-import 'package:app_for_family_backup/screens/screen_experts/experts_screen.dart';
-import 'package:app_for_family_backup/screens/screen_introduction/screen_splash.dart';
-import 'package:app_for_family_backup/screens/screen_introduction/screen_start.dart';
-import 'package:app_for_family_backup/screens/screen_login/screen_login.dart';
-import 'package:app_for_family_backup/screens/screen_register/screen_register.dart';
+import 'screens/screen_about_us/screen_about_us.dart';
+import 'screens/screen_ask_expert/screen_ask_expert_form.dart';
+import 'screens/screen_ask_expert/screen_ask_expert_category.dart';
+import 'screens/screen_clothing_donation/screen_clothing_donation.dart';
+import 'screens/../common/widgets/custom_outline_button.dart';
+import 'screens/screen_experts/screen_experts.dart';
+import 'screens/screen_introduction/screen_splash.dart';
+import 'screens/screen_introduction/screen_start.dart';
+import 'screens/screen_login/screen_login.dart';
+import 'screens/screen_register/screen_register.dart';
 import 'package:flutter/material.dart';
 
 void main() => runApp(MaterialApp(

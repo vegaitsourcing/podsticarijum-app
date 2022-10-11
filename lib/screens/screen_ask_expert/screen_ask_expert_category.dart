@@ -1,5 +1,5 @@
-import 'package:app_for_family_backup/common/widgets/app_bar/app_bar.dart';
-import 'package:app_for_family_backup/common/widgets/custom_outline_button.dart';
+import '../../common/widgets/app_bar/app_bar.dart';
+import '../../common/widgets/custom_outline_button.dart';
 import 'package:flutter/material.dart';
 
 class ScreenAskExpertCategory extends StatelessWidget {

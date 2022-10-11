@@ -1,11 +1,7 @@
-import 'package:app_for_family_backup/common/widgets/app_bar/app_bar.dart';
-import 'package:app_for_family_backup/common/widgets/form_scrollable.dart';
-import 'package:app_for_family_backup/common/widgets/custom_outline_button.dart';
-import 'package:app_for_family_backup/common/widgets/custom_text_form_field.dart';
-import 'package:flutter/cupertino.dart';
+import '../../common/widgets/app_bar/app_bar.dart';
+import '../../common/widgets/form_scrollable.dart';
+import '../../common/widgets/custom_text_form_field.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
 
 class ScreenAskExpertForm extends StatefulWidget {
   static const String route = '/ask_expert_form_screen';
