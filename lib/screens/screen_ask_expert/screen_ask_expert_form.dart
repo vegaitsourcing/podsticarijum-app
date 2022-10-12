@@ -22,7 +22,7 @@ class _ScreenAskExpertFormState extends State<ScreenAskExpertForm> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: getAppBar(backgroundColor: Colors.white),
+      appBar: CustomAppBar(), //default background paint is white
       body: FormScrollable(
         children: [
           Padding(

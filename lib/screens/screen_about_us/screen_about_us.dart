@@ -1,24 +1,17 @@
 import 'package:app_for_family_backup/common/widgets/app_bar/app_bar.dart';
 import 'package:app_for_family_backup/common/widgets/default_background.dart';
+import 'package:app_for_family_backup/common/widgets/default_header.dart';
 import 'package:flutter/material.dart';
 
 class ScreenAboutUs extends StatelessWidget {
   static String route = '/about_us';
-  static Color _backgroundYellow = const Color.fromRGBO(236, 239, 171, 1.000);
 
   const ScreenAboutUs({super.key});
 
   List<Widget> buildScreenContent(BuildContext context) {
     return [
       const SizedBox(height: 20),
-      Text(
-        'O NAMA',
-        textAlign: TextAlign.start,
-        style: Theme.of(context)
-            .textTheme
-            .headline2
-            ?.copyWith(color: const Color(0xFF06070D)),
-      ),
+      DefaultHeader(context, 'O NAMA'),
       const SizedBox(height: 68),
       Text(
         _description,
@@ -32,7 +25,7 @@ class ScreenAboutUs extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        appBar: getAppBar(backgroundColor: _backgroundYellow),
+        appBar: CustomAppBar(backgroundPaint: BackgroundPaint.Yellow),
         body: DefaultBackground(context, buildScreenContent(context)),
       ),
     );

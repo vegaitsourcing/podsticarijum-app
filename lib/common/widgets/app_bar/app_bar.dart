@@ -1,18 +1,34 @@
 import 'package:flutter/material.dart';
 
-AppBar getAppBar({Color backgroundColor = Colors.amber}) {
+enum BackgroundPaint {
+  White,
+  Yellow,
+}
+
+AppBar CustomAppBar({BackgroundPaint backgroundPaint = BackgroundPaint.White}) {
+  const Color _backgroundYellow = const Color.fromRGBO(236, 239, 171, 1.000);
+  Color color;
+
+  switch (backgroundPaint) {
+    case BackgroundPaint.White:
+      color = Colors.white;
+      break;
+    case BackgroundPaint.Yellow:
+      color = _backgroundYellow;
+      break;
+  }
+
   return AppBar(
-    backgroundColor: backgroundColor,
+    backgroundColor: color,
     shadowColor: Colors.transparent,
-    title: CustomAppBar(backgroundColor),
+    title: mAppBar(color),
   );
 }
 
-class CustomAppBar extends StatelessWidget {
+class mAppBar extends StatelessWidget {
   final Color backgroundColor;
 
-  const CustomAppBar(@required this.backgroundColor, {Key? key})
-      : super(key: key);
+  const mAppBar(@required this.backgroundColor, {Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

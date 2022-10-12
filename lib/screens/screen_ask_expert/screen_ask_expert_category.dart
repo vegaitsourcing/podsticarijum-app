@@ -10,7 +10,7 @@ class ScreenAskExpertCategory extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: getAppBar(),
+      appBar: CustomAppBar(),
       body: Container(
         color: Colors.amber,
         width: double.infinity,

@@ -10,7 +10,7 @@ class StartScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: getAppBar(),
+      appBar: CustomAppBar(),
       body: Container(
         alignment: Alignment.center,
         height: double.infinity,
