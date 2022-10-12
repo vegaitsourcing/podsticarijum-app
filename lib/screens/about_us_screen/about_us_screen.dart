@@ -1,4 +1,4 @@
-import 'package:app_for_family_backup/common/widgets/scrollable_content_widget.dart';
+import 'package:app_for_family_backup/common/widgets/scrollable_content/scrollable_content_widget.dart';
 import 'package:flutter/material.dart';
 
 class AboutUsScreen extends StatelessWidget {
