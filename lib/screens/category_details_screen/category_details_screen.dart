@@ -10,18 +10,10 @@ class CategoryDetailsScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        body: Stack(
-          children: [
-            Positioned(
-              top: 0,
-              child: Image.asset('images/about_us_bg.png', scale: 0.8),
-            ),
-            ScrollableContentWidget(
-              title: 'NEUROTIPIČAN SENZO-MOTORNI RAZVOJ',
-              subtitle: '0-1 GODINA',
-              content: _description,
-            )
-          ],
+        body: ScrollableContentWidget(
+          title: 'NEUROTIPIČAN SENZO-MOTORNI RAZVOJ',
+          subtitle: '0-1 GODINA',
+          content: _description,
         ),
       ),
     );

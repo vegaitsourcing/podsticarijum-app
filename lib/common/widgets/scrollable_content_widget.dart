@@ -16,42 +16,50 @@ class ScrollableContentWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 20),
-      child: SingleChildScrollView(
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            const SizedBox(height: 20),
-            subtitle == null
-                ? const SizedBox(height: 0)
-                : Column(
-                    children: [
-                      Text(
-                        subtitle!,
-                        style: Theme.of(context)
-                            .textTheme
-                            .headline3
-                            ?.copyWith(color: const Color(0xFF06070D)),
+    return SingleChildScrollView(
+      child: Stack(
+        children: [
+          Positioned(
+            top: 0,
+            child: Image.asset('images/about_us_bg.png', scale: 0.8),
+          ),
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 20),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                const SizedBox(height: 20),
+                subtitle == null
+                    ? const SizedBox(height: 0)
+                    : Column(
+                        children: [
+                          Text(
+                            subtitle!,
+                            style: Theme.of(context)
+                                .textTheme
+                                .headline3
+                                ?.copyWith(color: const Color(0xFF06070D)),
+                          ),
+                          const SizedBox(height: 16),
+                        ],
                       ),
-                      const SizedBox(height: 16),
-                    ],
-                  ),
-            Text(
-              title,
-              style: Theme.of(context)
-                  .textTheme
-                  .headline2
-                  ?.copyWith(color: const Color(0xFF06070D)),
+                Text(
+                  title,
+                  style: Theme.of(context)
+                      .textTheme
+                      .headline2
+                      ?.copyWith(color: const Color(0xFF06070D)),
+                ),
+                const SizedBox(height: 68),
+                Text(
+                  content,
+                  style: Theme.of(context).textTheme.bodyText1,
+                ),
+                const SizedBox(height: 35)
+              ],
             ),
-            const SizedBox(height: 68),
-            Text(
-              content,
-              style: Theme.of(context).textTheme.bodyText1,
-            ),
-            const SizedBox(height: 35)
-          ],
-        ),
+          ),
+        ],
       ),
     );
   }
