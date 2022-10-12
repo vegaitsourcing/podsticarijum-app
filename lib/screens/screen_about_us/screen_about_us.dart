@@ -1,51 +1,39 @@
+import 'package:app_for_family_backup/common/widgets/app_bar/app_bar.dart';
+import 'package:app_for_family_backup/common/widgets/default_background.dart';
 import 'package:flutter/material.dart';
 
 class ScreenAboutUs extends StatelessWidget {
   static String route = '/about_us';
+  static Color _backgroundYellow = const Color.fromRGBO(236, 239, 171, 1.000);
 
   const ScreenAboutUs({super.key});
 
-  Widget buildScreenContent(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 20),
-      child: SingleChildScrollView(
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            const SizedBox(height: 20),
-            Text(
-              'O NAMA',
-              textAlign: TextAlign.start,
-              style: Theme.of(context)
-                  .textTheme
-                  .headline2
-                  ?.copyWith(color: const Color(0xFF06070D)),
-            ),
-            const SizedBox(height: 68),
-            Text(
-              _description,
-              style: Theme.of(context).textTheme.bodyText1,
-            ),
-            const SizedBox(height: 35)
-          ],
-        ),
+  List<Widget> buildScreenContent(BuildContext context) {
+    return [
+      const SizedBox(height: 20),
+      Text(
+        'O NAMA',
+        textAlign: TextAlign.start,
+        style: Theme.of(context)
+            .textTheme
+            .headline2
+            ?.copyWith(color: const Color(0xFF06070D)),
       ),
-    );
+      const SizedBox(height: 68),
+      Text(
+        _description,
+        style: Theme.of(context).textTheme.bodyText1,
+      ),
+      const SizedBox(height: 35)
+    ];
   }
 
   @override
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        body: Stack(
-          children: [
-            Positioned(
-              top: -100,
-              child: Image.asset('images/about_us_bg.png', scale: 0.8),
-            ),
-            buildScreenContent(context)
-          ],
-        ),
+        appBar: getAppBar(backgroundColor: _backgroundYellow),
+        body: DefaultBackground(context, buildScreenContent(context)),
       ),
     );
   }
