@@ -5,21 +5,12 @@ class AboutUsScreen extends StatelessWidget {
   static String route = '/about_us';
 
   const AboutUsScreen({super.key});
-  
+
   @override
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        body: Stack(
-          children: [
-            // TODO: Remove fixed top offset
-            Positioned(
-              top: -100,
-              child: Image.asset('images/about_us_bg.png', scale: 0.8),
-            ),
-            ScrollableContentWidget(title: 'O NAMA', content: _description)
-          ],
-        ),
+        body: ScrollableContentWidget(title: 'O NAMA', content: _description),
       ),
     );
   }

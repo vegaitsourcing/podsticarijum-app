@@ -12,7 +12,7 @@ class ScrollableContentWidget extends StatelessWidget {
   final String title;
   final String content;
 
-  int get backgroundOffset => subtitle != null ? 0 : -100;
+  double get backgroundOffset => subtitle != null ? 0 : -100;
 
   @override
   Widget build(BuildContext context) {
@@ -20,7 +20,7 @@ class ScrollableContentWidget extends StatelessWidget {
       child: Stack(
         children: [
           Positioned(
-            top: 0,
+            top: backgroundOffset,
             child: Image.asset('images/about_us_bg.png', scale: 0.8),
           ),
           Padding(
