@@ -1,0 +1,4 @@
+enum FlagType {
+  green,
+  red;
+}

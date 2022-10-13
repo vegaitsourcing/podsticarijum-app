@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
 class ClothingDonationScreen extends StatelessWidget {
+  static String route = '/clothing_donation';
+
   const ClothingDonationScreen({super.key});
 
   @override
