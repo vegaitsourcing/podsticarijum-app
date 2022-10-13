@@ -20,14 +20,14 @@ class ScreenExperts extends StatelessWidget {
         [
           DefaultHeader(context, "Tim $teamNumber"),
           const SizedBox(height: 68),
-          TextWithHeaderWidget(
-              "Petar Peric", _description, 'images/image-placeholder.png'),
+          TextWithHeaderWidget("Petar Peric", _description,
+              imageUrl: 'images/image-placeholder.png'),
           const SizedBox(height: 68),
-          TextWithHeaderWidget(
-              "Nikola Ivanovic", _description, 'images/image-placeholder.png'),
+          TextWithHeaderWidget("Nikola Ivanovic", _description,
+              imageUrl: 'images/image-placeholder.png'),
           const SizedBox(height: 68),
           TextWithHeaderWidget("Djuro Radusinovic", _description,
-              'images/image-placeholder.png'),
+              imageUrl: 'images/image-placeholder.png'),
           const SizedBox(height: 20),
         ],
       ),

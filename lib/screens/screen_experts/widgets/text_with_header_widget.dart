@@ -7,9 +7,10 @@ class TextWithHeaderWidget extends StatelessWidget {
   final String text;
   final double spacing;
   final String imageUrl;
+  final bool hasImage;
 
-  const TextWithHeaderWidget(this.header, this.text, this.imageUrl,
-      {Key? key, this.spacing = 20.0})
+  const TextWithHeaderWidget(this.header, this.text,
+      {Key? key, this.imageUrl = "", this.spacing = 20.0, this.hasImage = true})
       : super(key: key);
 
   @override
@@ -17,7 +18,9 @@ class TextWithHeaderWidget extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        HeaderWithPhotoWidget(header, imageUrl),
+        hasImage
+            ? HeaderWithPhotoWidget(header, imageUrl)
+            : DefaultHeader(context, header),
         SizedBox(height: spacing),
         Text(
           text,

@@ -12,19 +12,22 @@ class CustomOutlineButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        Container(
-          height: 70,
-          width: width,
-          child: OutlinedButton(
-            onPressed: onClick,
-            style: ButtonStyle(
-              backgroundColor: MaterialStateProperty.all(Colors.white),
-            ),
-            child: Padding(
-              padding: const EdgeInsets.all(15.0),
-              child: Text(
-                text.toUpperCase(),
-                style: Theme.of(context).textTheme.headlineSmall,
+        Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 20.0),
+          child: Container(
+            height: 70,
+            width: width,
+            child: OutlinedButton(
+              onPressed: onClick,
+              style: ButtonStyle(
+                backgroundColor: MaterialStateProperty.all(Colors.white),
+              ),
+              child: Padding(
+                padding: const EdgeInsets.all(15.0), //doesn't have an effect
+                child: Text(
+                  text.toUpperCase(),
+                  style: Theme.of(context).textTheme.headlineSmall,
+                ),
               ),
             ),
           ),

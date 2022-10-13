@@ -1,8 +1,9 @@
+import 'package:app_for_family_backup/common/screens/screen_go_back_with_message.dart';
+
 import 'screens/screen_about_us/screen_about_us.dart';
 import 'screens/screen_ask_expert/screen_ask_expert_form.dart';
 import 'screens/screen_ask_expert/screen_ask_expert_category.dart';
 import 'screens/screen_clothing_donation/screen_clothing_donation.dart';
-import 'screens/../common/widgets/custom_outline_button.dart';
 import 'screens/screen_experts/screen_experts.dart';
 import 'screens/screen_introduction/screen_splash.dart';
 import 'screens/screen_introduction/screen_start.dart';
@@ -24,7 +25,8 @@ void main() => runApp(
           ),
         ),
         title: "App for family backup",
-        initialRoute: '/', // TODO: Change back to start screen
+        initialRoute:
+            ScreenClothingDonation.route, // TODO: Change back to start screen
         routes: {
           '/': (context) => ScreenExperts(1),
           ScreenLogin.route: (context) => ScreenLogin(),
@@ -32,11 +34,16 @@ void main() => runApp(
           ScreenAboutUs.route: (context) => ScreenAboutUs(),
           ScreenAskExpertCategory.route: (context) => ScreenAskExpertCategory(),
           ScreenExperts.route: (context) => ScreenExperts(1),
-          ScreenClothingDonation.route: (context) => ScreenClothingDonation(),
+          ScreenClothingDonation.route: (context) => ScreenClothingDonation(
+              "masu masu pitanja", "masu masu informacija", "Header"),
           ScreenSplash.route: (context) => ScreenSplash(),
           StartScreen.route: (context) => StartScreen(),
           ScreenAskExpertCategory.route: (context) => ScreenAskExpertCategory(),
           ScreenAskExpertForm.route: (context) => ScreenAskExpertForm(),
+          ScreenGoBackWithMessage.route: ((context) => ScreenGoBackWithMessage(
+              "Hvala na postavljenom pitanju, na vašu e-mail adresu će uskooro stići odgovor!",
+              buttonText: "Vrati se na početni ekran",
+              () {})),
         },
       ),
     );
