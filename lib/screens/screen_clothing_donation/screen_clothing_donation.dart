@@ -5,11 +5,11 @@ import 'package:flutter/material.dart';
 
 class ScreenDonation extends StatelessWidget {
   static String route = '/clothing_donation';
-  final String najcescaPitanja;
+  final String opisDonacija;
   final String informacije;
   final String header;
 
-  const ScreenDonation(this.najcescaPitanja, this.informacije, this.header,
+  const ScreenDonation(this.opisDonacija, this.informacije, this.header,
       {super.key});
 
   @override
@@ -28,7 +28,7 @@ class ScreenDonation extends StatelessWidget {
                 ),
                 TextWithHeaderWidget(
                   header,
-                  najcescaPitanja,
+                  opisDonacija,
                   hasImage: false,
                   spacing: 50,
                 ),

@@ -1,4 +1,5 @@
 import 'package:app_for_family_backup/common/screens/screen_go_back_with_message.dart';
+import 'package:app_for_family_backup/screens/screen_frequent_questions/screen_frequent_questions.dart';
 
 import 'screens/screen_about_us/screen_about_us.dart';
 import 'screens/screen_ask_expert/screen_ask_expert_form.dart';
@@ -25,7 +26,8 @@ void main() => runApp(
           ),
         ),
         title: "App for family backup",
-        initialRoute: ScreenDonation.route, // TODO: Change back to start screen
+        initialRoute:
+            ScreenFrequentQuestions.route, // TODO: Change back to start screen
         routes: {
           ScreenStart.route: (context) => ScreenStart(),
           ScreenLogin.route: (context) => ScreenLogin(),
@@ -34,11 +36,17 @@ void main() => runApp(
           ScreenAskExpertCategory.route: (context) => ScreenAskExpertCategory(),
           ScreenExperts.route: (context) => ScreenExperts(1),
           ScreenDonation.route: (context) => ScreenDonation(
-              "masu masu pitanja", "masu masu informacija", "Header"),
+                "masu masu pitanja",
+                "masu masu informacija",
+                "Header",
+              ),
           ScreenSplash.route: (context) => ScreenSplash(),
           ScreenStart.route: (context) => ScreenStart(),
           ScreenAskExpertCategory.route: (context) => ScreenAskExpertCategory(),
           ScreenAskExpertForm.route: (context) => ScreenAskExpertForm(),
+          ScreenFrequentQuestions.route: (context) => ScreenFrequentQuestions({
+                "neko pitanja": "neki odgovor",
+              }, 'Najčešća pitanja'),
           ScreenGoBackWithMessage.route: ((context) => ScreenGoBackWithMessage(
                 "Hvala na postavljenom pitanju, na vašu e-mail adresu će uskooro stići odgovor!",
                 buttonText: "Vrati se na početni ekran",
