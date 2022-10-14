@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-Widget DefaultBackground(BuildContext context, List<Widget> children,
+Widget DefaultContainer(BuildContext context, List<Widget> children,
     {double scale = 0.8}) {
   return Stack(
     children: [

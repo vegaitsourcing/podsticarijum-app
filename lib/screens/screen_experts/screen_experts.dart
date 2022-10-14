@@ -14,7 +14,7 @@ class ScreenExperts extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: CustomAppBar(backgroundPaint: BackgroundPaint.Yellow),
-      body: DefaultBackground(
+      body: DefaultContainer(
         context,
         scale: 0.85,
         [

@@ -40,9 +40,10 @@ void main() => runApp(
           ScreenAskExpertCategory.route: (context) => ScreenAskExpertCategory(),
           ScreenAskExpertForm.route: (context) => ScreenAskExpertForm(),
           ScreenGoBackWithMessage.route: ((context) => ScreenGoBackWithMessage(
-              "Hvala na postavljenom pitanju, na vašu e-mail adresu će uskooro stići odgovor!",
-              buttonText: "Vrati se na početni ekran",
-              () {})),
+                "Hvala na postavljenom pitanju, na vašu e-mail adresu će uskooro stići odgovor!",
+                buttonText: "Vrati se na početni ekran",
+                () {},
+              )),
         },
       ),
     );

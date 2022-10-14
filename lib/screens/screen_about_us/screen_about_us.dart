@@ -26,7 +26,7 @@ class ScreenAboutUs extends StatelessWidget {
     return SafeArea(
       child: Scaffold(
         appBar: CustomAppBar(backgroundPaint: BackgroundPaint.Yellow),
-        body: DefaultBackground(context, buildScreenContent(context)),
+        body: DefaultContainer(context, buildScreenContent(context)),
       ),
     );
   }
