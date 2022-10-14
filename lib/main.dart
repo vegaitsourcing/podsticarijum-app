@@ -1,4 +1,5 @@
 import 'package:app_for_family_backup/common/theme.dart';
+import 'package:app_for_family_backup/screens/menu_screen/menu_screen.dart';
 import 'package:flutter/material.dart';
 import 'screens/about_us_screen/about_us_screen.dart';
 import 'screens/ask_expert_screen/ask_expert_screen.dart';
@@ -20,7 +21,7 @@ class FamilyBackupApp extends StatelessWidget {
     return MaterialApp(
       theme: FamilyBackupTheme.familyAppThemeData,
       title: "App for family backup",
-      initialRoute: CategoryDetailsScreen.route, // TODO: Change back to start screen
+      initialRoute: MenuScreen.route, // TODO: Change back to start screen
       routes: {
         '/': (context) => StartScreen(),
         LoginScreen.route: (context) => LoginScreen(),
@@ -32,6 +33,7 @@ class FamilyBackupApp extends StatelessWidget {
         SplashScreen.route: (context) => SplashScreen(),
         StartScreen.route: (context) => StartScreen(),
         CategoryDetailsScreen.route: (context) => CategoryDetailsScreen(),
+        MenuScreen.route: (context) => MenuScreen(),
       },
     );
   }
