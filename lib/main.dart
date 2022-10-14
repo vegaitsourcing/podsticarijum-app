@@ -44,9 +44,16 @@ void main() => runApp(
           ScreenStart.route: (context) => ScreenStart(),
           ScreenAskExpertCategory.route: (context) => ScreenAskExpertCategory(),
           ScreenAskExpertForm.route: (context) => ScreenAskExpertForm(),
-          ScreenFrequentQuestions.route: (context) => ScreenFrequentQuestions({
-                "neko pitanja": "neki odgovor",
-              }, 'Najčešća pitanja'),
+          ScreenFrequentQuestions.route: (context) =>
+              ScreenFrequentQuestions(const {
+                "neko pitanje": "neki odgovor",
+                "neko pitanje 2": "neki odgovor 2",
+                "neko pitanje 3": "neki odgovor 3",
+                "PITANJE ALLOO": "neki odgovor",
+                "neko pitanje 5": "neki odgovor",
+                "neko pitanje 6": "neki odgovor",
+                "neko pitanje 7": "neki odgovor",
+              }, "Motorički razvoj"),
           ScreenGoBackWithMessage.route: ((context) => ScreenGoBackWithMessage(
                 "Hvala na postavljenom pitanju, na vašu e-mail adresu će uskooro stići odgovor!",
                 buttonText: "Vrati se na početni ekran",

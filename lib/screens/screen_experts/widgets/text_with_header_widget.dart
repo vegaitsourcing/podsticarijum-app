@@ -1,5 +1,5 @@
-import 'package:app_for_family_backup/common/widgets/default_header.dart';
-import 'package:app_for_family_backup/screens/screen_experts/widgets/header_with_photo_widget.dart';
+import '../../../common/widgets/default_header.dart';
+import '../../../screens/screen_experts/widgets/header_with_photo_widget.dart';
 import 'package:flutter/material.dart';
 
 class TextWithHeaderWidget extends StatelessWidget {
@@ -8,10 +8,19 @@ class TextWithHeaderWidget extends StatelessWidget {
   final double spacing;
   final String imageUrl;
   final bool hasImage;
+  final TextStyle? textStyle;
+  final bool hasBorder;
 
-  const TextWithHeaderWidget(this.header, this.text,
-      {Key? key, this.imageUrl = "", this.spacing = 20.0, this.hasImage = true})
-      : super(key: key);
+  const TextWithHeaderWidget(
+    this.header,
+    this.text, {
+    Key? key,
+    this.imageUrl = "",
+    this.spacing = 20.0,
+    this.hasImage = true,
+    this.textStyle = null,
+    this.hasBorder = true,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -24,13 +33,15 @@ class TextWithHeaderWidget extends StatelessWidget {
         SizedBox(height: spacing),
         Text(
           text,
-          style: Theme.of(context).textTheme.bodyText1,
+          style: textStyle ?? Theme.of(context).textTheme.bodyText1,
         ),
         SizedBox(height: spacing),
-        Image.asset(
-          width: double.infinity,
-          'images/border_dot_line.png',
-        ),
+        hasBorder
+            ? Image.asset(
+                width: double.infinity,
+                'images/border_dot_line.png',
+              )
+            : SizedBox.shrink(),
       ],
     );
   }

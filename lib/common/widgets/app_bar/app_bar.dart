@@ -37,10 +37,10 @@ class mAppBar extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
         Text(
-            style: Theme.of(context)
-                .textTheme
-                .headlineSmall, // to be updated in overall theme class
-            "APP FOR FAMILY BACKUP"),
+            style: Theme.of(context).textTheme.headlineSmall?.copyWith(
+                fontWeight:
+                    FontWeight.bold), // to be updated in overall theme class
+            "Podsticarijum"),
         IconButton(
           onPressed: () {},
           icon: const Icon(
