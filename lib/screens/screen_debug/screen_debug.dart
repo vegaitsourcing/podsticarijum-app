@@ -31,7 +31,7 @@ class ScreenDebug extends StatelessWidget {
               Navigator.pushNamed(context, ScreenAskExpertCategory.route);
             }),
             CustomOutlineButton("Donacija robe", () {
-              Navigator.pushNamed(context, ScreenClothingDonation.route);
+              Navigator.pushNamed(context, ScreenDonation.route);
             }),
             CustomOutlineButton("O nama", () {
               Navigator.pushNamed(context, ScreenAboutUs.route);

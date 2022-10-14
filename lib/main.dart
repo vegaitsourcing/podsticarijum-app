@@ -25,19 +25,18 @@ void main() => runApp(
           ),
         ),
         title: "App for family backup",
-        initialRoute:
-            ScreenClothingDonation.route, // TODO: Change back to start screen
+        initialRoute: ScreenDonation.route, // TODO: Change back to start screen
         routes: {
-          '/': (context) => ScreenExperts(1),
+          ScreenStart.route: (context) => ScreenStart(),
           ScreenLogin.route: (context) => ScreenLogin(),
           ScreenRegister.route: (context) => ScreenRegister(),
           ScreenAboutUs.route: (context) => ScreenAboutUs(),
           ScreenAskExpertCategory.route: (context) => ScreenAskExpertCategory(),
           ScreenExperts.route: (context) => ScreenExperts(1),
-          ScreenClothingDonation.route: (context) => ScreenClothingDonation(
+          ScreenDonation.route: (context) => ScreenDonation(
               "masu masu pitanja", "masu masu informacija", "Header"),
           ScreenSplash.route: (context) => ScreenSplash(),
-          StartScreen.route: (context) => StartScreen(),
+          ScreenStart.route: (context) => ScreenStart(),
           ScreenAskExpertCategory.route: (context) => ScreenAskExpertCategory(),
           ScreenAskExpertForm.route: (context) => ScreenAskExpertForm(),
           ScreenGoBackWithMessage.route: ((context) => ScreenGoBackWithMessage(

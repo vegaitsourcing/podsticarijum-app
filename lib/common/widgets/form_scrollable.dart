@@ -6,12 +6,12 @@ class FormScrollable extends StatefulWidget {
   final String submitButtonText;
   final Function onValidCallback; // data contains information about
 
-  FormScrollable(
-      {Key? key,
-      required this.children,
-      required this.submitButtonText,
-      required this.onValidCallback})
-      : super(key: key);
+  FormScrollable({
+    Key? key,
+    required this.children,
+    required this.submitButtonText,
+    required this.onValidCallback,
+  }) : super(key: key);
 
   @override
   State<FormScrollable> createState() => _FormScrollableState();

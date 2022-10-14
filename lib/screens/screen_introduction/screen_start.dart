@@ -2,10 +2,10 @@ import 'package:app_for_family_backup/common/widgets/app_bar/app_bar.dart';
 import 'package:app_for_family_backup/common/widgets/custom_outline_button.dart';
 import 'package:flutter/material.dart';
 
-class StartScreen extends StatelessWidget {
+class ScreenStart extends StatelessWidget {
   static String route = "/start_screen";
 
-  const StartScreen({super.key});
+  const ScreenStart({super.key});
 
   @override
   Widget build(BuildContext context) {

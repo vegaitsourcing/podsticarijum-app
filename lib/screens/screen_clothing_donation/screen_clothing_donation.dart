@@ -3,14 +3,13 @@ import 'package:app_for_family_backup/common/widgets/default_background.dart';
 import 'package:app_for_family_backup/screens/screen_experts/widgets/text_with_header_widget.dart';
 import 'package:flutter/material.dart';
 
-class ScreenClothingDonation extends StatelessWidget {
+class ScreenDonation extends StatelessWidget {
   static String route = '/clothing_donation';
   final String najcescaPitanja;
   final String informacije;
   final String header;
 
-  const ScreenClothingDonation(
-      this.najcescaPitanja, this.informacije, this.header,
+  const ScreenDonation(this.najcescaPitanja, this.informacije, this.header,
       {super.key});
 
   @override

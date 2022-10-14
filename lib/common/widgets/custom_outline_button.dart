@@ -5,8 +5,7 @@ class CustomOutlineButton extends StatelessWidget {
   final double width;
   final Function() onClick;
 
-  CustomOutlineButton(@required this.text, @required this.onClick,
-      {this.width = double.infinity});
+  CustomOutlineButton(this.text, this.onClick, {this.width = double.infinity});
 
   @override
   Widget build(BuildContext context) {
@@ -32,9 +31,7 @@ class CustomOutlineButton extends StatelessWidget {
             ),
           ),
         ),
-        SizedBox(
-          height: 20, // mimics bottom margin
-        )
+        SizedBox(height: 20) //mimics button margin
       ],
     );
   }
