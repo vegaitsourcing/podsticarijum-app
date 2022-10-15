@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../../common/widgets/app_bar/new_app_bar.dart';
 import '../../common/widgets/default_header.dart';
-import '../experts_screen/widgets/text_with_header_widget.dart';
+import '../../common/widgets/info_section_widget.dart';
 import '../../common/widgets/default_container.dart';
 
 Widget questionAnswerWidget(
@@ -13,9 +13,9 @@ Widget questionAnswerWidget(
   return Column(
     children: [
       const SizedBox(height: 20),
-      TextWithHeaderWidget(
-        question,
-        answer,
+      InfoSectionWidget(
+        title: question,
+        content: answer,
         hasBorder: hasBorder,
         spacing: 15,
       ),
