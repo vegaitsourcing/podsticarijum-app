@@ -34,8 +34,11 @@ class NewAppBar extends StatelessWidget implements PreferredSizeWidget {
       );
     } else {
       return IconButton(
-        onPressed: () => Navigator.maybePop(context),
-        icon: const Icon(Icons.close),
+        onPressed: () => Navigator.pop(context),
+        icon: const Icon(
+          Icons.close,
+          color: Colors.black,
+        ),
       );
     }
   }

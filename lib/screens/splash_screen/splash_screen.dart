@@ -45,7 +45,7 @@ class SplashScreen extends StatelessWidget {
             padding: const EdgeInsets.symmetric(horizontal: 20),
             child: CustomOutlineButton(
               text: "Počni",
-              onClick: () => Navigator.pushReplacementNamed(
+              onClick: () => Navigator.popAndPushNamed(
                 context,
                 CategoriesScreen.route,
               ),
