@@ -30,7 +30,7 @@ class _ExpertFormScreenState extends State<ExpertFormScreen> {
             padding: const EdgeInsets.only(bottom: 30.0),
             child: Text(
               "Postavi pitanje",
-              style: Theme.of(context).textTheme.headline2,
+              style: Theme.of(context).textTheme.headline3,
             ),
           ),
           CustomTextFormField(

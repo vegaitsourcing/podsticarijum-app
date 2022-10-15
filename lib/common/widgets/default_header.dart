@@ -6,7 +6,7 @@ Text DefaultHeader(BuildContext context, String text) {
     textAlign: TextAlign.start,
     style: Theme.of(context)
         .textTheme
-        .headline2
+        .headline3
         ?.copyWith(color: const Color(0xFF06070D)),
   );
 }

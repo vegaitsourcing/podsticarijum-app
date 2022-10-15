@@ -82,6 +82,7 @@ flutter:
     - family: Amatic SC
       fonts:
         - asset: fonts/AmaticSC-Regular.ttf
+          weight: 400
         - asset: fonts/AmaticSC-Bold.ttf
           style: normal
           weight: 700

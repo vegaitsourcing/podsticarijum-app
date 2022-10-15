@@ -7,7 +7,7 @@ import 'screens/donation_screen/donation_screen.dart';
 import 'screens/frequent_questions_screen/frequent_questions_screen.dart';
 import 'screens/about_us_screen/screen_about_us.dart';
 import 'screens/ask_expert_screen/ask_expert_form_screen.dart';
-import 'screens/ask_expert_screen/ask_expert_category_screen.dart';
+import 'screens/ask_expert_screen/faq_categories_screen.dart';
 import 'screens/experts_screen/experts_screen.dart';
 import 'screens/menu_screen/menu_screen.dart';
 import 'screens/splash_screen/splash_screen.dart';
@@ -23,11 +23,11 @@ class FamilyBackupApp extends StatelessWidget {
     return MaterialApp(
       theme: FamilyBackupTheme.familyAppThemeData,
       title: 'Podsticarium',
-      initialRoute: AboutUsScreen.route,
+      initialRoute: FaqCategoriesScreen.route,
       routes: {
         MenuScreen.route: (context) => MenuScreen(),
-        AboutUsScreen.route: (context) => AboutUsScreen(),
-        AskExpertCategoryScreen.route: (context) => AskExpertCategoryScreen(),
+        AboutUsScreen.route: (context) => const AboutUsScreen(),
+        FaqCategoriesScreen.route: (context) => FaqCategoriesScreen(),
         ExpertsScreen.route: (context) => ExpertsScreen(1),
         DonationScreen.route: (context) => DonationScreen(
               "masu masu pitanja",

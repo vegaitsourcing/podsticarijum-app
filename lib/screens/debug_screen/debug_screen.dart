@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../about_us_screen/screen_about_us.dart';
-import '../ask_expert_screen/ask_expert_category_screen.dart';
+import '../ask_expert_screen/faq_categories_screen.dart';
 import '../../common/widgets/custom_outline_button.dart';
 import '../donation_screen/donation_screen.dart';
 import '../experts_screen/experts_screen.dart';
@@ -20,7 +20,7 @@ class DebugScreen extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             CustomOutlineButton("Pitaj stručnjaka", () {
-              Navigator.pushNamed(context, AskExpertCategoryScreen.route);
+              Navigator.pushNamed(context, FaqCategoriesScreen.route);
             }),
             CustomOutlineButton("Donacija robe", () {
               Navigator.pushNamed(context, DonationScreen.route);
