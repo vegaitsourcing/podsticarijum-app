@@ -13,7 +13,7 @@ class SplashScreen extends StatelessWidget {
       backgroundColor: Color.fromRGBO(236, 239, 171, 1.000),
       body: centeredContainerWithFooter(
         context,
-        containerWithImageAndText(context, 'images/cloud-with-heart.png',
+        containerWithImageAndText(context, 'images/cloud_with_heart.png',
             DefaultHeader(context, "Podsticarijum")),
         Column(
           children: [

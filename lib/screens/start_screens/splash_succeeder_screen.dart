@@ -21,7 +21,7 @@ class SplashSucceederScreen extends StatelessWidget {
             Column(mainAxisAlignment: MainAxisAlignment.spaceEvenly, children: [
           containerWithImageAndText(
             context,
-            'images/cloud-with-heart.png',
+            'images/cloud_with_heart.png',
             DefaultHeader(context, "Podsticarijum"),
           ),
           Text(

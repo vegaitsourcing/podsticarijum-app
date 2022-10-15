@@ -93,7 +93,7 @@ class GoBackWithMessageScreen extends StatelessWidget {
       appBar: CustomAppBar(backgroundPaint: BackgroundPaint.Yellow),
       body: centeredContainerWithFooter(
         context,
-        containerWithImageAndText(context, 'images/cloud-with-heart.png',
+        containerWithImageAndText(context, 'images/cloud_with_heart.png',
             _textWidget(context, message)),
         CustomOutlineButton(buttonText, onClick),
       ),
