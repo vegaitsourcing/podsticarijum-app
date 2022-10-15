@@ -21,6 +21,11 @@ class FamilyBackupTheme {
         color: Color(0xFF06070D),
       ),
       headline4: TextStyle(fontSize: 30.0, color: Color(0xFF06070D)),
+      headline5: TextStyle(
+        fontSize: 20.0,
+        color: Color(0xFF06070D),
+        fontWeight: FontWeight.bold,
+      ),
       headline6: TextStyle(fontSize: 20.0, color: Color(0xFF06070D)),
       bodyText1: TextStyle(fontSize: 16.0, fontFamily: 'Montserrat'),
     ),

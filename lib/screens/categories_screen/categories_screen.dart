@@ -4,10 +4,18 @@ import 'package:flutter/material.dart';
 import '../../common/enums/app_bar_type.dart';
 import '../../common/widgets/custom_outline_button.dart';
 
-class CategoriesScreen extends StatelessWidget {
-  static const route = '/categories';
+class SubCategoriesScreen extends StatelessWidget {
+  static const route = '/subcategories';
+  static const double _padding = 12;
+  static const List<String> subCategories = [
+    'Motorički razvoj',
+    'Govorno-jezički razvoj',
+    'Senzo-motorički razvoj',
+    'Socio-emotivni razvoj',
+    'Kognitivni razvoj',
+  ];
 
-  const CategoriesScreen({Key? key}) : super(key: key);
+  const SubCategoriesScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -17,20 +25,25 @@ class CategoriesScreen extends StatelessWidget {
         appBar: const NewAppBar(appBarType: AppBarType.rootNav),
         body: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 21),
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              CustomOutlineButton(text: "0-1 godina", onClick: () {}),
-              const SizedBox(height: 12),
-              CustomOutlineButton(text: "1-3 godina", onClick: () {}),
-              const SizedBox(height: 12),
-              CustomOutlineButton(text: "3-5 godina", onClick: () {}),
-              const SizedBox(height: 12),
-              CustomOutlineButton(text: "5-7 godina", onClick: () {}),
-            ],
+          child: SingleChildScrollView(
+            //scroll view to support all screens
+            child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  ...subCategories.map((e) => _getColumnElement(e)).toList()
+                ]),
           ),
         ),
       ),
+    );
+  }
+
+  Widget _getColumnElement(String buttonText) {
+    return Column(
+      children: [
+        CustomOutlineButton(text: buttonText, onClick: () {}),
+        const SizedBox(height: 12),
+      ],
     );
   }
 }

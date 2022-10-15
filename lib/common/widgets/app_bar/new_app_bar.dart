@@ -4,10 +4,11 @@ import '../../../screens/menu_screen/menu_screen.dart';
 import '../../enums/app_bar_type.dart';
 
 class NewAppBar extends StatelessWidget implements PreferredSizeWidget {
+  static const double _topMargin = 30;
   const NewAppBar({
     Key? key,
     this.appBarType = AppBarType.rootNav,
-  })  : preferredSize = const Size.fromHeight(kToolbarHeight),
+  })  : preferredSize = const Size.fromHeight(kToolbarHeight + _topMargin),
         super(key: key);
 
   final AppBarType appBarType;
@@ -42,13 +43,18 @@ class NewAppBar extends StatelessWidget implements PreferredSizeWidget {
 
   @override
   Widget build(BuildContext context) {
-    return AppBar(
-      automaticallyImplyLeading: false,
-      backgroundColor: getBackgroundColor(context),
-      title: const Text('Podsticarium'),
-      titleTextStyle: Theme.of(context).textTheme.headline6,
-      elevation: 0,
-      actions: [buildMenuAction(context)],
+    return Column(
+      children: [
+        SizedBox(height: _topMargin),
+        AppBar(
+          automaticallyImplyLeading: false,
+          backgroundColor: getBackgroundColor(context),
+          title: Text('Podsticarium'),
+          titleTextStyle: Theme.of(context).textTheme.headline5,
+          elevation: 0,
+          actions: [buildMenuAction(context)],
+        ),
+      ],
     );
   }
 }
