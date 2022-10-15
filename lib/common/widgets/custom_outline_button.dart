@@ -3,22 +3,25 @@ import 'package:flutter/material.dart';
 class CustomOutlineButton extends StatelessWidget {
   final String text;
   final Function() onClick;
+  final bool isYellow;
 
   CustomOutlineButton({
     super.key,
     required this.text,
     required this.onClick,
+    this.isYellow = false,
   });
 
   @override
   Widget build(BuildContext context) {
     return Container(
       height: 100,
-      // color: Colors.green,
       width: MediaQuery.of(context).size.width,
-      decoration: const BoxDecoration(
+      decoration: BoxDecoration(
         image: DecorationImage(
-          image: AssetImage('images/button_bg.png'),
+          image: isYellow
+              ? const AssetImage('images/button_bg_yellow.png')
+              : const AssetImage('images/button_bg.png'),
           fit: BoxFit.contain,
         ),
       ),

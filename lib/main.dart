@@ -1,3 +1,4 @@
+import 'package:app_for_family_backup/screens/ask_expert_screen/ask_expert_form_screen.dart';
 import 'package:flutter/material.dart';
 
 import 'common/theme.dart';
@@ -23,7 +24,7 @@ class FamilyBackupApp extends StatelessWidget {
     return MaterialApp(
       theme: FamilyBackupTheme.familyAppThemeData,
       title: 'Podsticarium',
-      initialRoute: FaqCategoriesScreen.route,
+      initialRoute: AskExpertFormScreen.route,
       routes: {
         SplashScreen.route: (context) => SplashScreen(),
         SubCategoriesScreen.route: (context) => const SubCategoriesScreen(),
@@ -33,6 +34,7 @@ class FamilyBackupApp extends StatelessWidget {
         ExpertsScreen.route: (context) => const ExpertsScreen(),
         DonationScreen.route: (context) => const DonationScreen(),
         CategoryDetailsScreen.route: (context) => const CategoryDetailsScreen(),
+        AskExpertFormScreen.route: (context) => AskExpertFormScreen(),
         CategoriesScreen.route: (context) => const CategoriesScreen(),
         FrequentQuestionsScreen.route: (context) =>
             FrequentQuestionsScreen(const {
