@@ -1,10 +1,10 @@
-import 'package:app_for_family_backup/screens/about_us_screen/about_us_screen.dart';
-import 'package:app_for_family_backup/screens/ask_expert_screen/ask_expert_screen.dart';
-import 'package:app_for_family_backup/screens/clothing_donation_screen/clothing_donation_screen.dart';
-import 'package:app_for_family_backup/screens/experts_screen/experts_screen.dart';
+import 'package:app_for_family_backup/screens/ask_expert_screen/ask_expert_category_screen.dart';
 import 'package:flutter/material.dart';
 
 import '../../common/widgets/menu/menu_item.dart';
+import '../about_us_screen/screen_about_us.dart';
+import '../donation_screen/donation_screen.dart';
+import '../experts_screen/experts_screen.dart';
 
 class MenuScreen extends StatefulWidget {
   static const route = '/menu';
@@ -17,7 +17,7 @@ class MenuScreen extends StatefulWidget {
 
 class _MenuScreenState extends State<MenuScreen> {
   int? selectedItemId;
-  static const _navigationDelayMillis = 500;
+  static const _navigationDelayMillis = 300;
 
   void onMenuSelected(BuildContext context, int menuItemId) async {
     setState(() {
@@ -38,9 +38,9 @@ class _MenuScreenState extends State<MenuScreen> {
       case 2:
         return ExpertsScreen.route;
       case 3:
-        return ClothingDonationScreen.route;
+        return DonationScreen.route;
       case 4:
-        return AskExpertScreen.route;
+        return AskExpertCategoryScreen.route;
       default:
         return null;
     }
