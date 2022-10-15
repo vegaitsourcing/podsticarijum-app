@@ -1,8 +1,9 @@
-import '../../common/screens/go_back_with_message_screen.dart';
+import 'package:app_for_family_backup/screens/menu_screen/menu_screen.dart';
+import 'package:flutter/material.dart';
+
+import '../go_back_screen/go_back_with_message_screen.dart';
 import '../../common/widgets/custom_outline_button.dart';
 import '../../common/widgets/default_header.dart';
-import 'start_screen.dart';
-import 'package:flutter/material.dart';
 
 class SplashSucceederScreen extends StatelessWidget {
   final String text;
@@ -31,7 +32,7 @@ class SplashSucceederScreen extends StatelessWidget {
           CustomOutlineButton(
             "Počni",
             () {
-              Navigator.pushNamed(context, StartScreen.route);
+              // TODO: Add next screen;
             },
           ),
         ]),

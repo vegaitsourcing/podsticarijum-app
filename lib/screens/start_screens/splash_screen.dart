@@ -1,4 +1,4 @@
-import '../../common/screens/go_back_with_message_screen.dart';
+import '../go_back_screen/go_back_with_message_screen.dart';
 import '../../common/widgets/default_header.dart';
 import 'package:flutter/material.dart';
 
