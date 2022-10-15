@@ -1,15 +1,15 @@
-import 'package:app_for_family_backup/screens/ask_expert_screen/ask_expert_category_screen.dart';
 import 'package:flutter/material.dart';
 
-import '../../common/widgets/menu/menu_item.dart';
+import 'widgets/menu_item.dart';
 import '../about_us_screen/screen_about_us.dart';
+import '../ask_expert_screen/faq_categories_screen.dart';
 import '../donation_screen/donation_screen.dart';
 import '../experts_screen/experts_screen.dart';
 
 class MenuScreen extends StatefulWidget {
   static const route = '/menu';
 
-  MenuScreen({super.key});
+  const MenuScreen({super.key});
 
   @override
   State<MenuScreen> createState() => _MenuScreenState();
@@ -40,7 +40,7 @@ class _MenuScreenState extends State<MenuScreen> {
       case 3:
         return DonationScreen.route;
       case 4:
-        return AskExpertCategoryScreen.route;
+        return FaqCategoriesScreen.route;
       default:
         return null;
     }

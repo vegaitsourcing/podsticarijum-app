@@ -69,6 +69,8 @@ flutter:
     - images/image_placeholder.png
     - images/cloud_with_heart.png
     - images/czpn_logo.png
+    - images/menu_icon.png
+    - images/button_bg.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
@@ -80,6 +82,7 @@ flutter:
     - family: Amatic SC
       fonts:
         - asset: fonts/AmaticSC-Regular.ttf
+          weight: 400
         - asset: fonts/AmaticSC-Bold.ttf
           style: normal
           weight: 700

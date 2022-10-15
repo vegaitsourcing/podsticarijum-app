@@ -1,12 +1,13 @@
-import 'custom_outline_button.dart';
 import 'package:flutter/material.dart';
 
-class FormScrollable extends StatefulWidget {
+import 'custom_outline_button.dart';
+
+class ScrollableForm extends StatefulWidget {
   final List<Widget> children;
   final String submitButtonText;
   final Function onValidCallback; // data contains information about
 
-  FormScrollable({
+  const ScrollableForm({
     Key? key,
     required this.children,
     required this.submitButtonText,
@@ -14,20 +15,25 @@ class FormScrollable extends StatefulWidget {
   }) : super(key: key);
 
   @override
-  State<FormScrollable> createState() => _FormScrollableState();
+  State<ScrollableForm> createState() => _ScrollableFormState();
 }
 
-class _FormScrollableState extends State<FormScrollable> {
+class _ScrollableFormState extends State<ScrollableForm> {
   final _formKey = GlobalKey<FormState>();
 
   @override
   Widget build(BuildContext context) {
-    widget.children.add(CustomOutlineButton(widget.submitButtonText, () {
-      if (_formKey.currentState!.validate()) {
-        _formKey.currentState?.save();
-        widget.onValidCallback();
-      }
-    }));
+    widget.children.add(
+      CustomOutlineButton(
+        text: widget.submitButtonText,
+        onClick: () {
+          if (_formKey.currentState!.validate()) {
+            _formKey.currentState?.save();
+            widget.onValidCallback();
+          }
+        },
+      ),
+    );
 
     return SingleChildScrollView(
       child: Stack(
@@ -35,12 +41,12 @@ class _FormScrollableState extends State<FormScrollable> {
           Container(
             width: double.infinity,
             color: Colors.white,
-            padding: EdgeInsets.only(left: 20, right: 20),
+            padding: const EdgeInsets.symmetric(horizontal: 20),
           ),
           Form(
             key: _formKey,
             child: Container(
-              padding: EdgeInsets.only(left: 20, right: 20),
+              padding: const EdgeInsets.symmetric(horizontal: 20),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: widget.children,

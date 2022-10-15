@@ -53,7 +53,7 @@ class CategoryDetailsScreen extends StatelessWidget {
                     const SizedBox(height: 20),
                     Text(
                       'PODSTICARIJUMNE IGRE I AKTIVNOSTI, STIMULATIVNE ZA RAZVOJ VAŠE BEBE I DETETA',
-                      style: Theme.of(context).textTheme.headline2,
+                      style: Theme.of(context).textTheme.headline3,
                     ),
                     const SizedBox(height: 12),
                     const FlagSection(
@@ -84,7 +84,7 @@ class CategoryDetailsScreen extends StatelessWidget {
                   const SizedBox(height: 20),
                   Text(
                     'ZNAKOVI ODSTUPANJA OD NEUROTIPIČNOG RAZVOJA',
-                    style: Theme.of(context).textTheme.headline2,
+                    style: Theme.of(context).textTheme.headline3,
                   ),
                   const SizedBox(height: 12),
                   const FlagSection(
