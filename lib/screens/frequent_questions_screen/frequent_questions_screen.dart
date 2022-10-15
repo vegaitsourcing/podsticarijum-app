@@ -1,5 +1,5 @@
 import '../../common/widgets/default_header.dart';
-import '../screen_experts/widgets/text_with_header_widget.dart';
+import '../experts_screen/widgets/text_with_header_widget.dart';
 import '../../common/widgets/default_background.dart';
 import '../../common/widgets/app_bar/app_bar.dart';
 import 'package:flutter/material.dart';
@@ -66,6 +66,5 @@ class FrequentQuestionsScreen extends StatelessWidget {
         ],
       ),
     );
-    ;
   }
 }
