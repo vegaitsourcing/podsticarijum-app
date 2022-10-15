@@ -20,9 +20,8 @@ class SplashSucceederScreen extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
-            containerWithImageAndText(
+            buildLogoWidget(
               context,
-              'images/cloud_with_heart.png',
               buildTitle(context, "Podsticarijum"),
             ),
             Text(

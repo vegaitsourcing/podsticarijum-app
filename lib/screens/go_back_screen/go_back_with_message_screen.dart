@@ -4,7 +4,6 @@ import '../../common/widgets/app_bar/new_app_bar.dart';
 import '../../common/widgets/custom_outline_button.dart';
 import '../../common/widgets/useful_widgets.dart';
 
-
 class GoBackWithMessageScreen extends StatelessWidget {
   static const String route = "/go_back_with_message_screen";
 
@@ -22,9 +21,7 @@ class GoBackWithMessageScreen extends StatelessWidget {
       backgroundColor: Color.fromRGBO(236, 239, 171, 1.000),
       appBar: const NewAppBar(),
       body: centeredContainerWithFooter(
-        context,
-        containerWithImageAndText(context, 'images/cloud_with_heart.png',
-            textWidget(context, message)),
+        buildLogoWidget(context, textWidget(context, message)),
         CustomOutlineButton(buttonText, onClick),
       ),
     );

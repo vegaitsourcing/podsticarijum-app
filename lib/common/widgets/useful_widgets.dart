@@ -10,14 +10,13 @@ Text textWidget(BuildContext context, String text) {
   );
 }
 
-Widget containerWithImageAndText(
+Widget buildLogoWidget(
   BuildContext context,
-  String imgUrl,
   Text textWidget,
 ) {
   return Container(
-    width: MediaQuery.of(context).size.width,
-    color: const Color.fromRGBO(236, 239, 171, 1.000),
+    color: Theme.of(context).primaryColor,
+    padding: const EdgeInsets.symmetric(horizontal: 20),
     child: Stack(
       fit: StackFit.loose,
       alignment: Alignment.center,
@@ -25,7 +24,7 @@ Widget containerWithImageAndText(
         Container(
           width: double.infinity,
           child: Image.asset(
-            imgUrl,
+            'images/cloud_with_heart.png',
             scale: 0.5,
           ),
         ),
@@ -40,24 +39,32 @@ Widget containerWithImageAndText(
   );
 }
 
+Widget buildFooterWidget(BuildContext context) => Column(
+      children: [
+        Text(
+          "Powered by",
+          style: Theme.of(context).textTheme.bodyText1,
+        ),
+        Image.asset('images/czpn_logo.png'),
+        const SizedBox(height: 30)
+      ],
+    );
+
 Widget centeredContainerWithFooter(
-  BuildContext context,
   Widget centeredWidget,
   Widget footerWidget,
 ) {
   return Container(
     height: double.infinity,
     child: Stack(
+      alignment: Alignment.center,
       children: [
-        Positioned(
-          child: Align(
-            alignment: Alignment.center,
-            child: centeredWidget,
-          ),
+        Align(
+          alignment: Alignment.center,
+          child: centeredWidget,
         ),
         Positioned(
           bottom: 0,
-          width: MediaQuery.of(context).size.width,
           child: Align(
             alignment: Alignment.bottomCenter,
             child: footerWidget,

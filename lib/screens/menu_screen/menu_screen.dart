@@ -9,7 +9,7 @@ import '../experts_screen/experts_screen.dart';
 class MenuScreen extends StatefulWidget {
   static const route = '/menu';
 
-  MenuScreen({super.key});
+  const MenuScreen({super.key});
 
   @override
   State<MenuScreen> createState() => _MenuScreenState();

@@ -11,21 +11,13 @@ class SplashScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color.fromRGBO(236, 239, 171, 1.000),
+      backgroundColor: Theme.of(context).primaryColor,
       body: centeredContainerWithFooter(
-        context,
-        containerWithImageAndText(context, 'images/cloud_with_heart.png',
-            buildTitle(context, "Podsticarijum")),
-        Column(
-          children: [
-            Text(
-              "Powered by",
-              style: Theme.of(context).textTheme.bodyText1,
-            ),
-            Image.asset('images/czpn_logo.png'),
-            const SizedBox(height: 30)
-          ],
+        buildLogoWidget(
+          context,
+          buildTitle(context, "Podsticarijum"),
         ),
+        buildFooterWidget(context)
       ),
     );
   }
