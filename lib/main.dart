@@ -23,17 +23,17 @@ class FamilyBackupApp extends StatelessWidget {
     return MaterialApp(
       theme: FamilyBackupTheme.familyAppThemeData,
       title: 'Podsticarium',
-      initialRoute: SplashScreen.route,
+      initialRoute: SplashSucceederScreen.route,
       routes: {
+        SplashScreen.route: (context) => const SplashScreen(),
+        SplashSucceederScreen.route: (context) => const SplashSucceederScreen(),
+        CategoriesScreen.route: (context) => CategoriesScreen(),
         MenuScreen.route: (context) => const MenuScreen(),
         AboutUsScreen.route: (context) => const AboutUsScreen(),
         FaqCategoriesScreen.route: (context) => const FaqCategoriesScreen(),
         ExpertsScreen.route: (context) => const ExpertsScreen(),
         DonationScreen.route: (context) => const DonationScreen(),
-        SplashScreen.route: (context) => SplashScreen(),
         ExpertFormScreen.route: (context) => ExpertFormScreen(),
-        SplashSucceederScreen.route: (context) => SplashSucceederScreen("Text"),
-        CategoriesScreen.route: (context) => CategoriesScreen(),
         FrequentQuestionsScreen.route: (context) =>
             FrequentQuestionsScreen(const {
               "neko pitanje": "neki odgovor",

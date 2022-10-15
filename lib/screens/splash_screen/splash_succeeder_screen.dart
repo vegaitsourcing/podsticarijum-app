@@ -5,34 +5,38 @@ import '../../common/widgets/default_header.dart';
 import '../../common/widgets/useful_widgets.dart';
 
 class SplashSucceederScreen extends StatelessWidget {
-  final String text;
+  const SplashSucceederScreen({super.key});
 
-  const SplashSucceederScreen(this.text, {super.key});
   static const String route = "/splash_screen_succeeder";
+  static const String info = '"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliqui';
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: Theme.of(context).primaryColor,
-      body: Container(
-        alignment: Alignment.center,
-        padding: const EdgeInsets.symmetric(horizontal: 20),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+    return SafeArea(
+      child: Scaffold(
+        backgroundColor: Theme.of(context).primaryColor,
+        body: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: [
             buildLogoWidget(
               context,
               buildTitle(context, "Podsticarijum"),
             ),
-            Text(
-              text,
-              style: Theme.of(context).textTheme.bodyText1,
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 44),
+              child: Text(
+                info,
+                style: Theme.of(context).textTheme.bodyText1,
+              ),
             ),
-            CustomOutlineButton(
-              "Počni",
-              () {
-                // TODO: Add next screen;
-              },
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 20),
+              child: CustomOutlineButton(
+                "Počni",
+                () {
+                  // TODO: Add next screen;
+                },
+              ),
             ),
           ],
         ),
