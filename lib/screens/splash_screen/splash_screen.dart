@@ -1,9 +1,9 @@
-import 'package:app_for_family_backup/screens/categories_screen/categories_screen.dart';
 import 'package:flutter/material.dart';
 
 import '../../common/widgets/custom_outline_button.dart';
 import '../../common/widgets/default_header.dart';
 import '../../common/widgets/useful_widgets.dart';
+import '../categories_screen/subcategories_screen.dart';
 
 class SplashScreen extends StatelessWidget {
   SplashScreen({Key? key}) : super(key: key);
