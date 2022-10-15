@@ -15,7 +15,7 @@ class SplashScreen extends StatelessWidget {
       body: centeredContainerWithFooter(
         buildLogoWidget(
           context,
-          buildTitle(context, "Podsticarijum"),
+          buildTitle(context, "Podsticarium"),
         ),
         buildFooterWidget(context)
       ),
