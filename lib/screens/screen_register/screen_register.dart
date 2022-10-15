@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class ScreenRegister extends StatelessWidget {
-  static String route = '/register';
+  static const String route = '/register';
 
   const ScreenRegister({super.key});
 

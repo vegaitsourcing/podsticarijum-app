@@ -45,8 +45,8 @@ void main() => runApp(
           ScreenStart.route: (context) => ScreenStart(),
           ScreenAskExpertCategory.route: (context) => ScreenAskExpertCategory(),
           ScreenAskExpertForm.route: (context) => ScreenAskExpertForm(),
-          ScreenSplashSucceeder.route: ((context) =>
-              ScreenSplashSucceeder("Text in the center")),
+          ScreenSplashSucceeder.route: ((context) => ScreenSplashSucceeder(
+              "Text in the centerText in the centerText in the centerText in the centerText in the centerText in the centerText in the centerText in the centerText in the center")),
           ScreenFrequentQuestions.route: (context) =>
               ScreenFrequentQuestions(const {
                 "neko pitanje": "neki odgovor",

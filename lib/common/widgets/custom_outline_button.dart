@@ -4,15 +4,17 @@ class CustomOutlineButton extends StatelessWidget {
   final String text;
   final double width;
   final Function() onClick;
+  final double horizontalPadding;
 
-  CustomOutlineButton(this.text, this.onClick, {this.width = double.infinity});
+  CustomOutlineButton(this.text, this.onClick,
+      {this.width = double.infinity, this.horizontalPadding = 0});
 
   @override
   Widget build(BuildContext context) {
     return Column(
       children: [
         Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 20.0),
+          padding: EdgeInsets.symmetric(horizontal: horizontalPadding),
           child: Container(
             height: 70,
             width: width,
@@ -31,7 +33,7 @@ class CustomOutlineButton extends StatelessWidget {
             ),
           ),
         ),
-        SizedBox(height: 20) //mimics button margin
+        const SizedBox(height: 20) //mimics button margin
       ],
     );
   }

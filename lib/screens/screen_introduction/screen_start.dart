@@ -3,7 +3,7 @@ import '../../common/widgets/custom_outline_button.dart';
 import 'package:flutter/material.dart';
 
 class ScreenStart extends StatelessWidget {
-  static String route = "/start_screen";
+  static const String route = "/start_screen";
 
   const ScreenStart({super.key});
 

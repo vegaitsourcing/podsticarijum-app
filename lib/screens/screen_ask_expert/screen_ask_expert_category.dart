@@ -3,7 +3,7 @@ import '../../common/widgets/custom_outline_button.dart';
 import 'package:flutter/material.dart';
 
 class ScreenAskExpertCategory extends StatelessWidget {
-  static String route = '/ask_expert';
+  static const String route = '/ask_expert';
 
   const ScreenAskExpertCategory({super.key});
 

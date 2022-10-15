@@ -3,7 +3,7 @@ import '../../common/widgets/default_header.dart';
 import 'package:flutter/material.dart';
 
 class ScreenSplash extends StatelessWidget {
-  static String route = "/splash_screen";
+  static const String route = "/splash_screen";
 
   const ScreenSplash({Key? key}) : super(key: key);
 

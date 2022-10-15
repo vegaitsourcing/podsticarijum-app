@@ -33,6 +33,7 @@ Widget containerWithImageAndText(
           width: double.infinity,
           child: Image.asset(
             imgUrl,
+            scale: 0.5,
           ),
         ),
         Container(
@@ -75,7 +76,7 @@ Widget centeredContainerWithFooter(
 }
 
 class ScreenGoBackWithMessage extends StatelessWidget {
-  static String route = "/go_back_with_message_screen";
+  static const String route = "/go_back_with_message_screen";
 
   final String message;
   final Function() onClick;

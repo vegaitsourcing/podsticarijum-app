@@ -4,7 +4,7 @@ import '../../screens/screen_experts/widgets/text_with_header_widget.dart';
 import 'package:flutter/material.dart';
 
 class ScreenDonation extends StatelessWidget {
-  static String route = '/clothing_donation';
+  static const String route = '/clothing_donation';
   final String opisDonacija;
   final String informacije;
   final String header;

@@ -8,7 +8,7 @@ class ScreenSplashSucceeder extends StatelessWidget {
   final String text;
 
   const ScreenSplashSucceeder(this.text, {super.key});
-  static String route = "/splash_screen_succeeder";
+  static const String route = "/splash_screen_succeeder";
 
   @override
   Widget build(BuildContext context) {
@@ -16,11 +16,12 @@ class ScreenSplashSucceeder extends StatelessWidget {
       backgroundColor: Color.fromRGBO(236, 239, 171, 1.000),
       body: Container(
         alignment: Alignment.center,
+        padding: EdgeInsets.symmetric(horizontal: 20),
         child:
             Column(mainAxisAlignment: MainAxisAlignment.spaceEvenly, children: [
           containerWithImageAndText(
             context,
-            'images-cloud-with-heart.png',
+            'images/cloud-with-heart.png',
             DefaultHeader(context, "Podsticarijum"),
           ),
           Text(

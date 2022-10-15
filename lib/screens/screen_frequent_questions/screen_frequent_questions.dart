@@ -21,6 +21,7 @@ Widget questionAnswerWidget(String question, String answer,
 }
 
 class ScreenFrequentQuestions extends StatelessWidget {
+  static const String route = '/screen_frequent_question';
   final Map<String, String> questionAndAnswers;
   final String categoryName;
   final List<Widget> questionAndAnswersWidgetList = [];
@@ -39,8 +40,6 @@ class ScreenFrequentQuestions extends StatelessWidget {
             hasBorder: false));
   }
 
-  static String route = '/screen_frequent_question';
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -57,7 +56,7 @@ class ScreenFrequentQuestions extends StatelessWidget {
               children: [
                 DefaultSubHeader(context, "Najčešća pitanja"),
                 DefaultHeader(context, categoryName),
-                SizedBox(
+                const SizedBox(
                   height: 35,
                 ),
                 ...questionAndAnswersWidgetList
