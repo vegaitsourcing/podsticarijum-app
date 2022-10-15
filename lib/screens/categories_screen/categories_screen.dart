@@ -17,10 +17,10 @@ class CategoriesScreen extends StatelessWidget {
         appBar: const NewAppBar(appBarType: AppBarType.rootNav),
         body: Column(
           children: [
-            CustomOutlineButton("0-1 godina", () {}),
-            CustomOutlineButton("1-3 godina", () {}),
-            CustomOutlineButton("3-5 godina", () {}),
-            CustomOutlineButton("5-7 godina", () {}),
+            CustomOutlineButton(text: "0-1 godina", onClick: () {}),
+            CustomOutlineButton(text: "1-3 godina", onClick: () {}),
+            CustomOutlineButton(text: "3-5 godina", onClick: () {}),
+            CustomOutlineButton(text: "5-7 godina", onClick: () {}),
           ],
         ),
       ),

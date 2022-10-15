@@ -5,24 +5,36 @@ import '../../common/widgets/custom_outline_button.dart';
 import '../../common/widgets/useful_widgets.dart';
 
 class GoBackWithMessageScreen extends StatelessWidget {
-  static const String route = "/go_back_with_message_screen";
+  static const String route = "/go_back_with_message";
 
-  final String message;
-  final Function() onClick;
-  final String buttonText;
+  final Function() onButtonClick;
 
-  const GoBackWithMessageScreen(this.message, this.onClick,
-      {Key? key, this.buttonText = "Vrati se na početni ekran"})
-      : super(key: key);
+  const GoBackWithMessageScreen({
+    Key? key,
+    required this.onButtonClick,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color.fromRGBO(236, 239, 171, 1.000),
+      backgroundColor: Theme.of(context).primaryColor,
       appBar: const NewAppBar(),
       body: centeredContainerWithFooter(
-        buildLogoWidget(context, textWidget(context, message)),
-        CustomOutlineButton(buttonText, onClick),
+        buildLogoWidget(
+          context,
+          Text(
+            overflow: TextOverflow.ellipsis,
+            'Hvala na postavljenom pitanju, na vašu e-mail adresu će uskooro stići odgovor!',
+            style: Theme.of(context).textTheme.headline5,
+            textAlign: TextAlign.center,
+          ),
+        ),
+        Column(
+          children: [
+            CustomOutlineButton(text: "Vrati se na početni ekran", onClick: onButtonClick),
+            const SizedBox(height: 30)
+          ],
+        ),
       ),
     );
   }

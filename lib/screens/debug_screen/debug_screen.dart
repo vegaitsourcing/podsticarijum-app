@@ -19,19 +19,19 @@ class DebugScreen extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            CustomOutlineButton("Pitaj stručnjaka", () {
+            CustomOutlineButton(text: "Pitaj stručnjaka", onClick: () {
               Navigator.pushNamed(context, FaqCategoriesScreen.route);
             }),
-            CustomOutlineButton("Donacija robe", () {
+            CustomOutlineButton(text: "Donacija robe", onClick: () {
               Navigator.pushNamed(context, DonationScreen.route);
             }),
-            CustomOutlineButton("O nama", () {
+            CustomOutlineButton(text: "O nama", onClick: () {
               Navigator.pushNamed(context, AboutUsScreen.route);
             }),
-            CustomOutlineButton("Stručnjaci", () {
+            CustomOutlineButton(text: "Stručnjaci", onClick: () {
               Navigator.pushNamed(context, ExpertsScreen.route);
             }),
-            CustomOutlineButton("Introduction", () {
+            CustomOutlineButton(text: "Introduction", onClick: () {
               Navigator.pushNamed(context, SplashScreen.route);
             }),
           ],

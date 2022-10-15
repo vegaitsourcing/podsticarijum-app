@@ -7,7 +7,7 @@ import '../../common/widgets/useful_widgets.dart';
 class SplashSucceederScreen extends StatelessWidget {
   const SplashSucceederScreen({super.key});
 
-  static const String route = "/splash_screen_succeeder";
+  static const String route = "/splash_succeeder";
   static const String info = '"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliqui';
 
   @override
@@ -32,8 +32,8 @@ class SplashSucceederScreen extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 20),
               child: CustomOutlineButton(
-                "Počni",
-                () {
+                text: "Počni",
+                onClick: () {
                   // TODO: Add next screen;
                 },
               ),

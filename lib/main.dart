@@ -6,7 +6,6 @@ import 'screens/go_back_screen/go_back_with_message_screen.dart';
 import 'screens/donation_screen/donation_screen.dart';
 import 'screens/frequent_questions_screen/frequent_questions_screen.dart';
 import 'screens/about_us_screen/screen_about_us.dart';
-import 'screens/ask_expert_screen/ask_expert_form_screen.dart';
 import 'screens/ask_expert_screen/faq_categories_screen.dart';
 import 'screens/experts_screen/experts_screen.dart';
 import 'screens/menu_screen/menu_screen.dart';
@@ -23,17 +22,16 @@ class FamilyBackupApp extends StatelessWidget {
     return MaterialApp(
       theme: FamilyBackupTheme.familyAppThemeData,
       title: 'Podsticarium',
-      initialRoute: SplashSucceederScreen.route,
+      initialRoute: GoBackWithMessageScreen.route,
       routes: {
         SplashScreen.route: (context) => const SplashScreen(),
         SplashSucceederScreen.route: (context) => const SplashSucceederScreen(),
-        CategoriesScreen.route: (context) => CategoriesScreen(),
+        CategoriesScreen.route: (context) => const CategoriesScreen(),
         MenuScreen.route: (context) => const MenuScreen(),
         AboutUsScreen.route: (context) => const AboutUsScreen(),
         FaqCategoriesScreen.route: (context) => const FaqCategoriesScreen(),
         ExpertsScreen.route: (context) => const ExpertsScreen(),
         DonationScreen.route: (context) => const DonationScreen(),
-        ExpertFormScreen.route: (context) => ExpertFormScreen(),
         FrequentQuestionsScreen.route: (context) =>
             FrequentQuestionsScreen(const {
               "neko pitanje": "neki odgovor",
@@ -44,11 +42,9 @@ class FamilyBackupApp extends StatelessWidget {
               "neko pitanje 6": "neki odgovor",
               "neko pitanje 7": "neki odgovor",
             }, "Motorički razvoj"),
-        GoBackWithMessageScreen.route: ((context) => GoBackWithMessageScreen(
-              "Hvala na postavljenom pitanju, na vašu e-mail adresu će uskooro stići odgovor!",
-              buttonText: "Vrati se na početni ekran",
-              () {},
-            )),
+        GoBackWithMessageScreen.route: (context) => GoBackWithMessageScreen(
+              onButtonClick: () {},
+            )
       },
     );
   }
