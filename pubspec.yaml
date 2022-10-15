@@ -32,7 +32,6 @@ dependencies:
   flutter:
     sdk: flutter
 
-
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.2
@@ -53,7 +52,6 @@ dev_dependencies:
 
 # The following section is specific to Flutter packages.
 flutter:
-
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in
   # the material Icons class.
@@ -67,6 +65,10 @@ flutter:
     - images/separator.png
     - images/green_flag_section_bg.png
     - images/menu_bullet_img.png
+    - images/border_dot_line.png
+    - images/image_placeholder.png
+    - images/cloud_with_heart.png
+    - images/czpn_logo.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
@@ -81,7 +83,7 @@ flutter:
         - asset: fonts/AmaticSC-Bold.ttf
           style: normal
           weight: 700
-    
+
     - family: Montserrat
       fonts:
         - asset: fonts/Montserrat-Regular.ttf

@@ -1,13 +1,13 @@
-import 'package:app_for_family_backup/common/widgets/CustomForm.dart';
+import '../../common/widgets/custom_form.dart';
 import 'package:flutter/material.dart';
 
-class LoginScreen extends StatelessWidget {
-  static String route = '/login';
+class ScreenLogin extends StatelessWidget {
+  static const String route = '/login';
 
-  const LoginScreen({super.key});
+  const ScreenLogin({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return FormCustom();
+    return CustomForm();
   }
 }
