@@ -42,7 +42,7 @@ class SubCategoriesScreen extends StatelessWidget {
     return Column(
       children: [
         CustomOutlineButton(text: buttonText, onClick: () {}),
-        const SizedBox(height: 12),
+        const SizedBox(height: _padding),
       ],
     );
   }

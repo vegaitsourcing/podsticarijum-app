@@ -23,7 +23,7 @@ class FamilyBackupApp extends StatelessWidget {
     return MaterialApp(
       theme: FamilyBackupTheme.familyAppThemeData,
       title: 'Podsticarium',
-      initialRoute: SplashScreen.route,
+      initialRoute: FaqCategoriesScreen.route,
       routes: {
         SplashScreen.route: (context) => SplashScreen(),
         SubCategoriesScreen.route: (context) => const SubCategoriesScreen(),
