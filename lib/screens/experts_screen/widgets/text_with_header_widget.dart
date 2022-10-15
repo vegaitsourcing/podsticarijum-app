@@ -28,7 +28,7 @@ class TextWithHeaderWidget extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         hasImage
-            ? HeaderWithPhotoWidget(header, imageUrl)
+            ? HeaderWithPhotoWidget(header)
             : DefaultHeader(context, header),
         SizedBox(height: spacing),
         Text(

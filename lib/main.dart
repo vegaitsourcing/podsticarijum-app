@@ -2,13 +2,14 @@ import 'package:flutter/material.dart';
 
 import 'common/screens/go_back_with_message_screen.dart';
 import 'common/theme.dart';
+import 'screens/donation_screen/donation_screen.dart';
 import 'screens/frequent_questions_screen/frequent_questions_screen.dart';
 import 'screens/about_us_screen/screen_about_us.dart';
 import 'screens/ask_expert_screen/ask_expert_form_screen.dart';
 import 'screens/ask_expert_screen/ask_expert_category_screen.dart';
-import 'screens/donation_screen/dontion_screen.dart';
 import 'screens/experts_screen/experts_screen.dart';
 import 'screens/login_screen/login_screen.dart';
+import 'screens/menu_screen/menu_screen.dart';
 import 'screens/register_screen/register_screen.dart';
 import 'screens/start_screens/splash_screen.dart';
 import 'screens/start_screens/splash_succeeder_screen.dart';
@@ -24,10 +25,10 @@ class FamilyBackupApp extends StatelessWidget {
     return MaterialApp(
       theme: FamilyBackupTheme.familyAppThemeData,
       title: "App for family backup",
-      initialRoute:
-          SplashSucceederScreen.route, // TODO: Change back to start screen
+      initialRoute: MenuScreen.route,
       routes: {
         StartScreen.route: (context) => StartScreen(),
+        MenuScreen.route: (context) => MenuScreen(),
         ScreenLogin.route: (context) => ScreenLogin(),
         ScreenRegister.route: (context) => ScreenRegister(),
         AboutUsScreen.route: (context) => AboutUsScreen(),
@@ -39,8 +40,6 @@ class FamilyBackupApp extends StatelessWidget {
               "Header",
             ),
         SplashScreen.route: (context) => SplashScreen(),
-        StartScreen.route: (context) => StartScreen(),
-        AskExpertCategoryScreen.route: (context) => AskExpertCategoryScreen(),
         ExpertFormScreen.route: (context) => ExpertFormScreen(),
         SplashSucceederScreen.route: (context) => SplashSucceederScreen("Text"),
         FrequentQuestionsScreen.route: (context) =>

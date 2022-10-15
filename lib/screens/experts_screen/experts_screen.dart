@@ -24,19 +24,16 @@ class ExpertsScreen extends StatelessWidget {
           TextWithHeaderWidget(
             "Petar Peric",
             _description,
-            imageUrl: 'images/image-placeholder.png',
           ),
           const SizedBox(height: 68),
           TextWithHeaderWidget(
             "Nikola Ivanovic",
             _description,
-            imageUrl: 'images/image-placeholder.png',
           ),
           const SizedBox(height: 68),
           TextWithHeaderWidget(
             "Djuro Radusinovic",
             _description,
-            imageUrl: 'images/image-placeholder.png',
           ),
           const SizedBox(height: 20),
         ],
