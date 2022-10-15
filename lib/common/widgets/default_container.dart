@@ -21,9 +21,9 @@ class DefaultContainer extends StatelessWidget {
           left: leftOffset,
           child: Image.asset('images/about_us_bg.png', scale: scale),
         ),
-        Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 20),
-          child: SingleChildScrollView(
+        SingleChildScrollView(
+          child: Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 20),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: children,
