@@ -1,5 +1,5 @@
 class AboutUs {
-  final String data =
+  static const String data =
       '''Mi smo tim ljudi koji su sanjali i dosanjali o jednom ušuškanom mestu na kom će svaki bebac,
     svako dete, svaka porodica dobiti celovit, holistički, profesionalni podsticaj razvoju, rastu, igri,
     osmehu, učenju , edukaciji I prevenciji. Želja nam je da od maminog stomaka, preko prvog
