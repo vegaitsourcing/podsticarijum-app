@@ -1,10 +1,10 @@
-import '../Question.dart';
+import '../paragraph_data.dart';
 
 class SensoryMotorDevelopment {
-  List<Question> listOfQuestions = <Question>[];
+  List<ParagraphData> listOfQuestions = <ParagraphData>[];
 
   SensoryMotorDevelopment() {
-    Question question1 = Question(
+    ParagraphData question1 = ParagraphData(
         "Šta je senzo-motorni razvoj?",
         "Senzorna integracija je neurobiološki process prijema, obrade I reagovanja na informacije koje dolaze putem čula. "
             "Kada govorimo o čulima, uvek navodimo pet čula ali zapravo ih ima sedam i to su: sluh, vid, miris, ukus, dodir, "
@@ -12,10 +12,10 @@ class SensoryMotorDevelopment {
             "Čula rade udruženo i mozak na organizovan način koristi čulne informacije o prizorima, zvucima, dodirima, mirisima, ukusima i pokretima, "
             "a zatim dete svojim čulnim iskustvima daje značenje i u skladu sa tim se ponaša  adekvatno reaguje.");
 
-    Question question2 = Question("Na šta se odnosi senzorna obrada?",
+    ParagraphData question2 = ParagraphData("Na šta se odnosi senzorna obrada?",
         "Senzorna obrada se odnosi na to kako se služimo informacijama koje čulima primamo iz tela i iz okoline – čula se integrišu da bi stvorila sliku okoline i nas u njoj.");
 
-    Question question3 = Question(
+    ParagraphData question3 = ParagraphData(
         "Na šta, zapravo, djeluje senzo-motorni razvoj?",
         '''Senzo-motorni razvoj deluje na procese učenja:
         Regulaciju/samoregulciju (spososobnost adekvatnog ponašanja i reagovanja);

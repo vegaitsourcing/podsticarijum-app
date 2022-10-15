@@ -6,3 +6,8 @@ class NeurotypicalSigns {
     ''' Preterano mirno ili razdražljivo, mlitavo ili zgrčeno '''
   ];
 }
+
+
+// kategorija
+// pod kategorija
+// podaci
