@@ -29,14 +29,12 @@ class DonationScreen extends StatelessWidget {
                 TextWithHeaderWidget(
                   header,
                   opisDonacija,
-                  hasImage: false,
                   spacing: 50,
                 ),
                 const SizedBox(height: 50),
                 TextWithHeaderWidget(
                   "Informacije",
                   informacije,
-                  hasImage: false,
                   spacing: 50,
                 ),
               ],

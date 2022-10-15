@@ -15,7 +15,7 @@ class SplashScreen extends StatelessWidget {
       body: centeredContainerWithFooter(
         context,
         containerWithImageAndText(context, 'images/cloud_with_heart.png',
-            DefaultHeader(context, "Podsticarijum")),
+            buildTitle(context, "Podsticarijum")),
         Column(
           children: [
             Text(

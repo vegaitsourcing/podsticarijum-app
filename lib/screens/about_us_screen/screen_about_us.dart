@@ -12,7 +12,7 @@ class AboutUsScreen extends StatelessWidget {
   List<Widget> buildScreenContent(BuildContext context) {
     return [
       const SizedBox(height: 20),
-      DefaultHeader(context, 'O NAMA'),
+      buildTitle(context, 'O NAMA'),
       const SizedBox(height: 68),
       Text(
         _description,

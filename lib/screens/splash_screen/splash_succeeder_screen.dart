@@ -23,7 +23,7 @@ class SplashSucceederScreen extends StatelessWidget {
             containerWithImageAndText(
               context,
               'images/cloud_with_heart.png',
-              DefaultHeader(context, "Podsticarijum"),
+              buildTitle(context, "Podsticarijum"),
             ),
             Text(
               text,

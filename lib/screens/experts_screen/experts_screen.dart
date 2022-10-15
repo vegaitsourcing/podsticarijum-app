@@ -1,16 +1,19 @@
-import 'package:app_for_family_backup/common/widgets/app_bar/new_app_bar.dart';
-
-import '../../common/widgets/default_container.dart';
-import '../../common/widgets/default_header.dart';
 import 'package:flutter/material.dart';
 
-import 'widgets/text_with_header_widget.dart';
+import '../../common/widgets/app_bar/new_app_bar.dart';
+import '../../common/widgets/default_container.dart';
+import '../../common/widgets/default_header.dart';
+import '../../common/widgets/text_with_header_widget.dart';
 
 class ExpertsScreen extends StatelessWidget {
   static const String route = '/experts';
+  const ExpertsScreen(this.teamNumber, {super.key});
+
   final int teamNumber;
 
-  const ExpertsScreen(this.teamNumber, {super.key});
+  Widget buildExpertSection(String title, String content) {
+    return Column(children: []);
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -19,21 +22,20 @@ class ExpertsScreen extends StatelessWidget {
       body: DefaultContainer(
         scale: 0.85,
         children: [
-          DefaultHeader(context, "Tim $teamNumber"),
+          buildTitle(context, "Tim $teamNumber"),
           const SizedBox(height: 68),
           TextWithHeaderWidget(
             "Petar Peric",
             _description,
           ),
-          const SizedBox(height: 68),
           TextWithHeaderWidget(
             "Nikola Ivanovic",
             _description,
           ),
-          const SizedBox(height: 68),
           TextWithHeaderWidget(
             "Djuro Radusinovic",
             _description,
+            hasBorder: false,
           ),
           const SizedBox(height: 20),
         ],

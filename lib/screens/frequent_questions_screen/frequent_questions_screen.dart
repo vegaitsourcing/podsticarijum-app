@@ -16,7 +16,6 @@ Widget questionAnswerWidget(
       TextWithHeaderWidget(
         question,
         answer,
-        hasImage: false,
         hasBorder: hasBorder,
         spacing: 15,
       ),
@@ -57,8 +56,8 @@ class FrequentQuestionsScreen extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                DefaultSubHeader(context, "Najčešća pitanja"),
-                DefaultHeader(context, categoryName),
+                buildSubtitle(context, "Najčešća pitanja"),
+                buildTitle(context, categoryName),
                 const SizedBox(
                   height: 35,
                 ),

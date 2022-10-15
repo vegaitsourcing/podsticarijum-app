@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-Text DefaultHeader(BuildContext context, String text) {
+Text buildTitle(BuildContext context, String text) {
   return Text(
     text,
     textAlign: TextAlign.start,
@@ -11,7 +11,7 @@ Text DefaultHeader(BuildContext context, String text) {
   );
 }
 
-Text DefaultSubHeader(BuildContext context, String text) {
+Text buildSubtitle(BuildContext context, String text) {
   return Text(
     text,
     textAlign: TextAlign.start,
