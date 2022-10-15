@@ -1,14 +1,23 @@
-import 'package:app_for_family_backup/common/widgets/TextFormFiledCustom.dart';
+import 'custom_text_form_field.dart';
 import 'package:flutter/material.dart';
 
-class FormCustom extends StatefulWidget {
-  FormCustom({Key? key}) : super(key: key);
+/**
+ * 
+ * THIS FORM IS UNUSED!
+ * 
+ * IT WAS MEANT TO BE USED WITH AUTHENTICATION SCREENS!
+ * 
+ * DON'T USE!
+ * 
+ */
+class CustomForm extends StatefulWidget {
+  CustomForm({Key? key}) : super(key: key);
 
   @override
-  State<FormCustom> createState() => _FormCustomState();
+  State<CustomForm> createState() => _CustomFormState();
 }
 
-class _FormCustomState extends State<FormCustom> {
+class _CustomFormState extends State<CustomForm> {
   final _formKey = GlobalKey<FormState>();
 
   @override
@@ -30,9 +39,13 @@ class _FormCustomState extends State<FormCustom> {
                       return null;
                     },
                   ),
-                  TextFormFieldCustom((String value) {
-                    return value.length >= 4;
-                  }, "Password should be at least 4 characters long"),
+                  CustomTextFormField(
+                    isValid: (String value) {
+                      return value.length >= 4;
+                    },
+                    invalidErrorMessage:
+                        "Password should be at least 4 characters long",
+                  ),
                   ElevatedButton(
                     onPressed: () {
                       // Validate returns true if the form is valid, or false otherwise.

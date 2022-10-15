@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
-class RegisterScreen extends StatelessWidget {
-  static String route = '/register';
+class ScreenRegister extends StatelessWidget {
+  static const String route = '/register';
 
-  const RegisterScreen({super.key});
+  const ScreenRegister({super.key});
 
   @override
   Widget build(BuildContext context) {
