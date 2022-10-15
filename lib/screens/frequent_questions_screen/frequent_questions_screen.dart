@@ -4,8 +4,11 @@ import '../../common/widgets/default_background.dart';
 import '../../common/widgets/app_bar/app_bar.dart';
 import 'package:flutter/material.dart';
 
-Widget questionAnswerWidget(String question, String answer,
-    {bool hasBorder = true}) {
+Widget questionAnswerWidget(
+  String question,
+  String answer, {
+  bool hasBorder = true,
+}) {
   return Column(
     children: [
       const SizedBox(height: 20),

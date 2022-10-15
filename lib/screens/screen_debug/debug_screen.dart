@@ -1,13 +1,13 @@
+import 'package:flutter/material.dart';
+
 import '../about_us_screen/screen_about_us.dart';
-import '../ask_expert_screen/ask_expert_form_screen.dart';
 import '../ask_expert_screen/ask_expert_category_screen.dart';
 import '../donation_screen/dontion_screen.dart';
 import '../../common/widgets/custom_outline_button.dart';
 import '../experts_screen/experts_screen.dart';
-import '../screen_introduction/screen_splash.dart';
-import '../screen_login/screen_login.dart';
-import '../screen_register/screen_register.dart';
-import 'package:flutter/material.dart';
+import '../login_screen/login_screen.dart';
+import '../register_screen/register_screen.dart';
+import '../start_screens/splash_screen.dart';
 
 class DebugScreen extends StatelessWidget {
   const DebugScreen({super.key});
@@ -15,7 +15,7 @@ class DebugScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(title: Text("Application for family backup title")),
+        appBar: AppBar(title: Text("Podsticarium")),
         body: Center(
             child: Column(
           mainAxisAlignment: MainAxisAlignment.center,

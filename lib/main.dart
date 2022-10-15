@@ -1,17 +1,18 @@
 import 'package:flutter/material.dart';
 
 import 'common/screens/go_back_with_message_screen.dart';
+import 'common/theme.dart';
 import 'screens/frequent_questions_screen/frequent_questions_screen.dart';
-import 'screens/screen_introduction/splash_succeeder_screen.dart';
 import 'screens/about_us_screen/screen_about_us.dart';
 import 'screens/ask_expert_screen/ask_expert_form_screen.dart';
 import 'screens/ask_expert_screen/ask_expert_category_screen.dart';
 import 'screens/donation_screen/dontion_screen.dart';
 import 'screens/experts_screen/experts_screen.dart';
-import 'screens/screen_introduction/screen_splash.dart';
-import 'screens/screen_introduction/start_screen.dart';
-import 'screens/screen_login/screen_login.dart';
-import 'screens/screen_register/screen_register.dart';
+import 'screens/login_screen/login_screen.dart';
+import 'screens/register_screen/register_screen.dart';
+import 'screens/start_screens/splash_screen.dart';
+import 'screens/start_screens/splash_succeeder_screen.dart';
+import 'screens/start_screens/start_screen.dart';
 
 void main() => runApp(FamilyBackupApp());
 
@@ -41,8 +42,7 @@ class FamilyBackupApp extends StatelessWidget {
         StartScreen.route: (context) => StartScreen(),
         AskExpertCategoryScreen.route: (context) => AskExpertCategoryScreen(),
         ExpertFormScreen.route: (context) => ExpertFormScreen(),
-        SplashSucceederScreen.route: ((context) => SplashSucceederScreen(
-            "Text in the centerText in the centerText in the centerText in the centerText in the centerText in the centerText in the centerText in the centerText in the center")),
+        SplashSucceederScreen.route: (context) => SplashSucceederScreen("Text"),
         FrequentQuestionsScreen.route: (context) =>
             FrequentQuestionsScreen(const {
               "neko pitanje": "neki odgovor",

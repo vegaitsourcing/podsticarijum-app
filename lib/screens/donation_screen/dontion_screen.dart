@@ -1,7 +1,7 @@
+import 'package:flutter/material.dart';
 import '../../common/widgets/app_bar/app_bar.dart';
 import '../../common/widgets/default_background.dart';
-import '../screen_experts/widgets/text_with_header_widget.dart';
-import 'package:flutter/material.dart';
+import '../experts_screen/widgets/text_with_header_widget.dart';
 
 class DonationScreen extends StatelessWidget {
   static const String route = '/clothing_donation';
@@ -32,9 +32,7 @@ class DonationScreen extends StatelessWidget {
                   hasImage: false,
                   spacing: 50,
                 ),
-                SizedBox(
-                  height: 50,
-                ),
+                const SizedBox(height: 50),
                 TextWithHeaderWidget(
                   "Informacije",
                   informacije,

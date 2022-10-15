@@ -1,8 +1,9 @@
 import '../../common/widgets/app_bar/app_bar.dart';
 import '../../common/widgets/default_background.dart';
 import '../../common/widgets/default_header.dart';
-import '../../screens/screen_experts/widgets/text_with_header_widget.dart';
 import 'package:flutter/material.dart';
+
+import 'widgets/text_with_header_widget.dart';
 
 class ExpertsScreen extends StatelessWidget {
   static const String route = '/experts';
@@ -20,14 +21,23 @@ class ExpertsScreen extends StatelessWidget {
         [
           DefaultHeader(context, "Tim $teamNumber"),
           const SizedBox(height: 68),
-          TextWithHeaderWidget("Petar Peric", _description,
-              imageUrl: 'images/image-placeholder.png'),
+          TextWithHeaderWidget(
+            "Petar Peric",
+            _description,
+            imageUrl: 'images/image-placeholder.png',
+          ),
           const SizedBox(height: 68),
-          TextWithHeaderWidget("Nikola Ivanovic", _description,
-              imageUrl: 'images/image-placeholder.png'),
+          TextWithHeaderWidget(
+            "Nikola Ivanovic",
+            _description,
+            imageUrl: 'images/image-placeholder.png',
+          ),
           const SizedBox(height: 68),
-          TextWithHeaderWidget("Djuro Radusinovic", _description,
-              imageUrl: 'images/image-placeholder.png'),
+          TextWithHeaderWidget(
+            "Djuro Radusinovic",
+            _description,
+            imageUrl: 'images/image-placeholder.png',
+          ),
           const SizedBox(height: 20),
         ],
       ),

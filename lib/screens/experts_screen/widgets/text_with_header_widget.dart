@@ -1,6 +1,6 @@
-import '../../../common/widgets/default_header.dart';
-import '../../../screens/screen_experts/widgets/header_with_photo_widget.dart';
 import 'package:flutter/material.dart';
+import '../../../common/widgets/default_header.dart';
+import 'header_with_photo_widget.dart';
 
 class TextWithHeaderWidget extends StatelessWidget {
   final String header;
@@ -15,10 +15,10 @@ class TextWithHeaderWidget extends StatelessWidget {
     this.header,
     this.text, {
     Key? key,
+    this.textStyle,
     this.imageUrl = "",
     this.spacing = 20.0,
     this.hasImage = true,
-    this.textStyle = null,
     this.hasBorder = true,
   }) : super(key: key);
 
