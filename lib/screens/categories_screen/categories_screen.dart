@@ -15,13 +15,20 @@ class CategoriesScreen extends StatelessWidget {
       child: Scaffold(
         backgroundColor: Theme.of(context).primaryColor,
         appBar: const NewAppBar(appBarType: AppBarType.rootNav),
-        body: Column(
-          children: [
-            CustomOutlineButton(text: "0-1 godina", onClick: () {}),
-            CustomOutlineButton(text: "1-3 godina", onClick: () {}),
-            CustomOutlineButton(text: "3-5 godina", onClick: () {}),
-            CustomOutlineButton(text: "5-7 godina", onClick: () {}),
-          ],
+        body: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 21),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              CustomOutlineButton(text: "0-1 godina", onClick: () {}),
+              const SizedBox(height: 12),
+              CustomOutlineButton(text: "1-3 godina", onClick: () {}),
+              const SizedBox(height: 12),
+              CustomOutlineButton(text: "3-5 godina", onClick: () {}),
+              const SizedBox(height: 12),
+              CustomOutlineButton(text: "5-7 godina", onClick: () {}),
+            ],
+          ),
         ),
       ),
     );
