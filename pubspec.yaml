@@ -69,7 +69,8 @@ flutter:
     - images/image_placeholder.png
     - images/cloud_with_heart.png
     - images/czpn_logo.png
-    - images/menu_icon.svg
+    - images/menu_icon.png
+    - images/button_bg.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

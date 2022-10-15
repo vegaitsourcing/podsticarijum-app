@@ -1,4 +1,5 @@
-import '../../common/widgets/app_bar/app_bar.dart';
+import 'package:app_for_family_backup/common/widgets/app_bar/new_app_bar.dart';
+
 import '../../common/widgets/scrollable_form.dart';
 import '../../common/widgets/custom_text_form_field.dart';
 import 'package:flutter/material.dart';
@@ -22,7 +23,7 @@ class _ExpertFormScreenState extends State<ExpertFormScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: CustomAppBar(), //default background paint is white
+      appBar: const NewAppBar(), //default background paint is white
       body: FormScrollable(
         children: [
           Padding(

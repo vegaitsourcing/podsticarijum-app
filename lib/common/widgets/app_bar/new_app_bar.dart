@@ -6,7 +6,7 @@ import '../../enums/app_bar_type.dart';
 class NewAppBar extends StatelessWidget implements PreferredSizeWidget {
   const NewAppBar({
     Key? key,
-    required this.appBarType,
+    this.appBarType = AppBarType.rootNav,
   })  : preferredSize = const Size.fromHeight(kToolbarHeight),
         super(key: key);
 
@@ -27,7 +27,10 @@ class NewAppBar extends StatelessWidget implements PreferredSizeWidget {
     if (appBarType == AppBarType.rootNav) {
       return IconButton(
         onPressed: () => Navigator.pushNamed(context, MenuScreen.route),
-        icon: ImageIcon(AssetImage('images/menu_icon.svg'),size: 18,),
+        icon: const ImageIcon(
+          AssetImage('images/menu_icon.png'),
+          color: Colors.black,
+        ),
       );
     } else {
       return IconButton(

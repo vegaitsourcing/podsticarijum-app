@@ -1,6 +1,7 @@
+import 'package:app_for_family_backup/common/widgets/app_bar/new_app_bar.dart';
 import 'package:flutter/material.dart';
-import '../../common/widgets/app_bar/app_bar.dart';
-import '../../common/widgets/default_background.dart';
+
+import '../../common/widgets/default_container.dart';
 import '../experts_screen/widgets/text_with_header_widget.dart';
 
 class DonationScreen extends StatelessWidget {
@@ -15,10 +16,9 @@ class DonationScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: CustomAppBar(backgroundPaint: BackgroundPaint.Yellow),
+      appBar: const NewAppBar(),
       body: DefaultContainer(
-        context,
-        [
+        children: [
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 15.0),
             child: Column(

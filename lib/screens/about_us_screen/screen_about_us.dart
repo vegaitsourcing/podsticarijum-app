@@ -1,7 +1,8 @@
-import '../../common/widgets/app_bar/app_bar.dart';
-import '../../common/widgets/default_background.dart';
-import '../../common/widgets/default_header.dart';
 import 'package:flutter/material.dart';
+
+import '../../common/widgets/app_bar/new_app_bar.dart';
+import '../../common/widgets/default_container.dart';
+import '../../common/widgets/default_header.dart';
 
 class AboutUsScreen extends StatelessWidget {
   static const String route = '/about_us';
@@ -25,8 +26,8 @@ class AboutUsScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        appBar: CustomAppBar(backgroundPaint: BackgroundPaint.Yellow),
-        body: DefaultContainer(context, buildScreenContent(context)),
+        appBar: const NewAppBar(),
+        body: DefaultContainer(children: buildScreenContent(context)),
       ),
     );
   }

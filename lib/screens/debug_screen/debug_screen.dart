@@ -5,7 +5,7 @@ import '../ask_expert_screen/ask_expert_category_screen.dart';
 import '../../common/widgets/custom_outline_button.dart';
 import '../donation_screen/donation_screen.dart';
 import '../experts_screen/experts_screen.dart';
-import '../start_screens/splash_screen.dart';
+import '../splash_screen/splash_screen.dart';
 
 class DebugScreen extends StatelessWidget {
   const DebugScreen({super.key});

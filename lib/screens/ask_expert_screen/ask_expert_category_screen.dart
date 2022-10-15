@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../../common/widgets/app_bar/app_bar.dart';
+import '../../common/widgets/app_bar/new_app_bar.dart';
 import '../../common/widgets/custom_outline_button.dart';
 
 class AskExpertCategoryScreen extends StatelessWidget {
@@ -10,7 +10,7 @@ class AskExpertCategoryScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: CustomAppBar(),
+      appBar: NewAppBar(),
       body: Container(
         color: Colors.amber,
         width: double.infinity,

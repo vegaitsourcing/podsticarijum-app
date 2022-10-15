@@ -10,8 +10,8 @@ import 'screens/ask_expert_screen/ask_expert_form_screen.dart';
 import 'screens/ask_expert_screen/ask_expert_category_screen.dart';
 import 'screens/experts_screen/experts_screen.dart';
 import 'screens/menu_screen/menu_screen.dart';
-import 'screens/start_screens/splash_screen.dart';
-import 'screens/start_screens/splash_succeeder_screen.dart';
+import 'screens/splash_screen/splash_screen.dart';
+import 'screens/splash_screen/splash_succeeder_screen.dart';
 
 void main() => runApp(const FamilyBackupApp());
 

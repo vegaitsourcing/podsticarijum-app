@@ -1,5 +1,6 @@
-import '../../common/widgets/app_bar/app_bar.dart';
-import '../../common/widgets/default_background.dart';
+import 'package:app_for_family_backup/common/widgets/app_bar/new_app_bar.dart';
+
+import '../../common/widgets/default_container.dart';
 import '../../common/widgets/default_header.dart';
 import 'package:flutter/material.dart';
 
@@ -14,11 +15,10 @@ class ExpertsScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: CustomAppBar(backgroundPaint: BackgroundPaint.Yellow),
+      appBar: NewAppBar(),
       body: DefaultContainer(
-        context,
         scale: 0.85,
-        [
+        children: [
           DefaultHeader(context, "Tim $teamNumber"),
           const SizedBox(height: 68),
           TextWithHeaderWidget(
