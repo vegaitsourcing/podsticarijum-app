@@ -1,16 +1,16 @@
-import '../screen_about_us/screen_about_us.dart';
-import '../screen_ask_expert/screen_ask_expert_form.dart';
-import '../screen_ask_expert/screen_ask_expert_category.dart';
-import '../screen_clothing_donation/screen_clothing_donation.dart';
+import '../about_us_screen/screen_about_us.dart';
+import '../ask_expert_screen/ask_expert_form_screen.dart';
+import '../ask_expert_screen/ask_expert_category_screen.dart';
+import '../donation_screen/dontion_screen.dart';
 import '../../common/widgets/custom_outline_button.dart';
-import '../screen_experts/screen_experts.dart';
+import '../experts_screen/experts_screen.dart';
 import '../screen_introduction/screen_splash.dart';
 import '../screen_login/screen_login.dart';
 import '../screen_register/screen_register.dart';
 import 'package:flutter/material.dart';
 
-class ScreenDebug extends StatelessWidget {
-  const ScreenDebug({super.key});
+class DebugScreen extends StatelessWidget {
+  const DebugScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -28,19 +28,19 @@ class ScreenDebug extends StatelessWidget {
               Navigator.pushNamed(context, ScreenRegister.route);
             }),
             CustomOutlineButton("Pitaj stručnjaka", () {
-              Navigator.pushNamed(context, ScreenAskExpertCategory.route);
+              Navigator.pushNamed(context, AskExpertCategoryScreen.route);
             }),
             CustomOutlineButton("Donacija robe", () {
-              Navigator.pushNamed(context, ScreenDonation.route);
+              Navigator.pushNamed(context, DonationScreen.route);
             }),
             CustomOutlineButton("O nama", () {
-              Navigator.pushNamed(context, ScreenAboutUs.route);
+              Navigator.pushNamed(context, AboutUsScreen.route);
             }),
             CustomOutlineButton("Stručnjaci", () {
-              Navigator.pushNamed(context, ScreenExperts.route);
+              Navigator.pushNamed(context, ExpertsScreen.route);
             }),
             CustomOutlineButton("Introduction", () {
-              Navigator.pushNamed(context, ScreenSplash.route);
+              Navigator.pushNamed(context, SplashScreen.route);
             }),
           ],
         )));

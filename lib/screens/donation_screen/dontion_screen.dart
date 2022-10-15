@@ -1,15 +1,15 @@
 import '../../common/widgets/app_bar/app_bar.dart';
 import '../../common/widgets/default_background.dart';
-import '../../screens/screen_experts/widgets/text_with_header_widget.dart';
+import '../screen_experts/widgets/text_with_header_widget.dart';
 import 'package:flutter/material.dart';
 
-class ScreenDonation extends StatelessWidget {
+class DonationScreen extends StatelessWidget {
   static const String route = '/clothing_donation';
   final String opisDonacija;
   final String informacije;
   final String header;
 
-  const ScreenDonation(this.opisDonacija, this.informacije, this.header,
+  const DonationScreen(this.opisDonacija, this.informacije, this.header,
       {super.key});
 
   @override
@@ -23,7 +23,7 @@ class ScreenDonation extends StatelessWidget {
             padding: const EdgeInsets.symmetric(horizontal: 15.0),
             child: Column(
               children: [
-                SizedBox(
+                const SizedBox(
                   height: 20,
                 ),
                 TextWithHeaderWidget(

@@ -1,5 +1,5 @@
 import '../../common/widgets/default_header.dart';
-import '../../screens/screen_experts/widgets/text_with_header_widget.dart';
+import '../screen_experts/widgets/text_with_header_widget.dart';
 import '../../common/widgets/default_background.dart';
 import '../../common/widgets/app_bar/app_bar.dart';
 import 'package:flutter/material.dart';
@@ -20,13 +20,13 @@ Widget questionAnswerWidget(String question, String answer,
   );
 }
 
-class ScreenFrequentQuestions extends StatelessWidget {
+class FrequentQuestionsScreen extends StatelessWidget {
   static const String route = '/screen_frequent_question';
   final Map<String, String> questionAndAnswers;
   final String categoryName;
   final List<Widget> questionAndAnswersWidgetList = [];
 
-  ScreenFrequentQuestions(this.questionAndAnswers, this.categoryName,
+  FrequentQuestionsScreen(this.questionAndAnswers, this.categoryName,
       {super.key}) {
     for (int i = 0; i < questionAndAnswers.length - 1; ++i) {
       String question = questionAndAnswers.keys.elementAt(i);

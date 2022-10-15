@@ -3,10 +3,10 @@ import '../../common/widgets/default_background.dart';
 import '../../common/widgets/default_header.dart';
 import 'package:flutter/material.dart';
 
-class ScreenAboutUs extends StatelessWidget {
+class AboutUsScreen extends StatelessWidget {
   static const String route = '/about_us';
 
-  const ScreenAboutUs({super.key});
+  const AboutUsScreen({super.key});
 
   List<Widget> buildScreenContent(BuildContext context) {
     return [

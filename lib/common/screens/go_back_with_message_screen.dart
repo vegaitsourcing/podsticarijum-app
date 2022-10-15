@@ -75,14 +75,14 @@ Widget centeredContainerWithFooter(
   );
 }
 
-class ScreenGoBackWithMessage extends StatelessWidget {
+class GoBackWithMessageScreen extends StatelessWidget {
   static const String route = "/go_back_with_message_screen";
 
   final String message;
   final Function() onClick;
   final String buttonText;
 
-  const ScreenGoBackWithMessage(this.message, this.onClick,
+  const GoBackWithMessageScreen(this.message, this.onClick,
       {Key? key, this.buttonText = "Vrati se na početni ekran"})
       : super(key: key);
 

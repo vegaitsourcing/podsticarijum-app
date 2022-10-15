@@ -61,8 +61,8 @@ flutter:
   assets:
     - images/about_us_bg.png
     - images/border_dot_line.png
-    - images/image-placeholder.png
-    - images/cloud-with-heart.png
+    - images/image_placeholder.png
+    - images/cloud_with_heart.png
     - images/czpn_logo.png
   #   - images/a_dot_ham.jpeg
 

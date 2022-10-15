@@ -4,11 +4,11 @@ import '../../common/widgets/default_header.dart';
 import '../../screens/screen_experts/widgets/text_with_header_widget.dart';
 import 'package:flutter/material.dart';
 
-class ScreenExperts extends StatelessWidget {
+class ExpertsScreen extends StatelessWidget {
   static const String route = '/experts';
   final int teamNumber;
 
-  const ScreenExperts(this.teamNumber, {super.key});
+  const ExpertsScreen(this.teamNumber, {super.key});
 
   @override
   Widget build(BuildContext context) {

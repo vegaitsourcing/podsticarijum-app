@@ -10,14 +10,14 @@ import 'package:flutter/material.dart';
  * DON'T USE!
  * 
  */
-class FormCustom extends StatefulWidget {
-  FormCustom({Key? key}) : super(key: key);
+class CustomForm extends StatefulWidget {
+  CustomForm({Key? key}) : super(key: key);
 
   @override
-  State<FormCustom> createState() => _FormCustomState();
+  State<CustomForm> createState() => _CustomFormState();
 }
 
-class _FormCustomState extends State<FormCustom> {
+class _CustomFormState extends State<CustomForm> {
   final _formKey = GlobalKey<FormState>();
 
   @override

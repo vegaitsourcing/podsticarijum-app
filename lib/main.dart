@@ -1,14 +1,14 @@
-import '../common/screens/screen_go_back_with_message.dart';
-import '../screens/screen_frequent_questions/screen_frequent_questions.dart';
-import '../screens/screen_introduction/screen_splash_succeeder.dart';
+import 'common/screens/go_back_with_message_screen.dart';
+import 'screens/frequent_questions_screen/frequent_questions_screen.dart';
+import 'screens/screen_introduction/splash_succeeder_screen.dart';
 
-import 'screens/screen_about_us/screen_about_us.dart';
-import 'screens/screen_ask_expert/screen_ask_expert_form.dart';
-import 'screens/screen_ask_expert/screen_ask_expert_category.dart';
-import 'screens/screen_clothing_donation/screen_clothing_donation.dart';
-import 'screens/screen_experts/screen_experts.dart';
+import 'screens/about_us_screen/screen_about_us.dart';
+import 'screens/ask_expert_screen/ask_expert_form_screen.dart';
+import 'screens/ask_expert_screen/ask_expert_category_screen.dart';
+import 'screens/donation_screen/dontion_screen.dart';
+import 'screens/experts_screen/experts_screen.dart';
 import 'screens/screen_introduction/screen_splash.dart';
-import 'screens/screen_introduction/screen_start.dart';
+import 'screens/screen_introduction/start_screen.dart';
 import 'screens/screen_login/screen_login.dart';
 import 'screens/screen_register/screen_register.dart';
 import 'package:flutter/material.dart';
@@ -28,27 +28,27 @@ void main() => runApp(
         ),
         title: "App for family backup",
         initialRoute:
-            ScreenSplashSucceeder.route, // TODO: Change back to start screen
+            SplashSucceederScreen.route, // TODO: Change back to start screen
         routes: {
-          ScreenStart.route: (context) => ScreenStart(),
+          StartScreen.route: (context) => StartScreen(),
           ScreenLogin.route: (context) => ScreenLogin(),
           ScreenRegister.route: (context) => ScreenRegister(),
-          ScreenAboutUs.route: (context) => ScreenAboutUs(),
-          ScreenAskExpertCategory.route: (context) => ScreenAskExpertCategory(),
-          ScreenExperts.route: (context) => ScreenExperts(1),
-          ScreenDonation.route: (context) => ScreenDonation(
+          AboutUsScreen.route: (context) => AboutUsScreen(),
+          AskExpertCategoryScreen.route: (context) => AskExpertCategoryScreen(),
+          ExpertsScreen.route: (context) => ExpertsScreen(1),
+          DonationScreen.route: (context) => DonationScreen(
                 "masu masu pitanja",
                 "masu masu informacija",
                 "Header",
               ),
-          ScreenSplash.route: (context) => ScreenSplash(),
-          ScreenStart.route: (context) => ScreenStart(),
-          ScreenAskExpertCategory.route: (context) => ScreenAskExpertCategory(),
-          ScreenAskExpertForm.route: (context) => ScreenAskExpertForm(),
-          ScreenSplashSucceeder.route: ((context) => ScreenSplashSucceeder(
+          SplashScreen.route: (context) => SplashScreen(),
+          StartScreen.route: (context) => StartScreen(),
+          AskExpertCategoryScreen.route: (context) => AskExpertCategoryScreen(),
+          ExpertFormScreen.route: (context) => ExpertFormScreen(),
+          SplashSucceederScreen.route: ((context) => SplashSucceederScreen(
               "Text in the centerText in the centerText in the centerText in the centerText in the centerText in the centerText in the centerText in the centerText in the center")),
-          ScreenFrequentQuestions.route: (context) =>
-              ScreenFrequentQuestions(const {
+          FrequentQuestionsScreen.route: (context) =>
+              FrequentQuestionsScreen(const {
                 "neko pitanje": "neki odgovor",
                 "neko pitanje 2": "neki odgovor 2",
                 "neko pitanje 3": "neki odgovor 3",
@@ -57,7 +57,7 @@ void main() => runApp(
                 "neko pitanje 6": "neki odgovor",
                 "neko pitanje 7": "neki odgovor",
               }, "Motorički razvoj"),
-          ScreenGoBackWithMessage.route: ((context) => ScreenGoBackWithMessage(
+          GoBackWithMessageScreen.route: ((context) => GoBackWithMessageScreen(
                 "Hvala na postavljenom pitanju, na vašu e-mail adresu će uskooro stići odgovor!",
                 buttonText: "Vrati se na početni ekran",
                 () {},

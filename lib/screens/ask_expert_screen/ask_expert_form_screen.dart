@@ -1,18 +1,18 @@
 import '../../common/widgets/app_bar/app_bar.dart';
-import '../../common/widgets/form_scrollable.dart';
+import '../../common/widgets/scrollable_form.dart';
 import '../../common/widgets/custom_text_form_field.dart';
 import 'package:flutter/material.dart';
 
-class ScreenAskExpertForm extends StatefulWidget {
+class ExpertFormScreen extends StatefulWidget {
   static const String route = '/ask_expert_form_screen';
 
-  const ScreenAskExpertForm({super.key});
+  const ExpertFormScreen({super.key});
 
   @override
-  State<ScreenAskExpertForm> createState() => _ScreenAskExpertFormState();
+  State<ExpertFormScreen> createState() => _ExpertFormScreenState();
 }
 
-class _ScreenAskExpertFormState extends State<ScreenAskExpertForm> {
+class _ExpertFormScreenState extends State<ExpertFormScreen> {
   final double _padding = 30;
 
   String? imePrezime = null;

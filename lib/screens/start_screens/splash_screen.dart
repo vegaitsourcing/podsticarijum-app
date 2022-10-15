@@ -1,11 +1,11 @@
-import '../../common/screens/screen_go_back_with_message.dart';
+import '../../common/screens/go_back_with_message_screen.dart';
 import '../../common/widgets/default_header.dart';
 import 'package:flutter/material.dart';
 
-class ScreenSplash extends StatelessWidget {
+class SplashScreen extends StatelessWidget {
   static const String route = "/splash_screen";
 
-  const ScreenSplash({Key? key}) : super(key: key);
+  const SplashScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

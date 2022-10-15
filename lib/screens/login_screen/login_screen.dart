@@ -1,4 +1,4 @@
-import '../../common/widgets/form_custom.dart';
+import '../../common/widgets/custom_form.dart';
 import 'package:flutter/material.dart';
 
 class ScreenLogin extends StatelessWidget {
@@ -8,6 +8,6 @@ class ScreenLogin extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return FormCustom();
+    return CustomForm();
   }
 }

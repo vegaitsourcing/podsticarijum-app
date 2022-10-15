@@ -2,10 +2,10 @@ import '../../common/widgets/app_bar/app_bar.dart';
 import '../../common/widgets/custom_outline_button.dart';
 import 'package:flutter/material.dart';
 
-class ScreenStart extends StatelessWidget {
+class StartScreen extends StatelessWidget {
   static const String route = "/start_screen";
 
-  const ScreenStart({super.key});
+  const StartScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
