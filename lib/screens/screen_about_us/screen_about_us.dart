@@ -1,6 +1,6 @@
-import 'package:app_for_family_backup/common/widgets/app_bar/app_bar.dart';
-import 'package:app_for_family_backup/common/widgets/default_background.dart';
-import 'package:app_for_family_backup/common/widgets/default_header.dart';
+import '../../common/widgets/app_bar/app_bar.dart';
+import '../../common/widgets/default_background.dart';
+import '../../common/widgets/default_header.dart';
 import 'package:flutter/material.dart';
 
 class ScreenAboutUs extends StatelessWidget {

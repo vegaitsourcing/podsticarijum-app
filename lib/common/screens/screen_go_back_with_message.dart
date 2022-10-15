@@ -7,6 +7,72 @@ import 'package:flutter/material.dart';
  * TOO HACKY, HARDCODED!!!! , CHECK FOR SOME MORE RELIABLE SOLUTION
  * 
  */
+Text _textWidget(BuildContext context, String text) {
+  return Text(
+    maxLines: 20,
+    overflow: TextOverflow.ellipsis,
+    text,
+    style: Theme.of(context).textTheme.headline5,
+    textAlign: TextAlign.center,
+  );
+}
+
+Widget containerWithImageAndText(
+  BuildContext context,
+  String imgUrl,
+  Text textWidget,
+) {
+  return Container(
+    width: MediaQuery.of(context).size.width,
+    color: const Color.fromRGBO(236, 239, 171, 1.000),
+    child: Stack(
+      fit: StackFit.loose,
+      alignment: Alignment.center,
+      children: [
+        Container(
+          width: double.infinity,
+          child: Image.asset(
+            imgUrl,
+          ),
+        ),
+        Container(
+          width: 230,
+          height: 150,
+          alignment: Alignment.center,
+          child: SizedBox(child: textWidget),
+        ),
+      ],
+    ),
+  );
+}
+
+Widget centeredContainerWithFooter(
+  BuildContext context,
+  Widget centeredWidget,
+  Widget footerWidget,
+) {
+  return Container(
+    height: double.infinity,
+    child: Stack(
+      children: [
+        Positioned(
+          child: Align(
+            alignment: Alignment.center,
+            child: centeredWidget,
+          ),
+        ),
+        Positioned(
+          bottom: 0,
+          width: MediaQuery.of(context).size.width,
+          child: Align(
+            alignment: Alignment.bottomCenter,
+            child: footerWidget,
+          ),
+        )
+      ],
+    ),
+  );
+}
 
 class ScreenGoBackWithMessage extends StatelessWidget {
   static String route = "/go_back_with_message_screen";
@@ -24,59 +90,17 @@ class ScreenGoBackWithMessage extends StatelessWidget {
     return Scaffold(
       backgroundColor: Color.fromRGBO(236, 239, 171, 1.000),
       appBar: CustomAppBar(backgroundPaint: BackgroundPaint.Yellow),
-      body: Container(
-        height: double.infinity,
-        child: Stack(
-          children: [
-            Positioned(
-              child: Align(
-                alignment: Alignment.center,
-                child: Container(
-                  width: MediaQuery.of(context).size.width,
-                  color: Color.fromRGBO(236, 239, 171, 1.000),
-                  child: Stack(
-                    fit: StackFit.loose,
-                    alignment: Alignment.center,
-                    children: [
-                      Container(
-                        width: double.infinity,
-                        child: Image.asset(
-                          'images/cloud-with-heart.png',
-                        ),
-                      ),
-                      Container(
-                        width: 230,
-                        height: 150,
-                        alignment: Alignment.center,
-                        child: SizedBox(
-                          child: Text(
-                            maxLines: 20,
-                            overflow: TextOverflow.ellipsis,
-                            message,
-                            style: Theme.of(context).textTheme.headline5,
-                            textAlign: TextAlign.center,
-                          ),
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-              ),
-            ),
-            Positioned(
-              bottom: 0,
-              width: MediaQuery.of(context).size.width,
-              child: Align(
-                alignment: Alignment.bottomCenter,
-                child: CustomOutlineButton(buttonText, onClick),
-              ),
-            )
-          ],
-        ),
+      body: centeredContainerWithFooter(
+        context,
+        containerWithImageAndText(context, 'images/cloud-with-heart.png',
+            _textWidget(context, message)),
+        CustomOutlineButton(buttonText, onClick),
       ),
     );
   }
 }
+
+
 
 
 // Container(
