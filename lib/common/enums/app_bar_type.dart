@@ -1,0 +1,3 @@
+enum AppBarType {
+  rootNav, menuNav;
+}

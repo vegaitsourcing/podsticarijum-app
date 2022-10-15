@@ -1,8 +1,9 @@
-import '../../common/widgets/default_header.dart';
-import '../experts_screen/widgets/text_with_header_widget.dart';
-import '../../common/widgets/default_background.dart';
-import '../../common/widgets/app_bar/app_bar.dart';
 import 'package:flutter/material.dart';
+
+import '../../common/widgets/app_bar/new_app_bar.dart';
+import '../../common/widgets/default_header.dart';
+import '../../common/widgets/info_section_widget.dart';
+import '../../common/widgets/default_container.dart';
 
 Widget questionAnswerWidget(
   String question,
@@ -12,10 +13,9 @@ Widget questionAnswerWidget(
   return Column(
     children: [
       const SizedBox(height: 20),
-      TextWithHeaderWidget(
-        question,
-        answer,
-        hasImage: false,
+      InfoSectionWidget(
+        title: question,
+        content: answer,
         hasBorder: hasBorder,
         spacing: 15,
       ),
@@ -46,19 +46,18 @@ class FrequentQuestionsScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: CustomAppBar(backgroundPaint: BackgroundPaint.Yellow),
+      appBar: const NewAppBar(),
       body: DefaultContainer(
         scale: 0.79,
         leftOffset: -50,
-        context,
-        [
+        children: [
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 15.0),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                DefaultSubHeader(context, "Najčešća pitanja"),
-                DefaultHeader(context, categoryName),
+                buildSubtitle(context, "Najčešća pitanja"),
+                buildTitle(context, categoryName),
                 const SizedBox(
                   height: 35,
                 ),

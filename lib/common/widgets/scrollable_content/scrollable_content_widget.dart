@@ -23,7 +23,7 @@ class ScrollableContentWidget extends StatelessWidget {
       children: [
         Text(
           subtitle!,
-          style: Theme.of(context).textTheme.headline3,
+          style: Theme.of(context).textTheme.headline4,
         ),
         const SizedBox(height: 16),
       ],
@@ -51,7 +51,7 @@ class ScrollableContentWidget extends StatelessWidget {
                 padding: const EdgeInsets.symmetric(horizontal: 20),
                 child: Text(
                   title,
-                  style: Theme.of(context).textTheme.headline2,
+                  style: Theme.of(context).textTheme.headline3,
                 ),
               ),
               const SizedBox(height: 68),
