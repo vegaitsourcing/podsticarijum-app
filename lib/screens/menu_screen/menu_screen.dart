@@ -27,7 +27,7 @@ class _MenuScreenState extends State<MenuScreen> {
     final String? routeName = getNavRoute();
     print("Selected menu item $menuItemId");
     if (routeName != null) {
-      Navigator.pushNamed(context, routeName);
+      Navigator.pushReplacementNamed(context, routeName);
     }
   }
 

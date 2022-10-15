@@ -10,7 +10,6 @@ import 'screens/ask_expert_screen/faq_categories_screen.dart';
 import 'screens/experts_screen/experts_screen.dart';
 import 'screens/menu_screen/menu_screen.dart';
 import 'screens/splash_screen/splash_screen.dart';
-import 'screens/splash_screen/splash_succeeder_screen.dart';
 
 void main() => runApp(const FamilyBackupApp());
 
@@ -24,8 +23,7 @@ class FamilyBackupApp extends StatelessWidget {
       title: 'Podsticarium',
       initialRoute: SplashScreen.route,
       routes: {
-        SplashScreen.route: (context) => const SplashScreen(),
-        SplashSucceederScreen.route: (context) => const SplashSucceederScreen(),
+        SplashScreen.route: (context) => SplashScreen(),
         CategoriesScreen.route: (context) => const CategoriesScreen(),
         MenuScreen.route: (context) => const MenuScreen(),
         AboutUsScreen.route: (context) => const AboutUsScreen(),
