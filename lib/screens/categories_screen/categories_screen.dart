@@ -1,6 +1,7 @@
+import 'package:app_for_family_backup/common/widgets/app_bar/new_app_bar.dart';
 import 'package:flutter/material.dart';
 
-import '../../common/widgets/app_bar/app_bar.dart';
+import '../../common/enums/app_bar_type.dart';
 import '../../common/widgets/custom_outline_button.dart';
 
 class CategoriesScreen extends StatelessWidget {
@@ -12,7 +13,8 @@ class CategoriesScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        appBar: CustomAppBar(),
+        backgroundColor: Theme.of(context).primaryColor,
+        appBar: const NewAppBar(appBarType: AppBarType.rootNav),
         body: Column(
           children: [
             CustomOutlineButton("0-1 godina", () {}),
