@@ -1,3 +1,5 @@
+import 'package:app_for_family_backup/common/enums/app_bar_type.dart';
+import 'package:app_for_family_backup/common/widgets/app_bar/new_app_bar.dart';
 import 'package:flutter/material.dart';
 
 import 'widgets/menu_item.dart';
@@ -17,7 +19,7 @@ class MenuScreen extends StatefulWidget {
 
 class _MenuScreenState extends State<MenuScreen> {
   int? selectedItemId;
-  static const _navigationDelayMillis = 300;
+  static const _navigationDelayMillis = 150;
 
   void onMenuSelected(BuildContext context, int menuItemId) async {
     setState(() {
@@ -27,7 +29,7 @@ class _MenuScreenState extends State<MenuScreen> {
     final String? routeName = getNavRoute();
     print("Selected menu item $menuItemId");
     if (routeName != null) {
-      Navigator.pushNamed(context, routeName);
+      Navigator.popAndPushNamed(context, routeName);
     }
   }
 
@@ -50,21 +52,7 @@ class _MenuScreenState extends State<MenuScreen> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        appBar: AppBar(
-          automaticallyImplyLeading: false,
-          title: const Text('Podsticarium'),
-          titleTextStyle: Theme.of(context).textTheme.headline6,
-          elevation: 0,
-          actions: [
-            IconButton(
-              onPressed: () {},
-              icon: const Icon(
-                Icons.close,
-                color: Color(0xFF0A0909),
-              ),
-            )
-          ],
-        ),
+        appBar: const NewAppBar(appBarType: AppBarType.menuNav),
         body: Padding(
           padding: const EdgeInsets.only(top: 96),
           child: Column(
