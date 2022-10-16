@@ -15,8 +15,16 @@ import 'screens/ask_expert_screen/faq_categories_screen.dart';
 import 'screens/experts_screen/experts_screen.dart';
 import 'screens/menu_screen/menu_screen.dart';
 import 'screens/splash_screen/splash_screen.dart';
+import 'package:firebase_core/firebase_core.dart';
+import 'firebase_options.dart';
 
-void main() => runApp(const FamilyBackupApp());
+void main() async {
+WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
+  runApp(const FamilyBackupApp());
+} 
 
 class FamilyBackupApp extends StatelessWidget {
   const FamilyBackupApp({super.key});
