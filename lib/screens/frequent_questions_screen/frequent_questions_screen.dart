@@ -5,14 +5,13 @@ import '../../common/widgets/default_header.dart';
 import '../../common/widgets/info_section_widget.dart';
 import '../../common/widgets/default_container.dart';
 
-class FrequentQuestionsScreen extends StatelessWidget {
+class FaqAnswersScreen extends StatelessWidget {
   static const String route = '/screen_frequent_question';
   final Map<String, String> questionAndAnswers;
   final String categoryName;
   final List<Widget> questionAndAnswersWidgetList = [];
 
-  FrequentQuestionsScreen(this.questionAndAnswers, this.categoryName,
-      {super.key}) {
+  FaqAnswersScreen(this.questionAndAnswers, this.categoryName, {super.key}) {
     for (int i = 0; i < questionAndAnswers.length - 1; ++i) {
       String question = questionAndAnswers.keys.elementAt(i);
       String answer = questionAndAnswers.values.elementAt(i);

@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 
 import 'common/theme.dart';
 import 'screens/categories_screen/categories_screen.dart';
-import 'screens/categories_screen/subcategories_screen.dart';
+import 'screens/categories_screen/subcategories_screen_.dart';
+import 'screens/category_details_screen/category_details_intro_screen.dart';
 import 'screens/category_details_screen/category_details_pros_n_cons.dart';
 import 'screens/category_details_screen/category_details_more_screen.dart';
 import 'screens/category_details_screen/category_details_screen.dart';
@@ -25,23 +26,24 @@ class FamilyBackupApp extends StatelessWidget {
     return MaterialApp(
       theme: FamilyBackupTheme.familyAppThemeData,
       title: 'Podsticarium',
-      initialRoute: CategoryDetailsProsNConsScreen.route,
+      initialRoute: CategoryDetailsIntroScreen.route,
       routes: {
         SplashScreen.route: (context) => SplashScreen(),
+        CategoriesScreen.route: (context) => const CategoriesScreen(),
         SubCategoriesScreen.route: (context) => const SubCategoriesScreen(),
-        MenuScreen.route: (context) => const MenuScreen(),
-        AboutUsScreen.route: (context) => const AboutUsScreen(),
-        FaqCategoriesScreen.route: (context) => const FaqCategoriesScreen(),
-        ExpertsScreen.route: (context) => const ExpertsScreen(),
-        DonationScreen.route: (context) => const DonationScreen(),
+        CategoryDetailsIntroScreen.route: (context) =>
+            CategoryDetailsIntroScreen(),
         CategoryDetailsScreen.route: (context) => const CategoryDetailsScreen(),
         CategoryDetailsMoreScreen.route: (context) =>
             CategoryDetailsMoreScreen(),
         CategoryDetailsProsNConsScreen.route: (context) =>
             CategoryDetailsProsNConsScreen(),
-        CategoriesScreen.route: (context) => const CategoriesScreen(),
-        FrequentQuestionsScreen.route: (context) =>
-            FrequentQuestionsScreen(const {
+        MenuScreen.route: (context) => const MenuScreen(),
+        AboutUsScreen.route: (context) => const AboutUsScreen(),
+        ExpertsScreen.route: (context) => const ExpertsScreen(),
+        DonationScreen.route: (context) => const DonationScreen(),
+        FaqCategoriesScreen.route: (context) => const FaqCategoriesScreen(),
+        FaqAnswersScreen.route: (context) => FaqAnswersScreen(const {
               "neko pitanje": "neki odgovor",
               "neko pitanje 2": "neki odgovor 2",
               "neko pitanje 3": "neki odgovor 3",
@@ -50,7 +52,7 @@ class FamilyBackupApp extends StatelessWidget {
               "neko pitanje 6": "neki odgovor",
               "neko pitanje 7": "neki odgovor",
             }, "Motorički razvoj"),
-        GoBackWithMessageScreen.route: (context) => GoBackWithMessageScreen(
+        ekranZahvalnosti.route: (context) => ekranZahvalnosti(
               onButtonClick: () {},
             )
       },

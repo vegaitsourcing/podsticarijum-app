@@ -1,8 +1,10 @@
-import 'package:app_for_family_backup/common/widgets/app_bar/new_app_bar.dart';
 import 'package:flutter/material.dart';
 
 import '../../common/enums/app_bar_type.dart';
+import '../../common/widgets/app_bar/new_app_bar.dart';
 import '../../common/widgets/custom_outline_button.dart';
+import '../category_details_screen/category_details_screen.dart';
+import 'categories_screen.dart';
 
 class CategoriesScreen extends StatelessWidget {
   static const route = '/categories';
@@ -21,7 +23,11 @@ class CategoriesScreen extends StatelessWidget {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              CustomOutlineButton(text: "0-1 godina", onClick: () {}),
+              CustomOutlineButton(
+                  text: "0-1 godina",
+                  onClick: () {
+                    Navigator.pushNamed(context, SubCategoriesScreen.route);
+                  }),
               const SizedBox(height: _padding),
               CustomOutlineButton(text: "1-3 godina", onClick: () {}),
               const SizedBox(height: _padding),
