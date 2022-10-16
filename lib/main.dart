@@ -1,3 +1,4 @@
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 
 import 'common/theme.dart';
@@ -15,8 +16,15 @@ import 'screens/experts_screen/experts_screen.dart';
 import 'screens/menu_screen/menu_screen.dart';
 import 'screens/splash_screen/splash_screen.dart';
 import 'screens/thank_you_screen/thank_you_screen.dart';
+import 'firebase_options.dart';
 
-void main() => runApp(const FamilyBackupApp());
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
+  runApp(const FamilyBackupApp());
+}
 
 class FamilyBackupApp extends StatelessWidget {
   const FamilyBackupApp({super.key});
