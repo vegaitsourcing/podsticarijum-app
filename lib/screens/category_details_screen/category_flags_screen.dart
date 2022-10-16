@@ -1,13 +1,13 @@
-import 'package:app_for_family_backup/common/enums/flag_type.dart';
-import 'package:app_for_family_backup/screens/categories_screen/categories_screen.dart';
 import 'package:flutter/material.dart';
 
 import '../../common/enums/age_group_type.dart';
 import '../../common/enums/development_ascpect_type.dart';
+import '../../common/enums/flag_type.dart';
 import '../../common/widgets/app_bar/new_app_bar.dart';
 import '../../common/widgets/default_container.dart';
 import '../../common/widgets/default_header.dart';
 import '../../common/widgets/useful_widgets.dart';
+import '../categories_screen/categories_screen.dart';
 
 class CategoryFlagsScreenArguments {
   AgeGroupType ageGroupType;
