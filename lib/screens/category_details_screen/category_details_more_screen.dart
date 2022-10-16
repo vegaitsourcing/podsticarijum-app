@@ -54,9 +54,6 @@ class CategoryDetailsMoreScreen extends StatelessWidget {
                 buildTitle(context,
                     'Neurotipičan ${args.developmentAspectType.title}'),
                 const SizedBox(height: 100),
-                // ...paragraphList.map(
-                //   (paragraph) => _buildParagraph(paragraph, context),
-                // ),
                 _buildParagraph(subcategory.staticContent, context),
                 CustomOutlineButton(
                   text: "Podsticajne razvojne aktivnosti",
@@ -126,9 +123,7 @@ class CategoryDetailsMoreScreen extends StatelessWidget {
             paragraphText,
             style: Theme.of(context).textTheme.bodyText1,
           ),
-          const SizedBox(
-            height: 15,
-          ),
+          const SizedBox(height: 15),
         ],
       ),
     );
