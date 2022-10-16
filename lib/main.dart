@@ -1,5 +1,4 @@
 import 'package:firebase_core/firebase_core.dart';
-import 'package:app_for_family_backup/common/data/FAQ/motor_development.dart';
 import 'package:flutter/material.dart';
 
 import 'common/theme.dart';
