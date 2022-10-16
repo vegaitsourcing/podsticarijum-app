@@ -18,14 +18,14 @@ class CategoryDetailsIntroScreenArguments {
 }
 
 class CategoryDetailsIntroScreen extends StatelessWidget {
-  CategoryDetailsIntroScreenArguments? args = null;
+  CategoryDetailsIntroScreenArguments? args;
 
   static const String route = '/category_details_intro_screen';
   final double marginBottom = 15;
-  double _padding = 0;
-  //data
+  // data
   String description =
       ' Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia, molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium optio, eaque rerum! Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia, molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium optio, eaque rerum! ';
+
   List<String> bulletpointList = [
     'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
     'Lorem ipsum dolor sit amet consectetur adipisicing elit.',

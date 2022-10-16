@@ -1,15 +1,14 @@
 import 'package:flutter/material.dart';
 
-import '../go_back_screen/ekran_zahvalnosti.dart';
 import '../../common/enums/age_group_type.dart';
 import '../../common/enums/category_detail_type.dart';
 import '../../common/enums/development_ascpect_type.dart';
 import '../../common/widgets/app_bar/new_app_bar.dart';
-import '../../common/widgets/custom_outline_button.dart';
 import '../../common/widgets/default_container.dart';
 import '../../common/widgets/default_header.dart';
 import '../../common/widgets/useful_widgets.dart';
 import '../splash_screen/splash_screen.dart';
+import '../thank_you_screen/thank_you_screen.dart';
 
 class CategoryDetailsProsNConsScreenArguments {
   AgeGroupType ageGroupType;
@@ -22,11 +21,10 @@ class CategoryDetailsProsNConsScreenArguments {
 }
 
 class CategoryDetailsProsNConsScreen extends StatelessWidget {
-  CategoryDetailsProsNConsScreenArguments? args = null;
+  CategoryDetailsProsNConsScreenArguments? args;
 
   static const String route = '/category_details_more_advantages_screen';
   final double marginBottom = 15;
-  double _padding = 0;
   CategoryDetailType type;
 
   //data
@@ -37,9 +35,10 @@ class CategoryDetailsProsNConsScreen extends StatelessWidget {
     'Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia, molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium optio, eaque rerum!',
   ];
 
-  CategoryDetailsProsNConsScreen(
-      {Key? key, this.type = CategoryDetailType.pros})
-      : super(key: key);
+  CategoryDetailsProsNConsScreen({
+    Key? key,
+    this.type = CategoryDetailType.pros,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -77,23 +76,25 @@ class CategoryDetailsProsNConsScreen extends StatelessWidget {
                 const SizedBox(height: 100),
                 ...(paragraphList
                     .map((paragraph) => _buildParagraph(paragraph, context))),
-                SizedBox(height: 33),
+                const SizedBox(height: 33),
                 Image.asset('images/border_dot_line.png'),
-                SizedBox(height: 33),
+                const SizedBox(height: 33),
                 buildDefaultCustomForm(callback),
                 const SizedBox(height: 10),
                 Align(
                   alignment: Alignment.center,
                   child: TextButton(
                     child: Text(
-                        style: Theme.of(context).textTheme.headline4,
-                        "Vrati se na početnu stranu"),
+                      style: Theme.of(context).textTheme.headline4,
+                      "Vrati se na početnu stranu",
+                    ),
                     onPressed: () {
                       if (args != null) {
                         Navigator.pushNamedAndRemoveUntil(
-                            context,
-                            SplashScreen.route,
-                            (Route<dynamic> route) => false);
+                          context,
+                          SplashScreen.route,
+                          (Route<dynamic> route) => false,
+                        );
                       }
                     },
                   ),
