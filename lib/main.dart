@@ -33,7 +33,7 @@ class FamilyBackupApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       theme: FamilyBackupTheme.familyAppThemeData,
-      title: 'Podsticarium',
+      title: 'Podsticarijum',
       initialRoute: SplashScreen.route,
       routes: {
         SplashScreen.route: (context) => SplashScreen(),
