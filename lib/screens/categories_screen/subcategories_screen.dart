@@ -46,7 +46,7 @@ class SubCategoriesScreen extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     ...DevelopmentAspectType.values
-                        .map((e) => _getColumnElement(context, e))
+                        .map((aspectType) => _getColumnElement(context, aspectType))
                         .toList(),
                   ]),
             ),
