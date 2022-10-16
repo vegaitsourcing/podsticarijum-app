@@ -13,21 +13,18 @@ class CategoryFlagsScreenArguments {
   AgeGroupType ageGroupType;
   DevelopmentAspectType developmentAspectType;
   FlagType flagType;
+  List<String> bulletList;
 
   CategoryFlagsScreenArguments(
-      this.ageGroupType, this.developmentAspectType, this.flagType);
+    this.ageGroupType,
+    this.developmentAspectType,
+    this.flagType,
+    this.bulletList,
+  );
 }
 
 class CategoryFlagsScreen extends StatelessWidget {
   static const String route = '/category_flags';
-
-  //data
-  List<String> paragraphList = [
-    'Lorem ipsum dolor sit ',
-    'Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia, molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium optio, eaque rerum!',
-    'Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia, molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium optio, eaque rerum!',
-    'Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia, molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium optio, eaque rerum!',
-  ];
 
   CategoryFlagsScreen({
     Key? key,
@@ -46,6 +43,8 @@ class CategoryFlagsScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     final args = ModalRoute.of(context)!.settings.arguments
         as CategoryFlagsScreenArguments;
+
+    final paragraphList = args.bulletList;
 
     return SafeArea(
       child: Scaffold(

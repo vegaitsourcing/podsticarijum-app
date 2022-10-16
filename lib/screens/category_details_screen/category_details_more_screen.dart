@@ -25,7 +25,7 @@ class CategoryDetailsMoreScreenArguments {
 class CategoryDetailsMoreScreen extends StatelessWidget {
   static const String route = '/category_details_more';
 
-  CategoryDetailsMoreScreen({Key? key}) : super(key: key);
+  const CategoryDetailsMoreScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -33,8 +33,11 @@ class CategoryDetailsMoreScreen extends StatelessWidget {
         as CategoryDetailsMoreScreenArguments;
 
     final categories = CategoryRepository.categories;
-    final subcategories = categories.firstWhere((category) => category.ageGroupType == args.ageGroupType).subcategories;
-    final subcategory = subcategories.firstWhere((subcategory) => subcategory.developmentAspectType == args.developmentAspectType);
+    final subcategories = categories
+        .firstWhere((category) => category.ageGroupType == args.ageGroupType)
+        .subcategories;
+    final subcategory = subcategories.firstWhere((subcategory) =>
+        subcategory.developmentAspectType == args.developmentAspectType);
 
     return SafeArea(
       child: Scaffold(
@@ -48,7 +51,8 @@ class CategoryDetailsMoreScreen extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 buildSubtitle(context, args.ageGroupType.title),
-                buildTitle(context, 'Neurotipičan ${args.developmentAspectType.title}'),
+                buildTitle(context,
+                    'Neurotipičan ${args.developmentAspectType.title}'),
                 const SizedBox(height: 100),
                 // ...paragraphList.map(
                 //   (paragraph) => _buildParagraph(paragraph, context),
@@ -63,6 +67,7 @@ class CategoryDetailsMoreScreen extends StatelessWidget {
                       args.ageGroupType,
                       args.developmentAspectType,
                       FlagType.green,
+                      subcategory.greenFlags,
                     ),
                   ),
                   isYellow: true,
@@ -77,6 +82,7 @@ class CategoryDetailsMoreScreen extends StatelessWidget {
                       args.ageGroupType,
                       args.developmentAspectType,
                       FlagType.red,
+                      subcategory.redFlags,
                     ),
                   ),
                   isYellow: true,
