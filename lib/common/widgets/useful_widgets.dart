@@ -79,11 +79,11 @@ Widget centeredContainerWithFooter(
 }
 
 Widget buildDefaultCustomForm(
-  void onValidFormCallback(
+  void Function(
     String nameAndSurname,
     String email,
     String question,
-  ),
+  ) onValidFormCallback,
 ) {
   const double marginBottom = 15;
   String? nameAndSurname;

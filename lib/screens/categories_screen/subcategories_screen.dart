@@ -5,7 +5,7 @@ import '../../common/enums/app_bar_type.dart';
 import '../../common/enums/development_ascpect_type.dart';
 import '../../common/widgets/app_bar/new_app_bar.dart';
 import '../../common/widgets/custom_outline_button.dart';
-import '../category_details_screen/category_details_intro_screen.dart';
+import '../category_details_screen/category_intro_screen.dart';
 
 class SubCategoriesScreenArguments {
   AgeGroupType ageGroupType;
@@ -42,12 +42,13 @@ class SubCategoriesScreen extends StatelessWidget {
           padding: const EdgeInsets.symmetric(horizontal: 20),
           child: Center(
             child: SingleChildScrollView(
-              child:
-                  Column(mainAxisAlignment: MainAxisAlignment.center, children: [
-                ...DevelopmentAspectType.values
-                    .map((e) => _getColumnElement(e, context))
-                    .toList(),
-              ]),
+              child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    ...DevelopmentAspectType.values
+                        .map((aspectType) => _getColumnElement(context, aspectType))
+                        .toList(),
+                  ]),
             ),
           ),
         ),
@@ -55,15 +56,15 @@ class SubCategoriesScreen extends StatelessWidget {
     );
   }
 
-  Widget _getColumnElement(DevelopmentAspectType type, BuildContext context) {
+  Widget _getColumnElement(BuildContext context, DevelopmentAspectType type) {
     return Column(
       children: [
         CustomOutlineButton(
-          text: developmentAspectTypeStrings[type.index],
+          text: type.title,
           onClick: () {
             if (args != null) {
-              Navigator.pushNamed(context, CategoryDetailsIntroScreen.route,
-                  arguments: CategoryDetailsIntroScreenArguments(
+              Navigator.pushNamed(context, CategoryIntroScreen.route,
+                  arguments: CategoryIntroScreenArguments(
                     args!.ageGroupType,
                     type,
                   ));
