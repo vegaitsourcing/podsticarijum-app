@@ -1,4 +1,4 @@
-import 'package:app_for_family_backup/common/data/FAQ/motor_development.dart';
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 
 import 'common/theme.dart';
@@ -16,8 +16,15 @@ import 'screens/experts_screen/experts_screen.dart';
 import 'screens/menu_screen/menu_screen.dart';
 import 'screens/splash_screen/splash_screen.dart';
 import 'screens/thank_you_screen/thank_you_screen.dart';
+import 'firebase_options.dart';
 
-void main() => runApp(const FamilyBackupApp());
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
+  runApp(const FamilyBackupApp());
+}
 
 class FamilyBackupApp extends StatelessWidget {
   const FamilyBackupApp({super.key});
@@ -26,8 +33,8 @@ class FamilyBackupApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       theme: FamilyBackupTheme.familyAppThemeData,
-      title: 'Podsticarium',
-      initialRoute: ExpertsScreen.route,
+      title: 'Podsticarijum',
+      initialRoute: SplashScreen.route,
       routes: {
         SplashScreen.route: (context) => SplashScreen(),
         CategoriesScreen.route: (context) => const CategoriesScreen(),
@@ -36,8 +43,7 @@ class FamilyBackupApp extends StatelessWidget {
         CategoryDetailsScreen.route: (context) => const CategoryDetailsScreen(),
         CategoryDetailsMoreScreen.route: (context) =>
             CategoryDetailsMoreScreen(),
-        CategoryFlagsScreen.route: (context) =>
-            CategoryFlagsScreen(),
+        CategoryFlagsScreen.route: (context) => CategoryFlagsScreen(),
         MenuScreen.route: (context) => const MenuScreen(),
         AboutUsScreen.route: (context) => const AboutUsScreen(),
         ExpertsScreen.route: (context) => const ExpertsScreen(),

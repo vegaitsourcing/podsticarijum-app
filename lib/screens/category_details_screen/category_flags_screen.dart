@@ -19,7 +19,7 @@ class CategoryFlagsScreenArguments {
 }
 
 class CategoryFlagsScreen extends StatelessWidget {
-  static const String route = '/category_details_more_advantages';
+  static const String route = '/category_flags';
 
   //data
   List<String> paragraphList = [
@@ -35,10 +35,10 @@ class CategoryFlagsScreen extends StatelessWidget {
 
   void callback(String name, String mail, String question) {
     /**
-       *
-       * TODO: MAKE AN ASYNC CALL TO SEND THE EMAIL!
-       *
-       */
+     *
+     * TODO: MAKE AN ASYNC CALL TO SEND THE EMAIL!
+     *
+     */
     // Navigator.pushNamed(context, ThankYouScreen.route);
   }
 
@@ -64,11 +64,14 @@ class CategoryFlagsScreen extends StatelessWidget {
                 ),
                 buildTitle(
                   context,
-                  "Podsticarijum igre i aktivnosti, stimulativne za razvoj vaše bebe i deteta.",
+                  args.flagType == FlagType.green
+                      ? "Podsticarijum igre i aktivnosti, stimulativne za razvoj vaše bebe i deteta."
+                      : 'Znakovi odstupanja od neurotipičnog razvoja',
                 ),
                 const SizedBox(height: 100),
                 ...paragraphList.map(
-                  (paragraph) => _buildParagraph(context, args.flagType, paragraph),
+                  (paragraph) =>
+                      _buildParagraph(context, args.flagType, paragraph),
                 ),
                 const SizedBox(height: 33),
                 Image.asset('images/border_dot_line.png'),

@@ -1,3 +1,4 @@
+import 'package:app_for_family_backup/screens/categories_screen/categories_screen.dart';
 import 'package:flutter/material.dart';
 
 import '../../../screens/menu_screen/menu_screen.dart';
@@ -56,7 +57,13 @@ class NewAppBar extends StatelessWidget implements PreferredSizeWidget {
         AppBar(
           automaticallyImplyLeading: false,
           backgroundColor: getBackgroundColor(context),
-          title: Text('Podsticarium'),
+          title: GestureDetector(
+            onTap: () => Navigator.popUntil(
+              context,
+              ModalRoute.withName(CategoriesScreen.route),
+            ),
+            child: const Text('Podsticarijum'),
+          ),
           titleTextStyle: Theme.of(context).textTheme.headline5,
           elevation: 0,
           actions: [buildMenuAction(context)],
