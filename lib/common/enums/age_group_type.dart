@@ -1,16 +1,10 @@
 enum AgeGroupType {
-  first,
-  second,
-  third,
-  fourth,
+  first('0-1 godina'),
+  second('1-3 godina'),
+  third('3-5 godina'),
+  fourth('5-7 godina');
+
+  const AgeGroupType(this.title);
+
+  final String title;
 }
-
-String ageGroupTypeToString(AgeGroupType type) =>
-    ageGroupTypeStrings[type.index];
-
-const List<String> ageGroupTypeStrings = [
-  '0-1 godina',
-  '1-3 godina',
-  '3-5 godina',
-  '5-7 godina'
-];

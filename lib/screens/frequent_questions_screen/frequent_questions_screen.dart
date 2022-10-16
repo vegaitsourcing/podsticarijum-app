@@ -12,9 +12,6 @@ class FaqAnswersScreenArguments {
 }
 
 class FaqAnswersScreen extends StatelessWidget {
-
-  FaqAnswersScreenArguments? args;
-
   static const String route = '/screen_frequent_question';
   final Map<String, String> questionAndAnswers;
   final String categoryName;
@@ -27,15 +24,18 @@ class FaqAnswersScreen extends StatelessWidget {
       questionAndAnswersWidgetList.add(_questionAnswerWidget(question, answer));
     }
 
-    questionAndAnswersWidgetList.add(// add last element without a border
-        _questionAnswerWidget(
-            questionAndAnswers.keys.last, questionAndAnswers.values.last,
-            hasBorder: false));
+    questionAndAnswersWidgetList.add(
+      _questionAnswerWidget(
+        questionAndAnswers.keys.last,
+        questionAndAnswers.values.last,
+        hasBorder: false,
+      ),
+    );
   }
 
   @override
   Widget build(BuildContext context) {
-    args =
+    final args =
         ModalRoute.of(context)!.settings.arguments as FaqAnswersScreenArguments;
     // final questionMap = <String,String>{};
 
@@ -54,13 +54,10 @@ class FaqAnswersScreen extends StatelessWidget {
             children: [
               buildSubtitle(context, "Najčešća pitanja"),
               buildTitle(
-                  context,
-                  args != null
-                      ? developmentAspectTypeStrings[args!.type.index]
-                      : "development category"),
-              const SizedBox(
-                height: 35,
+                context,
+                args.type.title,
               ),
+              const SizedBox(height: 35),
               ...questionAndAnswersWidgetList
             ],
           ),

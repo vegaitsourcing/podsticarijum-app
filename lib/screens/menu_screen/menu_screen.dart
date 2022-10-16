@@ -1,7 +1,7 @@
-import 'package:app_for_family_backup/common/enums/app_bar_type.dart';
-import 'package:app_for_family_backup/common/widgets/app_bar/new_app_bar.dart';
 import 'package:flutter/material.dart';
 
+import '../../common/enums/app_bar_type.dart';
+import '../../common/widgets/app_bar/new_app_bar.dart';
 import 'widgets/menu_item.dart';
 import '../about_us_screen/screen_about_us.dart';
 import '../ask_expert_screen/faq_categories_screen.dart';

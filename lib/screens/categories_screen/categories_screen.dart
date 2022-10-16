@@ -4,7 +4,6 @@ import '../../common/enums/age_group_type.dart';
 import '../../common/enums/app_bar_type.dart';
 import '../../common/widgets/app_bar/new_app_bar.dart';
 import '../../common/widgets/custom_outline_button.dart';
-import '../category_details_screen/category_details_screen.dart';
 import 'subcategories_screen.dart';
 
 class CategoriesScreen extends StatelessWidget {
@@ -25,25 +24,25 @@ class CategoriesScreen extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               CustomOutlineButton(
-                  text: "0-1 godina",
+                  text: AgeGroupType.first.title,
                   onClick: () {
                     _navigate(AgeGroupType.first, context);
                   }),
               const SizedBox(height: _padding),
               CustomOutlineButton(
-                  text: "1-3 godina",
+                  text: AgeGroupType.second.title,
                   onClick: () {
                     _navigate(AgeGroupType.second, context);
                   }),
               const SizedBox(height: _padding),
               CustomOutlineButton(
-                  text: "3-5 godina",
+                  text: AgeGroupType.third.title,
                   onClick: () {
                     _navigate(AgeGroupType.third, context);
                   }),
               const SizedBox(height: _padding),
               CustomOutlineButton(
-                  text: "5-7 godina",
+                  text: AgeGroupType.fourth.title,
                   onClick: () {
                     _navigate(AgeGroupType.fourth, context);
                   }),

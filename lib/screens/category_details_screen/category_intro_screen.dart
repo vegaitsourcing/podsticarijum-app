@@ -5,27 +5,24 @@ import '../../common/enums/development_ascpect_type.dart';
 import '../../common/widgets/app_bar/new_app_bar.dart';
 import '../../common/widgets/custom_outline_button.dart';
 import '../../common/widgets/default_header.dart';
-import 'category_details_pros_n_cons.dart';
+import 'category_details_more_screen.dart';
 
-class CategoryDetailsIntroScreenArguments {
+class CategoryIntroScreenArguments {
   AgeGroupType ageGroupType;
   DevelopmentAspectType developmentAspectType;
 
-  CategoryDetailsIntroScreenArguments(
+  CategoryIntroScreenArguments(
     this.ageGroupType,
     this.developmentAspectType,
   );
 }
 
-class CategoryDetailsIntroScreen extends StatelessWidget {
-  CategoryDetailsIntroScreenArguments? args = null;
+class CategoryIntroScreen extends StatelessWidget {
+  static const String route = '/category_details_intro';
 
-  static const String route = '/category_details_intro_screen';
-  final double marginBottom = 15;
-  double _padding = 0;
-  //data
   String description =
       ' Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia, molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium optio, eaque rerum! Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia, molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium optio, eaque rerum! ';
+
   List<String> bulletpointList = [
     'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
     'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
@@ -35,12 +32,13 @@ class CategoryDetailsIntroScreen extends StatelessWidget {
     'Lorem ipsum dolor sit amet consectetur adipisicing elit.'
   ];
 
-  CategoryDetailsIntroScreen({Key? key}) : super(key: key);
+  CategoryIntroScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    args = ModalRoute.of(context)!.settings.arguments
-        as CategoryDetailsIntroScreenArguments;
+    print("category intro screen");
+    final args = ModalRoute.of(context)!.settings.arguments
+        as CategoryIntroScreenArguments;
 
     return SafeArea(
       child: Scaffold(
@@ -57,13 +55,7 @@ class CategoryDetailsIntroScreen extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     const SizedBox(height: 25),
-                    buildTitle(
-                      context,
-                      args != null
-                          ? developmentAspectTypeStrings[
-                              args!.developmentAspectType.index]
-                          : 'Title',
-                    ),
+                    buildTitle(context, args.developmentAspectType.title),
                     const SizedBox(height: 10),
                     Text(
                       description,
@@ -77,9 +69,11 @@ class CategoryDetailsIntroScreen extends StatelessWidget {
                 height: 70,
                 width: MediaQuery.of(context).size.width,
                 decoration: const BoxDecoration(
-                    image: DecorationImage(
-                        fit: BoxFit.fill,
-                        image: AssetImage('images/about_us_bg.png'))),
+                  image: DecorationImage(
+                    fit: BoxFit.fill,
+                    image: AssetImage('images/about_us_bg.png'),
+                  ),
+                ),
               ),
               const SizedBox(height: 20),
               Text(
@@ -107,16 +101,14 @@ class CategoryDetailsIntroScreen extends StatelessWidget {
               CustomOutlineButton(
                 text: 'Pogledaj više',
                 onClick: () {
-                  if (args != null) {
-                    Navigator.pushNamed(
-                      context,
-                      CategoryDetailsProsNConsScreen.route,
-                      arguments: CategoryDetailsProsNConsScreenArguments(
-                        args!.ageGroupType,
-                        args!.developmentAspectType,
-                      ),
-                    );
-                  }
+                  Navigator.pushNamed(
+                    context,
+                    CategoryDetailsMoreScreen.route,
+                    arguments: CategoryDetailsMoreScreenArguments(
+                      args.ageGroupType,
+                      args.developmentAspectType,
+                    ),
+                  );
                 },
               ),
               const SizedBox(height: 10),
@@ -135,9 +127,7 @@ class CategoryDetailsIntroScreen extends StatelessWidget {
             paragraphText,
             style: Theme.of(context).textTheme.bodyText1,
           ),
-          const SizedBox(
-            height: 15,
-          ),
+          const SizedBox(height: 15),
         ],
       ),
     );
