@@ -1,3 +1,4 @@
+import 'package:app_for_family_backup/common/enums/category_detail_type.dart';
 import 'package:flutter/material.dart';
 
 import '../../common/widgets/app_bar/new_app_bar.dart';
@@ -6,10 +7,11 @@ import '../../common/widgets/default_container.dart';
 import '../../common/widgets/default_header.dart';
 import '../../common/widgets/useful_widgets.dart';
 
-class CategoryDetailsMoreAdvantagesScreen extends StatelessWidget {
+class CategoryDetailsProsNConsScreen extends StatelessWidget {
   static const String route = '/category_details_more_advantages_screen';
   final double marginBottom = 15;
   double _padding = 0;
+  CategoryDetailType type;
   //data
   List<String> paragraphList = [
     'Lorem ipsum dolor sit ',
@@ -18,7 +20,9 @@ class CategoryDetailsMoreAdvantagesScreen extends StatelessWidget {
     'Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia, molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium optio, eaque rerum!',
   ];
 
-  CategoryDetailsMoreAdvantagesScreen({Key? key}) : super(key: key);
+  CategoryDetailsProsNConsScreen(
+      {Key? key, this.type = CategoryDetailType.cons})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -77,7 +81,9 @@ class CategoryDetailsMoreAdvantagesScreen extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Image.asset('images/green_flag_img.png'),
+              Image.asset(type == CategoryDetailType.pros
+                  ? 'images/green_flag_img.png'
+                  : 'images/red_flag_img.png'),
               const SizedBox(width: 10),
               Expanded(
                 child: Text(
