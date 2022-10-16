@@ -7,7 +7,6 @@ import 'screens/category_details_screen/category_details_intro_screen.dart';
 import 'screens/category_details_screen/category_details_pros_n_cons.dart';
 import 'screens/category_details_screen/category_details_more_screen.dart';
 import 'screens/category_details_screen/category_details_screen.dart';
-import 'screens/go_back_screen/ekran_zahvalnosti.dart';
 import 'screens/donation_screen/donation_screen.dart';
 import 'screens/frequent_questions_screen/frequent_questions_screen.dart';
 import 'screens/about_us_screen/screen_about_us.dart';
@@ -15,6 +14,7 @@ import 'screens/ask_expert_screen/faq_categories_screen.dart';
 import 'screens/experts_screen/experts_screen.dart';
 import 'screens/menu_screen/menu_screen.dart';
 import 'screens/splash_screen/splash_screen.dart';
+import 'screens/thank_you_screen/thank_you_screen.dart';
 
 void main() => runApp(const FamilyBackupApp());
 
@@ -52,7 +52,7 @@ class FamilyBackupApp extends StatelessWidget {
               "neko pitanje 6": "neki odgovor",
               "neko pitanje 7": "neki odgovor",
             }, "Motorički razvoj"),
-        ekranZahvalnosti.route: (context) => ekranZahvalnosti()
+        ThankYouScreen.route: (context) => const ThankYouScreen()
       },
     );
   }

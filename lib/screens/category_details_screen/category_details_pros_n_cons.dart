@@ -52,7 +52,7 @@ class CategoryDetailsProsNConsScreen extends StatelessWidget {
        * TODO: MAKE AN ASYNC CALL TO SEND THE EMAIL!
        *
        */
-      Navigator.pushNamed(context, ekranZahvalnosti.route);
+      Navigator.pushNamed(context, ThankYouScreen.route);
     }
 
     return SafeArea(
