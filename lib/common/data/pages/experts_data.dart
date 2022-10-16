@@ -1,7 +1,7 @@
-import 'paragraph_data.dart';
+import '../paragraph_data.dart';
 
 class ExpertsData{
-  List<ParagraphData> listOfQuestions = <ParagraphData>[];
+  List<ParagraphData> listOfExperts = <ParagraphData>[];
 
   ExpertsData() {
     ParagraphData expert1 = ParagraphData(
@@ -43,16 +43,13 @@ class ExpertsData{
         "Terapeut integracije primitivnih i posturalnih refleksa",
         "Javite se terapeutu integracije primitivnih i posturalnih refleksa (Blomberg Rhytmic Movement terapeut) ukoliko ste identifikovali da postoji potreba za stručnom pomoću. Vaš upit će stići timu stručnjaka koji će odgovoriti na Vaš upit u toku mjeseca."
     );
-
-
-
-    listOfQuestions.add(expert1);
-    listOfQuestions.add(expert2);
-    listOfQuestions.add(expert3);
-    listOfQuestions.add(expert4);
-    listOfQuestions.add(expert5);
-    listOfQuestions.add(expert6);
-    listOfQuestions.add(expert7);
-    listOfQuestions.add(expert8);
+    listOfExperts.add(expert1);
+    listOfExperts.add(expert2);
+    listOfExperts.add(expert3);
+    listOfExperts.add(expert4);
+    listOfExperts.add(expert5);
+    listOfExperts.add(expert6);
+    listOfExperts.add(expert7);
+    listOfExperts.add(expert8);
   }
 }

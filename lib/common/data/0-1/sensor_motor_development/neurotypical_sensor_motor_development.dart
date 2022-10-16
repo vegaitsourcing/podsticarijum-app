@@ -1,4 +1,4 @@
-class SensorMotorDevelopment {
+class NeurotipicalSensoryMotorDevelopment {
   var data = [
     '''Osećaji koji dolaze preko kože, putem dodira, su veoma važni tokom prvih meseci života bebe, ali i
         tokom celog perioda odrastanja. Preko čula dodira dete ostvaruje kontakt sa majkom dok ga doji,

@@ -1,3 +1,4 @@
+import 'package:app_for_family_backup/common/data/FAQ/motor_development.dart';
 import 'package:flutter/material.dart';
 
 import 'common/theme.dart';
@@ -21,7 +22,7 @@ class FamilyBackupApp extends StatelessWidget {
     return MaterialApp(
       theme: FamilyBackupTheme.familyAppThemeData,
       title: 'Podsticarium',
-      initialRoute: SplashScreen.route,
+      initialRoute: FrequentQuestionsScreen.route,
       routes: {
         SplashScreen.route: (context) => SplashScreen(),
         CategoriesScreen.route: (context) => const CategoriesScreen(),
@@ -30,16 +31,8 @@ class FamilyBackupApp extends StatelessWidget {
         FaqCategoriesScreen.route: (context) => const FaqCategoriesScreen(),
         ExpertsScreen.route: (context) => const ExpertsScreen(),
         DonationScreen.route: (context) => const DonationScreen(),
-        FrequentQuestionsScreen.route: (context) =>
-            FrequentQuestionsScreen(const {
-              "neko pitanje": "neki odgovor",
-              "neko pitanje 2": "neki odgovor 2",
-              "neko pitanje 3": "neki odgovor 3",
-              "PITANJE ALLOO": "neki odgovor",
-              "neko pitanje 5": "neki odgovor",
-              "neko pitanje 6": "neki odgovor",
-              "neko pitanje 7": "neki odgovor",
-            }, "Motorički razvoj"),
+        FrequentQuestionsScreen.route: (context) => FrequentQuestionsScreen(
+            MotorDevelopment().questionAndAnswers, "Motorički razvoj"),
         GoBackWithMessageScreen.route: (context) => GoBackWithMessageScreen(
               onButtonClick: () {},
             )

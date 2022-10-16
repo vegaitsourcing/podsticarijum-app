@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import '../../common/data/pages/experts_data.dart';
 import '../../common/widgets/app_bar/new_app_bar.dart';
 import '../../common/widgets/default_container.dart';
 import '../../common/widgets/default_header.dart';
@@ -18,19 +19,10 @@ class ExpertsScreen extends StatelessWidget {
         children: [
           buildTitle(context, "Tim stručnjaka"),
           const SizedBox(height: 68),
-          InfoSectionWidget(
-            title: "Petar Peric",
-            content: _description,
-          ),
-          InfoSectionWidget(
-            title:"Nikola Ivanovic",
-            content: _description,
-          ),
-          InfoSectionWidget(
-            title: "Djuro Radusinovic",
-            content: _description,
-            hasBorder: false,
-          ),
+          ... ExpertsData().listOfExperts.map((expert) => InfoSectionWidget(
+            title: expert.title,
+            content: expert.content,
+          )).toList(),
           const SizedBox(height: 20),
         ],
       ),

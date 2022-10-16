@@ -1,4 +1,4 @@
-class SensorMotorDevelopment {
+class StimulatingGamesForSensorMotorDevelopment {
   var data = [
     '''Dajte detetu sve vrste taktilnih stimulaija - blage dodire (maženje, dodire sa nekim lakim materijalom, 
         prljavština na koži, voda, hrana oko usana), duboke pritiske koji se stvaraju aktivnostima kao što su masaže, 
