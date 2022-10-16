@@ -72,6 +72,7 @@ flutter:
     - images/menu_icon.png
     - images/button_bg.png
     - images/button_bg_yellow.png
+    - images/bulletpoint.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
