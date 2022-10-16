@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'common/theme.dart';
 import 'screens/categories_screen/categories_screen.dart';
 import 'screens/categories_screen/subcategories_screen.dart';
+import 'screens/category_details_screen/category_details_more_advantages.dart';
 import 'screens/category_details_screen/category_details_more_screen.dart';
 import 'screens/category_details_screen/category_details_screen.dart';
 import 'screens/go_back_screen/go_back_with_message_screen.dart';
@@ -24,7 +25,7 @@ class FamilyBackupApp extends StatelessWidget {
     return MaterialApp(
       theme: FamilyBackupTheme.familyAppThemeData,
       title: 'Podsticarium',
-      initialRoute: CategoryDetailsMoreScreen.route,
+      initialRoute: CategoryDetailsMoreAdvantagesScreen.route,
       routes: {
         SplashScreen.route: (context) => SplashScreen(),
         SubCategoriesScreen.route: (context) => const SubCategoriesScreen(),
@@ -36,6 +37,8 @@ class FamilyBackupApp extends StatelessWidget {
         CategoryDetailsScreen.route: (context) => const CategoryDetailsScreen(),
         CategoryDetailsMoreScreen.route: (context) =>
             CategoryDetailsMoreScreen(),
+        CategoryDetailsMoreAdvantagesScreen.route: (context) =>
+            CategoryDetailsMoreAdvantagesScreen(),
         CategoriesScreen.route: (context) => const CategoriesScreen(),
         FrequentQuestionsScreen.route: (context) =>
             FrequentQuestionsScreen(const {
