@@ -1,5 +1,6 @@
 import 'package:app_for_family_backup/screens/category_language_screen/category_language_intro_screen.dart';
 import 'package:app_for_family_backup/screens/category_motoric_screen/category_motor_intro_screen.dart';
+import 'package:app_for_family_backup/screens/category_senso_motoric_screen/category_sensory_motoric_intro_screen.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 
@@ -53,6 +54,7 @@ class FamilyBackupApp extends StatelessWidget {
         FaqAnswersScreen.route: (context) => const FaqAnswersScreen(),
         ThankYouScreen.route: (context) => const ThankYouScreen(),
         CategoryMotorIntroScreen.route: (context) => CategoryMotorIntroScreen(),
+        CategorySensoryMotorIntroScreen.route: (context) => CategorySensoryMotorIntroScreen(),
         CategoryLanguageIntroScreen.route: (context) => CategoryLanguageIntroScreen()
       },
     );

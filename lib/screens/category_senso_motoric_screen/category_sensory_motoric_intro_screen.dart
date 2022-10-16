@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import '../../common/data/pages/sensor_motor_development.dart';
 import '../../common/enums/age_group_type.dart';
 import '../../common/enums/development_ascpect_type.dart';
 import '../../common/widgets/app_bar/new_app_bar.dart';
@@ -10,9 +11,6 @@ import '../category_details_screen/category_intro_screen.dart';
 
 class CategorySensoryMotorIntroScreen extends StatelessWidget {
   static const String route = '/category_sensory_motor_details_intro';
-
-  String description =
-      ' Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia, molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium optio, eaque rerum! Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia, molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium optio, eaque rerum! ';
 
   List<String> bulletpointList = [
     'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
@@ -29,7 +27,10 @@ class CategorySensoryMotorIntroScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     print("category intro screen");
     final args = ModalRoute.of(context)!.settings.arguments
-    as CategoryIntroScreenArguments;
+        as CategoryIntroScreenArguments;
+
+    const description = SensorMotorDevelopment.introData;
+    const bulletpointList = SensorMotorDevelopment.dataList;
 
     return SafeArea(
       child: Scaffold(
@@ -67,26 +68,27 @@ class CategorySensoryMotorIntroScreen extends StatelessWidget {
                 ),
               ),
               const SizedBox(height: 20),
-              Text(
-                'Senzo-SensoryMotorni razvoj utiče na procese učenja',
-                style: Theme.of(context).textTheme.bodyText1?.copyWith(
-                  fontWeight: FontWeight.bold,
-                  fontSize: 14,
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 20),
+                child: Text(
+                  'Senzo-motorni razvoj utiče na procese učenja:',
+                  style: Theme.of(context).textTheme.bodyText1?.copyWith(
+                        fontWeight: FontWeight.bold,
+                        fontSize: 14,
+                      ),
                 ),
               ),
               const SizedBox(height: 20),
-              ...bulletpointList
-                  .map(
-                    (bulletpoint) => _textWithIcon(bulletpoint, context),
-              )
-                  .toList(),
+              ...bulletpointList.map(
+                (bulletpoint) => _textWithIcon(bulletpoint, context),
+              ),
               const SizedBox(height: 20),
               Text(
                 'Pogledaj više informacija za određeni uzrast',
                 style: Theme.of(context).textTheme.bodyText1?.copyWith(
-                  fontWeight: FontWeight.bold,
-                  fontSize: 14,
-                ),
+                      fontWeight: FontWeight.bold,
+                      fontSize: 14,
+                    ),
               ),
               const SizedBox(height: 12.5),
               CustomOutlineButton(
@@ -128,10 +130,7 @@ class CategorySensoryMotorIntroScreen extends StatelessWidget {
     return Row(
       children: [
         const SizedBox(width: 20), //shared padding
-        const ImageIcon(
-          AssetImage('images/bulletpoint.png'),
-          size: 12,
-        ),
+        Image.asset('images/menu_bullet_img.png'),
         const SizedBox(width: 12),
         Expanded(
           child: Text(
