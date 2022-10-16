@@ -3,10 +3,10 @@ import 'package:flutter/material.dart';
 import 'common/theme.dart';
 import 'screens/categories_screen/subcategories_screen.dart';
 import 'screens/categories_screen/categories_screen.dart';
-import 'screens/category_details_screen/category_details_intro_screen.dart';
-import 'screens/category_details_screen/category_details_pros_n_cons.dart';
+import 'screens/category_details_screen/category_flags_screen.dart';
 import 'screens/category_details_screen/category_details_more_screen.dart';
 import 'screens/category_details_screen/category_details_screen.dart';
+import 'screens/category_details_screen/category_intro_screen.dart';
 import 'screens/donation_screen/donation_screen.dart';
 import 'screens/frequent_questions_screen/frequent_questions_screen.dart';
 import 'screens/about_us_screen/screen_about_us.dart';
@@ -31,13 +31,12 @@ class FamilyBackupApp extends StatelessWidget {
         SplashScreen.route: (context) => SplashScreen(),
         CategoriesScreen.route: (context) => const CategoriesScreen(),
         SubCategoriesScreen.route: (context) => SubCategoriesScreen(),
-        CategoryDetailsIntroScreen.route: (context) =>
-            CategoryDetailsIntroScreen(),
+        CategoryIntroScreen.route: (context) => CategoryIntroScreen(),
         CategoryDetailsScreen.route: (context) => const CategoryDetailsScreen(),
         CategoryDetailsMoreScreen.route: (context) =>
             CategoryDetailsMoreScreen(),
-        CategoryDetailsProsNConsScreen.route: (context) =>
-            CategoryDetailsProsNConsScreen(),
+        CategoryFlagsScreen.route: (context) =>
+            CategoryFlagsScreen(),
         MenuScreen.route: (context) => const MenuScreen(),
         AboutUsScreen.route: (context) => const AboutUsScreen(),
         ExpertsScreen.route: (context) => const ExpertsScreen(),

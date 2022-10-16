@@ -47,7 +47,7 @@ class FaqCategoriesScreen extends StatelessWidget {
     return Column(
       children: [
         CustomOutlineButton(
-          text: developmentAspectTypeStrings[type.index],
+          text: type.title,
           onClick: () {
             Navigator.pushNamed(
               context,
