@@ -48,7 +48,11 @@ class NewAppBar extends StatelessWidget implements PreferredSizeWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        SizedBox(height: _topMargin),
+        Container(
+          //sized box didn't work here
+          height: _topMargin,
+          color: getBackgroundColor(context),
+        ),
         AppBar(
           automaticallyImplyLeading: false,
           backgroundColor: getBackgroundColor(context),
