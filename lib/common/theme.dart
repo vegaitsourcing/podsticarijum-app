@@ -11,12 +11,12 @@ class FamilyBackupTheme {
     textTheme: const TextTheme(
       headline1: TextStyle(fontSize: 72.0, fontWeight: FontWeight.bold),
       headline2: TextStyle(
-        fontSize: 40.0,
+        fontSize: 35.0,
         fontWeight: FontWeight.normal,
         color: Color(0xFF0A0909),
       ),
       headline3: TextStyle(
-        fontSize: 36.0,
+        fontSize: 30.0,
         fontWeight: FontWeight.bold,
         color: Color(0xFF06070D),
       ),

@@ -14,23 +14,26 @@ class DefaultContainer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Stack(
-      children: [
-        Positioned(
-          top: -100,
-          left: leftOffset,
-          child: Image.asset('images/about_us_bg.png', scale: scale),
-        ),
-        SingleChildScrollView(
-          child: Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 20),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: children,
+    return SizedBox(
+      width: double.infinity,
+      child: Stack(
+        children: [
+          Positioned(
+            top: -100,
+            left: leftOffset,
+            child: Image.asset('images/about_us_bg.png', scale: scale),
+          ),
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 20.0),
+            child: SingleChildScrollView(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: children,
+              ),
             ),
           ),
-        ),
-      ],
+        ],
+      ),
     );
   }
 }

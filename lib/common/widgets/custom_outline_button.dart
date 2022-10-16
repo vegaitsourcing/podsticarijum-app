@@ -33,10 +33,11 @@ class CustomOutlineButton extends StatelessWidget {
           ),
           backgroundColor: Colors.transparent,
         ),
-        child: Text(
-          text.toUpperCase(),
-          style: Theme.of(context).textTheme.headline2,
-        ),
+        child: Text(text.toUpperCase(),
+            style: Theme.of(context).textTheme.headline2?.copyWith(
+                fontSize:
+                    33) //some text weren't able to fit with larget letters,
+            ),
       ),
     );
   }

@@ -80,15 +80,19 @@ Widget centeredContainerWithFooter(
 
 Widget buildDefaultCustomForm(
   void onValidFormCallback(
-      String nameAndSurname, String email, String question),
+    String nameAndSurname,
+    String email,
+    String question,
+  ),
 ) {
   const double marginBottom = 15;
   String? nameAndSurname;
   String? email;
   String? question;
+  bool isTransparent;
 
   return CustomForm(
-    submitButtonText: 'Submit form',
+    submitButtonText: 'Postavi pitanje',
     onValidCallback: () {
       if (nameAndSurname != null && email != null && question != null)
         onValidFormCallback(nameAndSurname!, email!, question!);

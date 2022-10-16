@@ -40,7 +40,7 @@ class _CustomFormState extends State<CustomForm> {
       child: Form(
         key: _formKey,
         child: Container(
-          color: Colors.white,
+          color: Colors.transparent,
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: widget.children,
