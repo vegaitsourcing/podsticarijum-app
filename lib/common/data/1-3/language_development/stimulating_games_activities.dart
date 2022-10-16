@@ -1,0 +1,7 @@
+class StimulatingGamesForSensorMotorDevelopment {
+  var data = [
+    '''Igre pred ogledalom su i dalje aktuelne i u ovom dobu. Sada ih možete obogatiti i usvajanjem telesne šeme, kao i prepoznavanjem osećanja, pa tako karminom ili vodoperivim flomasterom nacrtajte na ogledalo delove lica i igrajte se sa detetom „Hajde namigni i pošalji poljubac“, „Naduvaj obraze ovako kao ja“, „Isplazi jezik, kao ja...“ Odraz u ogledalu sa nacrtanim elementima i smešne face detetu će držati pažnju, a cilj će istovremeno biti ispunjen jačanjem mišića važnim za oralnu motoriku, osvešćivanjem delova tela, povezivanjem izgleda lica i emocije koja ga prati kod drugih osoba. U uzrastu oko dve i tri godine, pažnja kod dece je nešto dužeg trajanja, i to možete koristiti za čitanje kraćih priča i učenje pesmica. Rima i rimovanje su u ovom uzrastu od značaja za razvoj govora.''',
+    '''Dete sada pije iz čaše, koristi escajg i način hranjenja u potpunosti kao i ostali članovi porodice i samostalno.''',
+    '''Ukoliko je dete koristilo dudu ( cuclu ) do druge godine najkasnije bi trebalo da prestane sa korišćenjem. Duda podstiče nepravilan obrazac gutanja i nepravilan razvoj oralne motorike, i preporučuje se da se ukloni već sa početkom samostalnog hranjenja nemlečnom ishranom.''',
+    ];
+}

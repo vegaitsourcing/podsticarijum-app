@@ -1,0 +1,9 @@
+class SignsOfBadNeurotypicalDevelopment {
+  var data = [
+    '''Nerado se prljaju ili pak ne primećuju da su prljavi, mokri, Gade im se određeni materijali, hrana.Ispituju predmete ustima i do 3godine. Ne obraćaju pažnju na druge. Preferiraju samo određenu hranu, ne žele da okuse i pomirišu novu hranu.''',
+    '''Pokrivaju oči u osvetljenim prostorijama.Lako se smetu vizualnim podražajima.Pogledom prate svako kretanje u prostoru ili pak se čini da nisu svesni predmeta iz okruženja i imaju teškoće da prate očima predmete koji se kreću..Zadivljeni su televizijom, telefonima i uživaju da gledaju brzomenjajuće slike (reklame) i objekte koji se vrte.''',
+    '''Zatvaraju uši pri jakim zvukovima(izražavaju strah i plaču) ili pak uživaju u glasnim intenzivnim zvukovima i sami stalno proizvode buku (dok nešto rade).Ne reaguju kada ih pozovete imenom.''',
+    '''Izbegava ili se boje samostalnog kretanja.Izbegavaju nove položaje tela i preferiraju sedeće pozicije.Nerado istražuju okolinu,prelaze prepreke, penju se, skaču, spuštaju, ljuljaju..Imaju poteškoće na neravnim površinama, u prirodi npr. Mogu biti okupirani jednom aktivnošću koja se ponavlja – ljuljanje, klaćenje, lepršanje rukama, kretanje u krug..Gube ravnotežu, imaju tedenciju da se oslanjaju, pridržavaju,često padaju (2-3godine)..'''
+    '''Rast i razvoj svakog deteta su individualni i teku svojim sopstvenim tokom. Nijedno dete se ne razvija istim tempom i na isti način kao neko drugo dete, niti na osnovu isključivo napisanih normi. Ovi znakovi upozorenja predstavljaju moguće odstupanje i za svaki dalji zaključak, potrebno je obratiti se pedijatru, psihologu, defektologu i/ili logopedu u okolini.'''
+  ];
+}
