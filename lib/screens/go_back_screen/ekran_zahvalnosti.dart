@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import '../../common/widgets/app_bar/new_app_bar.dart';
 import '../../common/widgets/custom_outline_button.dart';
 import '../../common/widgets/useful_widgets.dart';
+import '../splash_screen/splash_screen.dart';
 
 /**
  * sole purpose of this screen's name:
@@ -13,11 +14,8 @@ import '../../common/widgets/useful_widgets.dart';
 class ekranZahvalnosti extends StatelessWidget {
   static const String route = "/go_back_with_message";
 
-  final Function() onButtonClick;
-
   const ekranZahvalnosti({
     Key? key,
-    required this.onButtonClick,
   }) : super(key: key);
 
   @override
@@ -39,7 +37,14 @@ class ekranZahvalnosti extends StatelessWidget {
         Column(
           children: [
             CustomOutlineButton(
-                text: "Vrati se na početni ekran", onClick: onButtonClick),
+                text: "Vrati se na početni ekran",
+                onClick: () {
+                  Navigator.pushNamedAndRemoveUntil(
+                    context,
+                    SplashScreen.route,
+                    (Route<dynamic> route) => false,
+                  );
+                }),
             const SizedBox(height: 30)
           ],
         ),

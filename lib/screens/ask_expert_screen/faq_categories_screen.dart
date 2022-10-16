@@ -1,18 +1,13 @@
 import 'package:flutter/material.dart';
 
+import '../../common/enums/development_ascpect_type.dart';
 import '../../common/widgets/app_bar/new_app_bar.dart';
 import '../../common/widgets/custom_outline_button.dart';
+import '../frequent_questions_screen/frequent_questions_screen.dart';
 
 class FaqCategoriesScreen extends StatelessWidget {
   static const String route = '/faq_categories';
   static const double _padding = 12;
-  static const List<String> subCategories = [
-    'Motorički razvoj',
-    'Govorno-jezički razvoj',
-    'Senzo-motorički razvoj',
-    'Socio-emotivni razvoj',
-    'Ishrana',
-  ];
 
   const FaqCategoriesScreen({super.key});
 
@@ -37,7 +32,9 @@ class FaqCategoriesScreen extends StatelessWidget {
                   ),
                 ),
                 SizedBox(height: 25),
-                ...subCategories.map((e) => _getColumnElement(e)).toList()
+                ...DevelopmentAspectType.values
+                    .map((e) => _getColumnElement(e, context))
+                    .toList()
               ],
             ),
           ),
@@ -46,10 +43,19 @@ class FaqCategoriesScreen extends StatelessWidget {
     );
   }
 
-  Widget _getColumnElement(String buttonText) {
+  Widget _getColumnElement(DevelopmentAspectType type, BuildContext context) {
     return Column(
       children: [
-        CustomOutlineButton(text: buttonText, onClick: () {}),
+        CustomOutlineButton(
+          text: developmentAspectTypeStrings[type.index],
+          onClick: () {
+            Navigator.pushNamed(
+              context,
+              FaqAnswersScreen.route,
+              arguments: FaqAnswersScreenArguments(type),
+            );
+          },
+        ),
         const SizedBox(height: _padding),
       ],
     );

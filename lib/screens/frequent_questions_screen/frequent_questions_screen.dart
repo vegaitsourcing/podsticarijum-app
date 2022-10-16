@@ -1,11 +1,19 @@
 import 'package:flutter/material.dart';
 
+import '../../common/enums/development_ascpect_type.dart';
 import '../../common/widgets/app_bar/new_app_bar.dart';
 import '../../common/widgets/default_header.dart';
 import '../../common/widgets/info_section_widget.dart';
 import '../../common/widgets/default_container.dart';
 
+class FaqAnswersScreenArguments {
+  DevelopmentAspectType type;
+  FaqAnswersScreenArguments(this.type);
+}
+
 class FaqAnswersScreen extends StatelessWidget {
+  FaqAnswersScreenArguments? args = null;
+
   static const String route = '/screen_frequent_question';
   final Map<String, String> questionAndAnswers;
   final String categoryName;
@@ -26,6 +34,9 @@ class FaqAnswersScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    args =
+        ModalRoute.of(context)!.settings.arguments as FaqAnswersScreenArguments;
+
     return Scaffold(
       appBar: const NewAppBar(),
       body: DefaultContainer(
@@ -36,7 +47,11 @@ class FaqAnswersScreen extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               buildSubtitle(context, "Najčešća pitanja"),
-              buildTitle(context, categoryName),
+              buildTitle(
+                  context,
+                  args != null
+                      ? developmentAspectTypeStrings[args!.type.index]
+                      : "development category"),
               const SizedBox(
                 height: 35,
               ),

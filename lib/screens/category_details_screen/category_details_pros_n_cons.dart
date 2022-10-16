@@ -1,13 +1,29 @@
-import 'package:app_for_family_backup/common/enums/category_detail_type.dart';
 import 'package:flutter/material.dart';
 
+import '../go_back_screen/ekran_zahvalnosti.dart';
+import '../../common/enums/age_group_type.dart';
+import '../../common/enums/category_detail_type.dart';
+import '../../common/enums/development_ascpect_type.dart';
 import '../../common/widgets/app_bar/new_app_bar.dart';
 import '../../common/widgets/custom_outline_button.dart';
 import '../../common/widgets/default_container.dart';
 import '../../common/widgets/default_header.dart';
 import '../../common/widgets/useful_widgets.dart';
+import '../splash_screen/splash_screen.dart';
+
+class CategoryDetailsProsNConsScreenArguments {
+  AgeGroupType ageGroupType;
+  DevelopmentAspectType developmentAspectType;
+
+  CategoryDetailsProsNConsScreenArguments(
+    this.ageGroupType,
+    this.developmentAspectType,
+  );
+}
 
 class CategoryDetailsProsNConsScreen extends StatelessWidget {
+  CategoryDetailsProsNConsScreenArguments? args = null;
+
   static const String route = '/category_details_more_advantages_screen';
   final double marginBottom = 15;
   double _padding = 0;
@@ -26,6 +42,18 @@ class CategoryDetailsProsNConsScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    args = ModalRoute.of(context)!.settings.arguments
+        as CategoryDetailsProsNConsScreenArguments;
+
+    void callback(String name, String mail, String questino) {
+      /**
+     * 
+     * MAKE AN ASYNC CALL TO SEND THE EMAIL!
+     * 
+     */
+      Navigator.pushNamed(context, ekranZahvalnosti.route);
+    }
+
     return SafeArea(
       child: Scaffold(
         appBar: const NewAppBar(),
@@ -37,7 +65,11 @@ class CategoryDetailsProsNConsScreen extends StatelessWidget {
             Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                buildSubtitle(context, "0-1 godina"),
+                buildSubtitle(
+                    context,
+                    args != null
+                        ? ageGroupTypeStrings[args!.ageGroupType.index]
+                        : 'age group'),
                 buildTitle(context,
                     "Podsticarijum igre i aktivnosti, stimulativne za razvoj vaše bebe i deteta."),
                 const SizedBox(height: 100),
@@ -54,10 +86,17 @@ class CategoryDetailsProsNConsScreen extends StatelessWidget {
                 Align(
                   alignment: Alignment.center,
                   child: TextButton(
-                    onPressed: () {},
                     child: Text(
                         style: Theme.of(context).textTheme.headline4,
                         "Vrati se na početnu stranu"),
+                    onPressed: () {
+                      if (args != null) {
+                        Navigator.pushNamedAndRemoveUntil(
+                            context,
+                            SplashScreen.route,
+                            (Route<dynamic> route) => false);
+                      }
+                    },
                   ),
                 ),
                 const SizedBox(height: 10),
@@ -67,10 +106,6 @@ class CategoryDetailsProsNConsScreen extends StatelessWidget {
         ),
       ),
     );
-  }
-
-  void callback(String name, String mail, String questino) {
-    print("name - $name \nemail - $mail\nquestion - $questino");
   }
 
   Widget _buildParagraph(String paragraphText, BuildContext context) {

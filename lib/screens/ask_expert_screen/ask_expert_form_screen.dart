@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import 'package:app_for_family_backup/common/widgets/app_bar/new_app_bar.dart';
-import 'package:app_for_family_backup/common/widgets/useful_widgets.dart';
+import '../../common/widgets/app_bar/new_app_bar.dart';
+import '../../common/widgets/useful_widgets.dart';
 
 class AskExpertFormScreen extends StatelessWidget {
   static const String route = 'ask_expert_form_screen';

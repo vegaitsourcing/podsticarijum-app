@@ -1,12 +1,25 @@
 import 'package:flutter/material.dart';
 
+import '../../common/enums/age_group_type.dart';
+import '../../common/enums/development_ascpect_type.dart';
 import '../../common/widgets/app_bar/new_app_bar.dart';
 import '../../common/widgets/custom_outline_button.dart';
-import '../../common/widgets/default_container.dart';
 import '../../common/widgets/default_header.dart';
-import '../../common/widgets/useful_widgets.dart';
+import 'category_details_pros_n_cons.dart';
+
+class CategoryDetailsIntroScreenArguments {
+  AgeGroupType ageGroupType;
+  DevelopmentAspectType developmentAspectType;
+
+  CategoryDetailsIntroScreenArguments(
+    this.ageGroupType,
+    this.developmentAspectType,
+  );
+}
 
 class CategoryDetailsIntroScreen extends StatelessWidget {
+  CategoryDetailsIntroScreenArguments? args = null;
+
   static const String route = '/category_details_intro_screen';
   final double marginBottom = 15;
   double _padding = 0;
@@ -26,6 +39,9 @@ class CategoryDetailsIntroScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    args = ModalRoute.of(context)!.settings.arguments
+        as CategoryDetailsIntroScreenArguments;
+
     return SafeArea(
       child: Scaffold(
         appBar: const NewAppBar(),
@@ -34,25 +50,33 @@ class CategoryDetailsIntroScreen extends StatelessWidget {
           child: Column(
             children: [
               Container(
-                padding: EdgeInsets.symmetric(horizontal: 20),
+                padding: const EdgeInsets.symmetric(horizontal: 20),
                 color: Theme.of(context).primaryColor,
                 width: double.infinity,
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     const SizedBox(height: 25),
-                    buildTitle(context, "Senzo-motorni razvo 2"),
+                    buildTitle(
+                      context,
+                      args != null
+                          ? developmentAspectTypeStrings[
+                              args!.developmentAspectType.index]
+                          : 'Title',
+                    ),
                     const SizedBox(height: 10),
-                    Text(description,
-                        textAlign: TextAlign.start,
-                        style: Theme.of(context).textTheme.bodyText1),
+                    Text(
+                      description,
+                      textAlign: TextAlign.start,
+                      style: Theme.of(context).textTheme.bodyText1,
+                    ),
                   ],
                 ),
               ),
               Container(
                 height: 70,
                 width: MediaQuery.of(context).size.width,
-                decoration: BoxDecoration(
+                decoration: const BoxDecoration(
                     image: DecorationImage(
                         fit: BoxFit.fill,
                         image: AssetImage('images/about_us_bg.png'))),
@@ -65,9 +89,11 @@ class CategoryDetailsIntroScreen extends StatelessWidget {
                       fontSize: 14,
                     ),
               ),
-              SizedBox(height: 20),
+              const SizedBox(height: 20),
               ...bulletpointList
-                  .map((bulletpoint) => _textWithIcon(bulletpoint, context))
+                  .map(
+                    (bulletpoint) => _textWithIcon(bulletpoint, context),
+                  )
                   .toList(),
               const SizedBox(height: 20),
               Text(
@@ -77,10 +103,21 @@ class CategoryDetailsIntroScreen extends StatelessWidget {
                       fontSize: 14,
                     ),
               ),
-              SizedBox(height: 12.5),
+              const SizedBox(height: 12.5),
               CustomOutlineButton(
                 text: 'Pogledaj više',
-                onClick: () {},
+                onClick: () {
+                  if (args != null) {
+                    Navigator.pushNamed(
+                      context,
+                      CategoryDetailsProsNConsScreen.route,
+                      arguments: CategoryDetailsProsNConsScreenArguments(
+                        args!.ageGroupType,
+                        args!.developmentAspectType,
+                      ),
+                    );
+                  }
+                },
               ),
               const SizedBox(height: 10),
             ],
@@ -88,10 +125,6 @@ class CategoryDetailsIntroScreen extends StatelessWidget {
         ),
       ),
     );
-  }
-
-  void callback(String name, String mail, String questino) {
-    print("name - $name \nemail - $mail\nquestion - $questino");
   }
 
   Widget _buildParagraph(String paragraphText, BuildContext context) {
@@ -113,12 +146,12 @@ class CategoryDetailsIntroScreen extends StatelessWidget {
   Widget _textWithIcon(String text, BuildContext context) {
     return Row(
       children: [
-        SizedBox(width: 20), //shared padding
-        ImageIcon(
+        const SizedBox(width: 20), //shared padding
+        const ImageIcon(
           AssetImage('images/bulletpoint.png'),
           size: 12,
         ),
-        SizedBox(width: 12),
+        const SizedBox(width: 12),
         Expanded(
           child: Text(
             text,
