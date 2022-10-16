@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 
+import 'custom_form.dart';
+import 'custom_text_form_field.dart';
+
 Text textWidget(BuildContext context, String text) {
   return Text(
     maxLines: 20,
@@ -72,5 +75,54 @@ Widget centeredContainerWithFooter(
         )
       ],
     ),
+  );
+}
+
+Widget buildDefaultCustomForm(
+  void onValidFormCallback(
+    String nameAndSurname,
+    String email,
+    String question,
+  ),
+) {
+  const double marginBottom = 15;
+  String? nameAndSurname;
+  String? email;
+  String? question;
+  bool isTransparent;
+
+  return CustomForm(
+    submitButtonText: 'Postavi pitanje',
+    onValidCallback: () {
+      if (nameAndSurname != null && email != null && question != null)
+        onValidFormCallback(nameAndSurname!, email!, question!);
+    },
+    children: [
+      CustomTextFormField(
+        labelText: 'Ime i prezime',
+        hint: 'Unesi ime i prezime',
+        onSaved: (value) => {nameAndSurname = value},
+      ),
+      SizedBox(height: marginBottom),
+      CustomTextFormField(
+        labelText: 'Adresa',
+        hint: 'Unesi e-mail adresu',
+        isValid: (value) {
+          return RegExp(// copied this regex from stack overflow
+                  r"^[a-zA-Z0-9.a-zA-Z0-9.!#$%&'*+-/=?^_`{|}~]+@[a-zA-Z0-9]+\.[a-zA-Z]+")
+              .hasMatch(value);
+        },
+        invalidErrorMessage: '*Neispravan e-mail',
+        onSaved: (value) => {email = value},
+      ),
+      SizedBox(height: marginBottom),
+      CustomTextFormField(
+        labelText: 'Pitanje',
+        hint: 'Postavi pitanje specijalisti.',
+        largeInputField: true,
+        onSaved: (value) => {question = value},
+      ),
+      const SizedBox(height: marginBottom),
+    ],
   );
 }

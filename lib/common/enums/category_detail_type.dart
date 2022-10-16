@@ -1,0 +1,4 @@
+enum CategoryDetailType {
+  pros,
+  cons;
+}
