@@ -12,7 +12,8 @@ class FaqAnswersScreenArguments {
 }
 
 class FaqAnswersScreen extends StatelessWidget {
-  FaqAnswersScreenArguments? args = null;
+
+  FaqAnswersScreenArguments? args;
 
   static const String route = '/screen_frequent_question';
   final Map<String, String> questionAndAnswers;
@@ -36,6 +37,11 @@ class FaqAnswersScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     args =
         ModalRoute.of(context)!.settings.arguments as FaqAnswersScreenArguments;
+    // final questionMap = <String,String>{};
+
+    // final aspectType = args!.type;
+
+    // if(aspectType == DevelopmentAspectType)
 
     return Scaffold(
       appBar: const NewAppBar(),

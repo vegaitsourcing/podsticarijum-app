@@ -1,0 +1,7 @@
+class StimulatingGamesForSensorMotorDevelopment {
+  var data = [
+    '''Simetrija u grafomotoričkim veštinama je važna kada govorimo o vizuomotornoj koordinaciji, percepciji, crtanjem i pisanjem po zadatom modelu, što su sve sposobnosti koje prethode urednom usvajanju veštine pisanja kod deteta. Kako biste kroz igru stimulisali sve navedeno, igrajte se npr. „Hajde da nacrtamo broj osam kako spava/leži“ Osmica koja leži je ustvari znak za beskonačno, koje dete treba jednim pokretom ruke da ponovi za vama. Slične aktivnosti su i da podelite A4 papir vertikalnom linijom na pola i sa jedne strane nacrtate pola figure leptira, cveta, kuće....a detetu date da završi drugu stranu figure. „Pišite“ prstom po leđima deteta slova koja ono treba da pogodi i obrnuto, neka dete „piše“ po vašim leđima, a vi pogađajte.''',
+    '''Oko šeste godine, deca pokazuju motivisanost za prepoznavanje i učenje slova, iskoristite to uz vežbanje i korišćenja svih vrsta reči, predloga npr. tako što ćete sakriti slova od papira po prostoru i igrati se sa detetom vruće/hladno....Ili „slovo Z je između kreveta i stola, a koje slovo je iznad slova Z?“ Skupljajte sa detetom sve predmete u kući/prostoriji na slovo P ili M...''',
+    '''Stimulativne i višestruko korisne igre u predškolskom dobu su i zagonetke, brzalice, poslovice...zahvaljujući kojima dete bogati i unapređuje svoj vokabular, pospešuje sintaksu, stimuliše kognitivne veštine, vežba jezik i izgovor svih glasova.'''
+    ];
+}
