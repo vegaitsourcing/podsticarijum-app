@@ -41,8 +41,7 @@ class FamilyBackupApp extends StatelessWidget {
         SubCategoriesScreen.route: (context) => SubCategoriesScreen(),
         CategoryIntroScreen.route: (context) => CategoryIntroScreen(),
         CategoryDetailsScreen.route: (context) => const CategoryDetailsScreen(),
-        CategoryDetailsMoreScreen.route: (context) =>
-            CategoryDetailsMoreScreen(),
+        CategoryDetailsMoreScreen.route: (context) => CategoryDetailsMoreScreen(),
         CategoryFlagsScreen.route: (context) => CategoryFlagsScreen(),
         MenuScreen.route: (context) => const MenuScreen(),
         AboutUsScreen.route: (context) => const AboutUsScreen(),

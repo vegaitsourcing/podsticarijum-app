@@ -1,3 +1,4 @@
+import 'package:app_for_family_backup/common/data/repository/category_repository.dart';
 import 'package:flutter/material.dart';
 
 import '../../common/enums/age_group_type.dart';
@@ -24,20 +25,16 @@ class CategoryDetailsMoreScreenArguments {
 class CategoryDetailsMoreScreen extends StatelessWidget {
   static const String route = '/category_details_more';
 
-  //data
-  List<String> paragraphList = [
-    'Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia, molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium optio, eaque rerum!',
-    'Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia, molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium optio, eaque rerum!',
-    'Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia, molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium optio, eaque rerum!',
-    'Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia, molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium optio, eaque rerum!',
-  ];
-
   CategoryDetailsMoreScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     final args = ModalRoute.of(context)!.settings.arguments
         as CategoryDetailsMoreScreenArguments;
+
+    final categories = CategoryRepository.categories;
+    final subcategories = categories.firstWhere((category) => category.ageGroupType == args.ageGroupType).subcategories;
+    final subcategory = subcategories.firstWhere((subcategory) => subcategory.developmentAspectType == args.developmentAspectType);
 
     return SafeArea(
       child: Scaffold(
@@ -50,12 +47,13 @@ class CategoryDetailsMoreScreen extends StatelessWidget {
             Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                buildSubtitle(context, "0-1 godina"),
-                buildTitle(context, "Neurotipičan senzo-motorni razvoj"),
+                buildSubtitle(context, args.ageGroupType.title),
+                buildTitle(context, 'Neurotipičan ${args.developmentAspectType.title}'),
                 const SizedBox(height: 100),
-                ...paragraphList.map(
-                  (paragraph) => _buildParagraph(paragraph, context),
-                ),
+                // ...paragraphList.map(
+                //   (paragraph) => _buildParagraph(paragraph, context),
+                // ),
+                _buildParagraph(subcategory.staticContent, context),
                 CustomOutlineButton(
                   text: "Podsticajne razvojne aktivnosti",
                   onClick: () => Navigator.pushNamed(

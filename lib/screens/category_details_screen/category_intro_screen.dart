@@ -18,25 +18,12 @@ class CategoryIntroScreenArguments {
 }
 
 class CategoryIntroScreen extends StatelessWidget {
-  static const String route = '/category_details_intro';
+  static const String route = '/category_intro';
 
-  String description =
-      ' Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia, molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium optio, eaque rerum! Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia, molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium optio, eaque rerum! ';
-
-  List<String> bulletpointList = [
-    'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
-    'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
-    'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
-    'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
-    'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
-    'Lorem ipsum dolor sit amet consectetur adipisicing elit.'
-  ];
-
-  CategoryIntroScreen({Key? key}) : super(key: key);
+  const CategoryIntroScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    print("category intro screen");
     final args = ModalRoute.of(context)!.settings.arguments
         as CategoryIntroScreenArguments;
 
@@ -58,7 +45,7 @@ class CategoryIntroScreen extends StatelessWidget {
                     buildTitle(context, args.developmentAspectType.title),
                     const SizedBox(height: 10),
                     Text(
-                      description,
+                      "description",
                       textAlign: TextAlign.start,
                       style: Theme.of(context).textTheme.bodyText1,
                     ),
@@ -84,11 +71,11 @@ class CategoryIntroScreen extends StatelessWidget {
                     ),
               ),
               const SizedBox(height: 20),
-              ...bulletpointList
-                  .map(
-                    (bulletpoint) => _textWithIcon(bulletpoint, context),
-                  )
-                  .toList(),
+              // ...bulletpointList
+              //     .map(
+              //       (bulletpoint) => _textWithIcon(bulletpoint, context),
+              //     )
+              //     .toList(),
               const SizedBox(height: 20),
               Text(
                 'Pogledaj više informacija za određeni uzrast',
