@@ -1,0 +1,8 @@
+version: "3.4"
+
+services:
+  web:
+    image: codeforacause/podsticarijum:#{TAG_NUMBER}#
+    container_name: podsticarijum-api
+    ports:
+      - "23000:5000"
