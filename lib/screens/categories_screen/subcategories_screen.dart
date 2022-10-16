@@ -42,12 +42,13 @@ class SubCategoriesScreen extends StatelessWidget {
           padding: const EdgeInsets.symmetric(horizontal: 20),
           child: Center(
             child: SingleChildScrollView(
-              child:
-                  Column(mainAxisAlignment: MainAxisAlignment.center, children: [
-                ...DevelopmentAspectType.values
-                    .map((e) => _getColumnElement(e, context))
-                    .toList(),
-              ]),
+              child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    ...DevelopmentAspectType.values
+                        .map((e) => _getColumnElement(context, e))
+                        .toList(),
+                  ]),
             ),
           ),
         ),
@@ -55,7 +56,7 @@ class SubCategoriesScreen extends StatelessWidget {
     );
   }
 
-  Widget _getColumnElement(DevelopmentAspectType type, BuildContext context) {
+  Widget _getColumnElement(BuildContext context, DevelopmentAspectType type) {
     return Column(
       children: [
         CustomOutlineButton(
