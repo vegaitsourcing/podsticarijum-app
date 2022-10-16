@@ -21,7 +21,7 @@ class CategoryDetailsProsNConsScreen extends StatelessWidget {
   ];
 
   CategoryDetailsProsNConsScreen(
-      {Key? key, this.type = CategoryDetailType.cons})
+      {Key? key, this.type = CategoryDetailType.pros})
       : super(key: key);
 
   @override

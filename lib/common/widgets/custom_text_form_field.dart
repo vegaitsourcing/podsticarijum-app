@@ -19,7 +19,7 @@ class CustomTextFormField extends StatelessWidget {
   const CustomTextFormField({
     this.isValid = _foo,
     this.invalidErrorMessage = "",
-    this.emptyErrorMessage = "*Required",
+    this.emptyErrorMessage = "*Obavezno polje",
     this.width = null,
     this.bottomMargin = 0,
     this.hint = "hint",
@@ -50,27 +50,30 @@ class CustomTextFormField extends StatelessWidget {
                 .bodyText1
                 ?.copyWith(color: Colors.black),
             decoration: InputDecoration(
-              contentPadding:
-                  const EdgeInsets.symmetric(horizontal: 13, vertical: 10),
-              border: OutlineInputBorder(
-                borderRadius: BorderRadius.circular(_borderRadius),
-                borderSide: const BorderSide(
-                  width: _borderWidth,
-                  color: Colors.black,
-                ),
-              ),
-              focusedBorder: OutlineInputBorder(
-                borderRadius: BorderRadius.circular(_borderRadius),
-                borderSide: const BorderSide(
-                  width: _borderWidth,
-                  color: Colors.black,
-                ),
-              ),
-              hintText: hint,
-              hintStyle: Theme.of(context).textTheme.bodyText1?.copyWith(
-                    color: _hintColor,
+                contentPadding:
+                    const EdgeInsets.symmetric(horizontal: 13, vertical: 10),
+                border: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(_borderRadius),
+                  borderSide: const BorderSide(
+                    width: _borderWidth,
+                    color: Colors.black,
                   ),
-            ),
+                ),
+                focusedBorder: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(_borderRadius),
+                  borderSide: const BorderSide(
+                    width: _borderWidth,
+                    color: Colors.black,
+                  ),
+                ),
+                hintText: hint,
+                hintStyle: Theme.of(context).textTheme.bodyText1?.copyWith(
+                      color: _hintColor,
+                    ),
+                errorStyle: Theme.of(context)
+                    .textTheme
+                    .bodyText1
+                    ?.copyWith(color: Colors.red)),
             validator: (value) {
               if (value == null || value.isEmpty) return emptyErrorMessage;
               if (!isValid(value)) return invalidErrorMessage;

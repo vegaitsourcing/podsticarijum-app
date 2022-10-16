@@ -107,6 +107,12 @@ Widget buildDefaultCustomForm(
       CustomTextFormField(
         labelText: 'Adresa',
         hint: 'Unesi e-mail adresu',
+        isValid: (value) {
+          return RegExp(// copied this regex from stack overflow
+                  r"^[a-zA-Z0-9.a-zA-Z0-9.!#$%&'*+-/=?^_`{|}~]+@[a-zA-Z0-9]+\.[a-zA-Z]+")
+              .hasMatch(value);
+        },
+        invalidErrorMessage: '*Neispravan e-mail',
         onSaved: (value) => {email = value},
       ),
       SizedBox(height: marginBottom),
