@@ -28,6 +28,7 @@ class CategoryDetailsProsNConsScreen extends StatelessWidget {
   final double marginBottom = 15;
   double _padding = 0;
   CategoryDetailType type;
+
   //data
   List<String> paragraphList = [
     'Lorem ipsum dolor sit ',
@@ -45,12 +46,12 @@ class CategoryDetailsProsNConsScreen extends StatelessWidget {
     args = ModalRoute.of(context)!.settings.arguments
         as CategoryDetailsProsNConsScreenArguments;
 
-    void callback(String name, String mail, String questino) {
+    void callback(String name, String mail, String question) {
       /**
-     * 
-     * MAKE AN ASYNC CALL TO SEND THE EMAIL!
-     * 
-     */
+       *
+       * TODO: MAKE AN ASYNC CALL TO SEND THE EMAIL!
+       *
+       */
       Navigator.pushNamed(context, ekranZahvalnosti.route);
     }
 
@@ -66,18 +67,16 @@ class CategoryDetailsProsNConsScreen extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 buildSubtitle(
-                    context,
-                    args != null
-                        ? ageGroupTypeStrings[args!.ageGroupType.index]
-                        : 'age group'),
-                buildTitle(context,
-                    "Podsticarijum igre i aktivnosti, stimulativne za razvoj vaše bebe i deteta."),
+                  context,
+                  args != null ? args!.ageGroupType.title : 'age group',
+                ),
+                buildTitle(
+                  context,
+                  "Podsticarijum igre i aktivnosti, stimulativne za razvoj vaše bebe i deteta.",
+                ),
                 const SizedBox(height: 100),
-                ...paragraphList
-                    .map(
-                      (paragraph) => _buildParagraph(paragraph, context),
-                    )
-                    .toList(),
+                ...(paragraphList
+                    .map((paragraph) => _buildParagraph(paragraph, context))),
                 SizedBox(height: 33),
                 Image.asset('images/border_dot_line.png'),
                 SizedBox(height: 33),
@@ -129,9 +128,7 @@ class CategoryDetailsProsNConsScreen extends StatelessWidget {
               ),
             ],
           ),
-          const SizedBox(
-            height: 15,
-          ),
+          const SizedBox(height: 15),
         ],
       ),
     );

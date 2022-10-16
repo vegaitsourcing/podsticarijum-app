@@ -9,11 +9,12 @@ import '../category_details_screen/category_details_intro_screen.dart';
 
 class SubCategoriesScreenArguments {
   AgeGroupType ageGroupType;
+
   SubCategoriesScreenArguments(this.ageGroupType);
 }
 
 class SubCategoriesScreen extends StatelessWidget {
-  SubCategoriesScreenArguments? args = null;
+  SubCategoriesScreenArguments? args;
 
   static const route = '/subcategories';
   static const double _padding = 12;
@@ -31,22 +32,23 @@ class SubCategoriesScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     args = ModalRoute.of(context)!.settings.arguments
         as SubCategoriesScreenArguments;
-
     print(args!.ageGroupType);
+
     return SafeArea(
       child: Scaffold(
         backgroundColor: Theme.of(context).primaryColor,
         appBar: const NewAppBar(appBarType: AppBarType.rootNav),
         body: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 21),
-          child: SingleChildScrollView(
-            //scroll view to support all screens
-            child:
-                Column(mainAxisAlignment: MainAxisAlignment.center, children: [
-              ...DevelopmentAspectType.values
-                  .map((e) => _getColumnElement(e, context))
-                  .toList(),
-            ]),
+          padding: const EdgeInsets.symmetric(horizontal: 20),
+          child: Center(
+            child: SingleChildScrollView(
+              child:
+                  Column(mainAxisAlignment: MainAxisAlignment.center, children: [
+                ...DevelopmentAspectType.values
+                    .map((e) => _getColumnElement(e, context))
+                    .toList(),
+              ]),
+            ),
           ),
         ),
       ),
