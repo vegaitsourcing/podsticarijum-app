@@ -1,10 +1,5 @@
-import '../paragraph_data.dart';
-
 class MotorDevelopment {
   Map<String, String> questionAndAnswers = {};
-
-
-  List<ParagraphData> listOfQuestions = <ParagraphData>[];
 
   MotorDevelopment() {
     questionAndAnswers["Da li je dobro za bebe da provode vreme na stomaku?"] = "Kako podstaći bebu da se pravilno okreće na leđa?";
