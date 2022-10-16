@@ -29,6 +29,9 @@ app.UseRouting();
 
 //app.UseAuthorization();
 
+app.MapGet("/", () => { return Results.Ok("OK!"); });
+
+
 app.MapPost("/email", async (MailDto emailDto, IPodsticarijumMailService mailService) =>
 {
     try

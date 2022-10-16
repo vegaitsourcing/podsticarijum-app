@@ -76,7 +76,7 @@ public class PodsticarijumMailService : IPodsticarijumMailService
     {
         ArgumentNullException.ThrowIfNull(appPackageName);
 
-        var validAppPackageNames = new string[] { "package1", "package2" };
+        var validAppPackageNames = new string[] { "com.example.app_for_family_backup", "" };
 
         if (!validAppPackageNames.Contains(appPackageName))
         {
