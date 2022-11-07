@@ -7,7 +7,7 @@ services:
     ports:
       - "23000:80"
     environment:
-      - ASPNETCORE_MailData__Password=#{MAIL_DATA_PASSWORD}#
-      - ASPNETCORE_MailData__AppMailAddressFrom=podsticarijum@gmail.com
-      - ASPNETCORE_MailData__Host=smtp.gmail.com
-      - ASPNETCORE_MailData__Port=587
+      - MailData__Password=#{MAIL_DATA_PASSWORD}#
+      - MailData__AppMailAddressFrom=podsticarijum@gmail.com
+      - MailData__Host=smtp.gmail.com
+      - MailData__Port=587
