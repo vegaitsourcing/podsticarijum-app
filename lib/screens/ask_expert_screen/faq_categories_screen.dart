@@ -31,7 +31,7 @@ class FaqCategoriesScreen extends StatelessWidget {
                     textAlign: TextAlign.center,
                   ),
                 ),
-                SizedBox(height: 25),
+                const SizedBox(height: 25),
                 ...DevelopmentAspectType.values
                     .map((e) => _getColumnElement(e, context))
                     .toList()

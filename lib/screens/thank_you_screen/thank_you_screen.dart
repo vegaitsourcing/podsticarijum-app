@@ -22,7 +22,7 @@ class ThankYouScreen extends StatelessWidget {
           context,
           Text(
             overflow: TextOverflow.ellipsis,
-            'Hvala na postavljenom pitanju, na vašu e-mail adresu će uskooro stići odgovor!',
+            'Hvala na postavljenom pitanju, na vašu e-mail adresu će uskoro stići odgovor!',
             style: Theme.of(context).textTheme.headline5,
             textAlign: TextAlign.center,
             maxLines: 5,
@@ -31,14 +31,15 @@ class ThankYouScreen extends StatelessWidget {
         Column(
           children: [
             CustomOutlineButton(
-                text: "Vrati se na početni ekran",
-                onClick: () {
-                  Navigator.pushNamedAndRemoveUntil(
-                    context,
-                    SplashScreen.route,
-                    (Route<dynamic> route) => false,
-                  );
-                }),
+              text: "Vrati se na početni ekran",
+              onClick: () {
+                Navigator.pushNamedAndRemoveUntil(
+                  context,
+                  SplashScreen.route,
+                  (Route<dynamic> route) => false,
+                );
+              },
+            ),
             const SizedBox(height: 30)
           ],
         ),

@@ -25,10 +25,13 @@ class FaqAnswersScreen extends StatelessWidget {
     }
 
     questionAndAnswersWidgetList.add(
-      _questionAnswerWidget(
-        questionAndAnswers.keys.last,
-        questionAndAnswers.values.last,
-        hasBorder: false,
+      Padding(
+        padding: const EdgeInsets.only(bottom: 30.0),
+        child: _questionAnswerWidget(
+          questionAndAnswers.keys.last,
+          questionAndAnswers.values.last,
+          hasBorder: false,
+        ),
       ),
     );
   }

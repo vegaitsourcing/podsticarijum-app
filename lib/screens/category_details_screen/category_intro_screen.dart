@@ -20,10 +20,10 @@ class CategoryIntroScreenArguments {
 class CategoryIntroScreen extends StatelessWidget {
   static const String route = '/category_details_intro';
 
-  String description =
+  final String description =
       ' Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia, molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium optio, eaque rerum! Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia, molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium optio, eaque rerum! ';
 
-  List<String> bulletpointList = [
+  final List<String> bulletpointList = [
     'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
     'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
     'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
@@ -36,7 +36,6 @@ class CategoryIntroScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    print("category intro screen");
     final args = ModalRoute.of(context)!.settings.arguments
         as CategoryIntroScreenArguments;
 
@@ -119,8 +118,8 @@ class CategoryIntroScreen extends StatelessWidget {
     );
   }
 
-  Widget _buildParagraph(String paragraphText, BuildContext context) {
-    return Container(
+  Widget buildParagraph(String paragraphText, BuildContext context) {
+    return SizedBox(
       child: Column(
         children: [
           Text(

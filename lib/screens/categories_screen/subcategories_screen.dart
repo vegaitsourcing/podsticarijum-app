@@ -14,8 +14,6 @@ class SubCategoriesScreenArguments {
 }
 
 class SubCategoriesScreen extends StatelessWidget {
-  SubCategoriesScreenArguments? args;
-
   static const route = '/subcategories';
   static const double _padding = 12;
   static const List<String> subCategories = [
@@ -26,13 +24,13 @@ class SubCategoriesScreen extends StatelessWidget {
     'Kognitivni razvoj',
   ];
 
-  SubCategoriesScreen({Key? key}) : super(key: key);
+  const SubCategoriesScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    args = ModalRoute.of(context)!.settings.arguments
-        as SubCategoriesScreenArguments;
-    print(args!.ageGroupType);
+    SubCategoriesScreenArguments? args = ModalRoute.of(context)!
+        .settings
+        .arguments as SubCategoriesScreenArguments;
 
     return SafeArea(
       child: Scaffold(
@@ -46,7 +44,8 @@ class SubCategoriesScreen extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     ...DevelopmentAspectType.values
-                        .map((aspectType) => _getColumnElement(context, aspectType))
+                        .map((aspectType) =>
+                            _getColumnElement(context, aspectType, args))
                         .toList(),
                   ]),
             ),
@@ -56,19 +55,18 @@ class SubCategoriesScreen extends StatelessWidget {
     );
   }
 
-  Widget _getColumnElement(BuildContext context, DevelopmentAspectType type) {
+  Widget _getColumnElement(BuildContext context, DevelopmentAspectType type,
+      SubCategoriesScreenArguments args) {
     return Column(
       children: [
         CustomOutlineButton(
           text: type.title,
           onClick: () {
-            if (args != null) {
-              Navigator.pushNamed(context, CategoryIntroScreen.route,
-                  arguments: CategoryIntroScreenArguments(
-                    args!.ageGroupType,
-                    type,
-                  ));
-            }
+            Navigator.pushNamed(context, CategoryIntroScreen.route,
+                arguments: CategoryIntroScreenArguments(
+                  args.ageGroupType,
+                  type,
+                ));
           },
         ),
         const SizedBox(height: _padding),

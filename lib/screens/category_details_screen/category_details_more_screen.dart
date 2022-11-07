@@ -1,14 +1,14 @@
-import 'package:app_for_family_backup/common/enums/flag_type.dart';
-import 'package:app_for_family_backup/screens/categories_screen/categories_screen.dart';
 import 'package:flutter/material.dart';
 
 import '../../common/enums/age_group_type.dart';
 import '../../common/enums/development_ascpect_type.dart';
+import '../../common/enums/flag_type.dart';
 import '../../common/widgets/app_bar/new_app_bar.dart';
 import '../../common/widgets/custom_outline_button.dart';
 import '../../common/widgets/default_container.dart';
 import '../../common/widgets/default_header.dart';
 import '../../common/widgets/useful_widgets.dart';
+import '../categories_screen/categories_screen.dart';
 import 'category_flags_screen.dart';
 
 class CategoryDetailsMoreScreenArguments {
@@ -25,7 +25,7 @@ class CategoryDetailsMoreScreen extends StatelessWidget {
   static const String route = '/category_details_more_screen';
 
   //data
-  List<String> paragraphList = [
+  final List<String> paragraphList = [
     'Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia, molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium optio, eaque rerum!',
     'Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia, molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium optio, eaque rerum!',
     'Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia, molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium optio, eaque rerum!',
@@ -84,9 +84,13 @@ class CategoryDetailsMoreScreen extends StatelessWidget {
                   isYellow: true,
                 ),
                 const SizedBox(height: 33),
-                Image.asset('images/border_dot_line.png'),
+                Image.asset(
+                  'images/separator.png',
+                  width: double.infinity,
+                  fit: BoxFit.fitWidth,
+                ),
                 const SizedBox(height: 33),
-                buildDefaultCustomForm(callback),
+                buildDefaultCustomForm(sendEmail, context),
                 const SizedBox(height: 10),
                 Align(
                   alignment: Alignment.center,
@@ -110,23 +114,17 @@ class CategoryDetailsMoreScreen extends StatelessWidget {
     );
   }
 
-  void callback(String name, String mail, String questino) {
-    print("name - $name \nemail - $mail\nquestion - $questino");
-  }
-
   Widget _buildParagraph(String paragraphText, BuildContext context) {
-    return Container(
-      child: Column(
-        children: [
-          Text(
-            paragraphText,
-            style: Theme.of(context).textTheme.bodyText1,
-          ),
-          const SizedBox(
-            height: 15,
-          ),
-        ],
-      ),
+    return Column(
+      children: [
+        Text(
+          paragraphText,
+          style: Theme.of(context).textTheme.bodyText1,
+        ),
+        const SizedBox(
+          height: 15,
+        ),
+      ],
     );
   }
 }

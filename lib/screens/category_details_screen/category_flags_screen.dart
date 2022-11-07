@@ -1,4 +1,7 @@
+import 'dart:convert';
+
 import 'package:flutter/material.dart';
+import 'package:http/http.dart';
 
 import '../../common/enums/age_group_type.dart';
 import '../../common/enums/development_ascpect_type.dart';
@@ -8,6 +11,33 @@ import '../../common/widgets/default_container.dart';
 import '../../common/widgets/default_header.dart';
 import '../../common/widgets/useful_widgets.dart';
 import '../categories_screen/categories_screen.dart';
+
+class EmailPayloadDto {
+  String nameSurname;
+  String mail;
+  String question;
+
+  EmailPayloadDto(this.nameSurname, this.mail, this.question);
+
+  Map<String, dynamic> toJson() => {
+        'AppPackageName': 'com.example.app_for_family_backup',
+        'UserMailAddress': mail,
+        'ExpertMail': 'djuro.radusinovic@vegait.rs',
+        'Body': question,
+      };
+}
+
+Future<bool> sendEmail(String name, String mail, String question) async {
+  EmailPayloadDto emailPayload = EmailPayloadDto(name, mail, question);
+  Response response = await post(
+    Uri.parse('https://podsticarijum.codeforacause.rs/email'),
+    headers: {'Content-Type': 'application/json; charset=UTF-8'},
+    body: jsonEncode(emailPayload.toJson()),
+  );
+
+  debugPrint("status code is ${response.statusCode}");
+  return response.statusCode == 200;
+}
 
 class CategoryFlagsScreenArguments {
   AgeGroupType ageGroupType;
@@ -22,7 +52,7 @@ class CategoryFlagsScreen extends StatelessWidget {
   static const String route = '/category_flags';
 
   //data
-  List<String> paragraphList = [
+  final List<String> paragraphList = [
     'Lorem ipsum dolor sit ',
     'Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia, molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium optio, eaque rerum!',
     'Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia, molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium optio, eaque rerum!',
@@ -32,15 +62,6 @@ class CategoryFlagsScreen extends StatelessWidget {
   CategoryFlagsScreen({
     Key? key,
   }) : super(key: key);
-
-  void callback(String name, String mail, String question) {
-    /**
-     *
-     * TODO: MAKE AN ASYNC CALL TO SEND THE EMAIL!
-     *
-     */
-    // Navigator.pushNamed(context, ThankYouScreen.route);
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -74,9 +95,13 @@ class CategoryFlagsScreen extends StatelessWidget {
                       _buildParagraph(context, args.flagType, paragraph),
                 ),
                 const SizedBox(height: 33),
-                Image.asset('images/border_dot_line.png'),
+                Image.asset(
+                  'images/separator.png',
+                  width: double.infinity,
+                  fit: BoxFit.fitWidth,
+                ),
                 const SizedBox(height: 33),
-                buildDefaultCustomForm(callback),
+                buildDefaultCustomForm(sendEmail, context),
                 const SizedBox(height: 10),
                 Align(
                   alignment: Alignment.center,

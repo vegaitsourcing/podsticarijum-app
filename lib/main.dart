@@ -1,3 +1,4 @@
+import 'package:app_for_family_backup/screens/debug_screen/debug_screen.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 
@@ -36,9 +37,10 @@ class FamilyBackupApp extends StatelessWidget {
       title: 'Podsticarijum',
       initialRoute: SplashScreen.route,
       routes: {
+        DebugScreen.route: (context) => const DebugScreen(),
         SplashScreen.route: (context) => SplashScreen(),
         CategoriesScreen.route: (context) => const CategoriesScreen(),
-        SubCategoriesScreen.route: (context) => SubCategoriesScreen(),
+        SubCategoriesScreen.route: (context) => const SubCategoriesScreen(),
         CategoryIntroScreen.route: (context) => CategoryIntroScreen(),
         CategoryDetailsScreen.route: (context) => const CategoryDetailsScreen(),
         CategoryDetailsMoreScreen.route: (context) =>
