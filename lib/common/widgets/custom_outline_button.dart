@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 class CustomOutlineButton extends StatelessWidget {
   final String text;
   final Function()? onClick;
-  final Future<void> Function()? onClickAsync = null;
   final bool isYellow;
 
   const CustomOutlineButton({
@@ -27,7 +26,6 @@ class CustomOutlineButton extends StatelessWidget {
         ),
       ),
       child: OutlinedButton(
-        // onPressed: onClickAsync ?? onClick,
         onPressed: onClick,
         style: OutlinedButton.styleFrom(
           side: const BorderSide(
