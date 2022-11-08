@@ -29,14 +29,20 @@ class EmailPayloadDto {
 
 Future<bool> sendEmail(String name, String mail, String question) async {
   EmailPayloadDto emailPayload = EmailPayloadDto(name, mail, question);
-  Response response = await post(
-    Uri.parse('https://podsticarijum.codeforacause.rs/email'),
-    headers: {'Content-Type': 'application/json; charset=UTF-8'},
-    body: jsonEncode(emailPayload.toJson()),
-  );
 
-  debugPrint("status code is ${response.statusCode}");
-  return response.statusCode == 200;
+  try {
+    Response response = await post(
+      Uri.parse('https://podsticarijum.codeforacause.rs/email'),
+      headers: {'Content-Type': 'application/json; charset=UTF-8'},
+      body: jsonEncode(emailPayload.toJson()),
+    ).timeout(
+      const Duration(seconds: 5),
+    );
+
+    return response.statusCode == 200;
+  } on Exception catch (_) {
+    return false;
+  }
 }
 
 class CategoryFlagsScreenArguments {
